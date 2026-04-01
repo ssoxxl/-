@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식 물타기 계산기 — 평균단가·손익 계산 | 계산왕</title>
+<meta name="description" content="주식 물타기 계산기. 추가 매수 후 평균단가, 손익금액, 수익률을 한번에 계산하세요. 손익분기가도 확인 가능합니다.">
+<link rel="canonical" href="https://계산왕.com/stock/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f2;--surface:#fff;--surface2:#f0efe9;--border:#e2e0d8;--text:#1a1a18;--muted:#888880;--accent:#2563eb;--accent-light:#eff6ff;--accent2:#1d4ed8;--red:#dc2626;--green:#16a34a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;min-height:100vh;}
+header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 24px;height:56px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;}
+.logo{font-size:18px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text);}
+.logo-badge{background:var(--text);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.back-btn{margin-left:auto;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:inherit;font-size:13px;cursor:pointer;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:var(--surface2);color:var(--text);}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 60px;}
+.calc-card{background:var(--surface);border:2px solid var(--border);border-radius:14px;overflow:hidden;}
+.card-hero{padding:28px 28px 20px;border-bottom:1px solid var(--border);}
+.card-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;margin-bottom:10px;background:var(--accent-light);color:var(--accent);text-transform:uppercase;letter-spacing:.4px;}
+.card-hero h1{font-size:24px;font-weight:900;letter-spacing:-.5px;margin-bottom:6px;}
+.card-hero p{font-size:14px;color:var(--muted);line-height:1.6;}
+.card-body{padding:24px 28px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
+.field input{width:100%;padding:11px 14px;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s;}
+.field input:focus{border-color:var(--text);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.section-label{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;transition:opacity .15s;}
+.btn-calc:hover{opacity:.85;}
+.result-box{margin-top:16px;padding:18px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent-light);display:none;}
+.result-box.show{display:block;}
+.result-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px;color:var(--accent);}
+.result-main{font-size:30px;font-weight:900;letter-spacing:-1px;margin-bottom:8px;color:var(--accent2);}
+.result-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid rgba(0,0,0,.06);}
+.result-row:last-child{border:none;}
+.result-row strong{font-weight:700;}
+.desc-section{padding:24px 28px;border-top:1px solid var(--border);background:var(--surface2);}
+.desc-section h2{font-size:15px;font-weight:700;margin-bottom:12px;}
+.desc-section p{font-size:13px;color:#555;line-height:1.8;margin-bottom:14px;}
+.faq-item{margin-bottom:14px;}
+.faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
+.faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.related{padding:20px 28px 28px;}
+.related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.related-btn{padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;display:block;text-align:center;transition:all .15s;}
+.related-btn:hover{border-color:var(--text);}
+footer{background:var(--text);color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:12px;}
+footer strong{color:#fff;}
+@media(max-width:600px){
+  .wrap{padding:16px 12px 40px;}
+  .card-body,.card-hero,.desc-section,.related{padding-left:16px;padding-right:16px;}
+  .field-row{grid-template-columns:1fr;}
+  .related-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<header>
+  <a href="../" class="logo"><span>계산왕</span><span class="logo-badge">👑</span></a>
+  <a href="../" class="back-btn">← 전체 계산기</a>
+</header>
+<div class="wrap">
+<div class="calc-card">
+  <div class="card-hero">
+    <span class="card-tag">재테크</span>
+    <h1>주식 물타기 계산기</h1>
+    <p>추가 매수 후 평균단가, 손익금액, 수익률을 한번에 계산합니다</p>
+  </div>
+  <div class="card-body">
+    <div class="section-label">🔵 최초 매수</div>
+    <div class="field-row">
+      <div class="field"><label>매수 단가 (원)</label><input type="number" id="p1" placeholder="50,000"></div>
+      <div class="field"><label>매수 수량 (주)</label><input type="number" id="q1" placeholder="100"></div>
+    </div>
+    <div class="section-label">🔴 추가 매수 (물타기)</div>
+    <div class="field-row">
+      <div class="field"><label>매수 단가 (원)</label><input type="number" id="p2" placeholder="35,000"></div>
+      <div class="field"><label>매수 수량 (주)</label><input type="number" id="q2" placeholder="200"></div>
+    </div>
+    <div class="field"><label>현재가 (원, 선택)</label><input type="number" id="cur" placeholder="40,000"></div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
+    <div class="result-box" id="result">
+      <div class="result-label">평균 매수단가</div>
+      <div class="result-main" id="avg"></div>
+      <div id="detail"></div>
+    </div>
+  </div>
+  <div class="desc-section">
+    <h2>📌 주식 물타기란?</h2>
+    <p>주가가 하락했을 때 추가 매수해 평균 매입단가를 낮추는 전략입니다. 평균단가를 낮추면 주가가 덜 올라도 손익분기점에 도달할 수 있습니다.</p>
+    <div class="faq-item">
+      <div class="faq-q">Q. 물타기가 항상 유리한가요?</div>
+      <div class="faq-a">아닙니다. 주가가 계속 하락하면 손실이 더 커질 수 있습니다. 기업의 펀더멘털을 확인 후 신중하게 결정하세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 손익분기가란?</div>
+      <div class="faq-a">투자 원금을 회수할 수 있는 주가 수준입니다. 평균단가와 동일하며, 이 가격 이상으로 주가가 올라야 수익이 납니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 물타기와 불타기의 차이는?</div>
+      <div class="faq-a">물타기는 하락 시 추가 매수, 불타기는 상승 시 추가 매수입니다. 물타기는 평균단가를 낮추고, 불타기는 수익 극대화를 목표로 합니다.</div>
+    </div>
+  </div>
+  <div class="related">
+    <h2>관련 계산기</h2>
+    <div class="related-grid">
+      <a href="../savings/" class="related-btn">🏦 적금 만기금액</a>
+      <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
+      <a href="../halbu/" class="related-btn">💳 카드 할부이자</a>
+      <a href="../yangdo/" class="related-btn">🏛️ 양도소득세</a>
+    </div>
+  </div>
+</div>
+</div>
+<footer><strong>계산왕</strong> — 직장인·재테크 계산기 모음<br><span style="margin-top:6px;display:block">본 계산기는 참고용이며 실제 금액과 다를 수 있습니다.</span></footer>
+<script>
+function comma(n){return Math.round(n).toLocaleString('ko-KR');}
+function won(n){return comma(n)+'원';}
+function calc(){
+  const p1=+document.getElementById('p1').value;
+  const q1=+document.getElementById('q1').value;
+  const p2=+document.getElementById('p2').value;
+  const q2=+document.getElementById('q2').value;
+  const cur=+document.getElementById('cur').value;
+  if(!p1||!q1||!p2||!q2){alert('매수 단가와 수량을 입력해주세요.');return;}
+  const totalQty=q1+q2;
+  const totalCost=p1*q1+p2*q2;
+  const avgPrice=totalCost/totalQty;
+  const curValue=cur?cur*totalQty:0;
+  const profit=cur?curValue-totalCost:0;
+  const profitRate=cur?(profit/totalCost*100):0;
+  const profitColor=profit>=0?'#16a34a':'#dc2626';
+  document.getElementById('avg').textContent=comma(avgPrice)+'원';
+  document.getElementById('detail').innerHTML=`
+    <div class="result-row"><span>총 매수 수량</span><strong>${comma(totalQty)}주</strong></div>
+    <div class="result-row"><span>총 투자금액</span><strong>${won(totalCost)}</strong></div>
+    <div class="result-row"><span>손익분기가</span><strong>${comma(avgPrice)}원</strong></div>
+    ${cur?`
+    <div class="result-row"><span>현재 평가금액</span><strong>${won(curValue)}</strong></div>
+    <div class="result-row"><span>손익금액</span><strong style="color:${profitColor}">${profit>=0?'+':''}${won(profit)}</strong></div>
+    <div class="result-row"><span>수익률</span><strong style="color:${profitColor}">${profit>=0?'+':''}${profitRate.toFixed(2)}%</strong></div>
+    `:''}
+  `;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

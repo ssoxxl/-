@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>계산왕 — 직장인·재테크 계산기 모음</title>
+<meta name="description" content="연봉 실수령액, 주식 물타기, 퇴직금, 실업급여, 청약가점, 양도소득세 등 직장인·재테크 계산기를 한곳에서. 계산왕에서 빠르고 정확하게 계산하세요.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f2;--surface:#fff;--surface2:#f0efe9;--border:#e2e0d8;--text:#1a1a18;--muted:#888880;--accent:#2563eb;--accent-light:#eff6ff;--green:#16a34a;--green-light:#f0fdf4;--orange:#ea580c;--orange-light:#fff7ed;--purple:#7c3aed;--purple-light:#f5f3ff;--red:#dc2626;--teal:#0d9488;--teal-light:#f0fdfa;--pink:#db2777;--pink-light:#fdf2f8;--indigo:#4338ca;--indigo-light:#eef2ff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;min-height:100vh;}
+header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 24px;height:56px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;}
+.logo{font-size:20px;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:6px;}
+.logo-badge{background:var(--text);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.logo-sub{font-size:12px;color:var(--muted);font-weight:400;margin-left:4px;}
+nav{margin-left:auto;display:flex;gap:4px;}
+.nav-btn{padding:6px 14px;border-radius:6px;border:none;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;}
+.nav-btn:hover,.nav-btn.on{background:var(--surface2);color:var(--text);}
+.nav-btn.on{font-weight:700;}
+.hero{padding:48px 24px 32px;max-width:900px;margin:0 auto;text-align:center;}
+.hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:-1.5px;line-height:1.2;margin-bottom:12px;}
+.hero h1 span{color:var(--accent);}
+.hero p{font-size:16px;color:var(--muted);margin-bottom:28px;}
+.search-bar{display:flex;max-width:480px;margin:0 auto;border:2px solid var(--text);border-radius:10px;overflow:hidden;background:var(--surface);}
+.search-bar input{flex:1;padding:12px 16px;border:none;font-family:inherit;font-size:15px;outline:none;background:transparent;color:var(--text);}
+.search-bar input::placeholder{color:var(--muted);}
+.search-bar button{padding:12px 20px;border:none;background:var(--text);color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;}
+.calc-grid{max-width:900px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.calc-card{background:var(--surface);border:2px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s;text-decoration:none;color:var(--text);display:block;}
+.calc-card:hover{border-color:var(--text);transform:translateY(-2px);}
+.card-inner{padding:20px;}
+.card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;}
+.card-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px;}
+.card-title{font-size:15px;font-weight:800;letter-spacing:-.3px;margin-bottom:4px;}
+.card-desc{font-size:12px;color:var(--muted);}
+.card-arrow{float:right;font-size:18px;color:var(--muted);margin-top:-30px;}
+
+/* themes */
+.t-blue .card-icon{background:var(--accent-light);}
+.t-blue .card-tag{background:var(--accent-light);color:var(--accent);}
+.t-green .card-icon{background:var(--green-light);}
+.t-green .card-tag{background:var(--green-light);color:var(--green);}
+.t-orange .card-icon{background:var(--orange-light);}
+.t-orange .card-tag{background:var(--orange-light);color:var(--orange);}
+.t-purple .card-icon{background:var(--purple-light);}
+.t-purple .card-tag{background:var(--purple-light);color:var(--purple);}
+.t-teal .card-icon{background:var(--teal-light);}
+.t-teal .card-tag{background:var(--teal-light);color:var(--teal);}
+.t-pink .card-icon{background:var(--pink-light);}
+.t-pink .card-tag{background:var(--pink-light);color:var(--pink);}
+.t-indigo .card-icon{background:var(--indigo-light);}
+.t-indigo .card-tag{background:var(--indigo-light);color:var(--indigo);}
+
+footer{background:var(--text);color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:12px;}
+footer strong{color:#fff;}
+@media(max-width:600px){
+  .calc-grid{grid-template-columns:1fr;padding:0 16px 40px;}
+  nav{display:none;}
+  .hero{padding:32px 16px 24px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <span>계산왕</span>
+    <span class="logo-badge">👑</span>
+    <span class="logo-sub">직장인·재테크 계산기 모음</span>
+  </div>
+  <nav>
+    <button class="nav-btn on" onclick="filterCalc('all',this)">전체</button>
+    <button class="nav-btn" onclick="filterCalc('재테크',this)">재테크</button>
+    <button class="nav-btn" onclick="filterCalc('부동산',this)">부동산</button>
+    <button class="nav-btn" onclick="filterCalc('직장인',this)">직장인</button>
+    <button class="nav-btn" onclick="filterCalc('생활',this)">생활</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>직장인·재테크 계산기<br><span>한 곳에서</span></h1>
+  <p>연봉·퇴직금·주식·부동산까지, 계산왕에서 빠르게 계산하세요</p>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="계산기 검색... (예: 물타기, 연봉)" oninput="searchCalc()">
+    <button>🔍</button>
+  </div>
+</section>
+
+<div class="calc-grid" id="calcGrid">
+
+  <a href="salary/" class="calc-card t-green" data-category="직장인" data-name="연봉 실수령액 계산기">
+    <div class="card-inner">
+      <div class="card-icon">💼</div>
+      <span class="card-tag">직장인</span>
+      <div class="card-title">연봉 실수령액 계산기</div>
+      <div class="card-desc">4대보험·소득세 공제 후 실제 월급</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="stock/" class="calc-card t-blue" data-category="재테크" data-name="주식 물타기 계산기">
+    <div class="card-inner">
+      <div class="card-icon">📈</div>
+      <span class="card-tag">재테크</span>
+      <div class="card-title">주식 물타기 계산기</div>
+      <div class="card-desc">추가 매수 후 평균단가·손익 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="retire/" class="calc-card t-purple" data-category="직장인" data-name="퇴직금 계산기">
+    <div class="card-inner">
+      <div class="card-icon">📦</div>
+      <span class="card-tag">직장인</span>
+      <div class="card-title">퇴직금 계산기</div>
+      <div class="card-desc">근속기간·평균임금 기반 퇴직금 산정</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="unemploy/" class="calc-card t-blue" data-category="직장인" data-name="실업급여 계산기">
+    <div class="card-inner">
+      <div class="card-icon">📋</div>
+      <span class="card-tag">직장인</span>
+      <div class="card-title">실업급여 계산기</div>
+      <div class="card-desc">이직일·근속기간·임금으로 수급액 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="jeonse/" class="calc-card t-orange" data-category="부동산" data-name="전월세 전환율 계산기">
+    <div class="card-inner">
+      <div class="card-icon">🏠</div>
+      <span class="card-tag">부동산</span>
+      <div class="card-title">전월세 전환율 계산기</div>
+      <div class="card-desc">전세→월세 전환 및 보증금 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="cheongak/" class="calc-card t-teal" data-category="부동산" data-name="청약 가점 계산기">
+    <div class="card-inner">
+      <div class="card-icon">🏢</div>
+      <span class="card-tag">부동산</span>
+      <div class="card-title">청약 가점 계산기</div>
+      <div class="card-desc">무주택기간·부양가족·청약통장 가점 산정</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="yangdo/" class="calc-card t-indigo" data-category="부동산" data-name="양도소득세 계산기">
+    <div class="card-inner">
+      <div class="card-icon">🏛️</div>
+      <span class="card-tag">부동산</span>
+      <div class="card-title">양도소득세 계산기</div>
+      <div class="card-desc">1주택 기준 양도차익·세액 간이 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="savings/" class="calc-card t-green" data-category="재테크" data-name="적금 만기금액 계산기">
+    <div class="card-inner">
+      <div class="card-icon">🏦</div>
+      <span class="card-tag">재테크</span>
+      <div class="card-title">적금 만기금액 계산기</div>
+      <div class="card-desc">월 납입액·금리·기간으로 만기금액 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="halbu/" class="calc-card t-pink" data-category="생활" data-name="카드 할부이자 계산기">
+    <div class="card-inner">
+      <div class="card-icon">💳</div>
+      <span class="card-tag">생활</span>
+      <div class="card-title">카드 할부이자 계산기</div>
+      <div class="card-desc">할부 개월수별 실제 이자·월 납부액 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="cartax/" class="calc-card t-orange" data-category="생활" data-name="자동차 취득세 계산기">
+    <div class="card-inner">
+      <div class="card-icon">🚗</div>
+      <span class="card-tag">생활</span>
+      <div class="card-title">자동차 취득세 계산기</div>
+      <div class="card-desc">차종·용도별 취득세·공채 매입금액 계산</div>
+      <span class="card-arrow">→</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <strong>계산왕</strong> — 직장인·재테크 계산기 모음<br>
+  <span style="margin-top:6px;display:block">본 계산기는 참고용이며 실제 금액과 다를 수 있습니다. 정확한 내용은 전문가에게 문의하세요.</span>
+</footer>
+
+<script>
+function filterCalc(cat,btn){
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.calc-card').forEach(card=>{
+    card.style.display=(cat==='all'||card.dataset.category===cat)?'':'none';
+  });
+}
+function searchCalc(){
+  const q=document.getElementById('searchInput').value.trim().toLowerCase();
+  document.querySelectorAll('.calc-card').forEach(card=>{
+    const n=card.dataset.name.toLowerCase();
+    const c=card.dataset.category.toLowerCase();
+    card.style.display=(!q||n.includes(q)||c.includes(q))?'':'none';
+  });
+}
+</script>
+</body>
+</html>
