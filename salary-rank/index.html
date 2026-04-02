@@ -66,6 +66,9 @@ footer strong{color:#fff;}
 <meta property="og:image:height" content="630">
 <meta name="twitter:image" content="https://xn--989av19a47d.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta name="daumoa-verification" content="52638bd43577858cdf80a388c3bf173be6b9be4914b8bde1a3b347cf6786f5b4">
 </head>
 <body>
 <header><a href="../" class="logo"><span>계산왕</span><span class="logo-badge">👑</span></a><a href="../" class="back-btn">← 전체 계산기</a></header>
@@ -111,35 +114,55 @@ footer strong{color:#fff;}
 <footer><strong>계산왕</strong> — 직장인·재테크 계산기 모음<br><span style="margin-top:6px;display:block">2023년 국세청 통계 기준. 실제와 다를 수 있습니다.</span></footer>
 <script>
 function comma(n){return Math.round(n).toLocaleString('ko-KR');}
-// 2023년 국세청 근로소득 통계 기반 근사값
+// 2023년 국세청 근로소득 통계 기반
+// 각 구간: 이 연봉 이상이면 상위 몇%인지
+// val=연봉(원), top=상위%(이 연봉 이상인 비율)
 const DIST=[
-  {pct:100,val:0},{pct:95,val:12000000},{pct:90,val:20000000},
-  {pct:85,val:25000000},{pct:80,val:30000000},{pct:75,val:33000000},
-  {pct:70,val:36000000},{pct:65,val:39000000},{pct:60,val:42000000},
-  {pct:55,val:45000000},{pct:50,val:48000000},{pct:45,val:52000000},
-  {pct:40,val:56000000},{pct:35,val:62000000},{pct:30,val:68000000},
-  {pct:25,val:76000000},{pct:20,val:87000000},{pct:15,val:100000000},
-  {pct:10,val:120000000},{pct:5,val:160000000},{pct:3,val:200000000},
-  {pct:1,val:300000000},{pct:0,val:999999999}
+  {val:300000000,top:1},
+  {val:200000000,top:3},
+  {val:160000000,top:5},
+  {val:120000000,top:10},
+  {val:100000000,top:15},
+  {val:87000000,top:20},
+  {val:76000000,top:25},
+  {val:68000000,top:30},
+  {val:62000000,top:35},
+  {val:56000000,top:40},
+  {val:52000000,top:45},
+  {val:48000000,top:50},
+  {val:45000000,top:55},
+  {val:42000000,top:60},
+  {val:39000000,top:65},
+  {val:36000000,top:70},
+  {val:33000000,top:75},
+  {val:30000000,top:80},
+  {val:25000000,top:85},
+  {val:20000000,top:90},
+  {val:12000000,top:95},
+  {val:0,top:100},
 ];
 function getRank(sal){
+  // 딱 맞는 구간 찾기
   for(let i=0;i<DIST.length-1;i++){
-    if(sal>=DIST[i].val&&sal<DIST[i+1].val){
-      const range=DIST[i+1].val-DIST[i].val;
-      const diff=sal-DIST[i].val;
-      const pctRange=DIST[i].pct-DIST[i+1].pct;
-      return DIST[i].pct-(diff/range*pctRange);
+    if(sal>=DIST[i].val){
+      // DIST[i].val 이상이면 상위 DIST[i].top% 이내
+      // 그 다음 구간과 보간
+      const range=DIST[i].val-DIST[i+1].val;
+      const diff=sal-DIST[i+1].val;
+      const topRange=DIST[i+1].top-DIST[i].top;
+      if(range===0)return DIST[i].top;
+      return DIST[i+1].top-(diff/range*topRange);
     }
   }
-  return 1;
+  return 100;
 }
 let lastResult='';
 function calc(){
   const sal=+document.getElementById('salary').value;
   if(!sal){alert('연봉을 입력해주세요.');return;}
-  const rank=getRank(sal);
-  const topPct=Math.max(0.5,100-rank).toFixed(1);
-  const fillPct=Math.min(99,rank);
+  const topPct=Math.min(99.9,Math.max(0.1,getRank(sal))).toFixed(1);
+  // 바 그래프: 상위%가 낮을수록 오른쪽 (높은 연봉)
+  const fillPct=100-parseFloat(topPct);
   document.getElementById('rankPct').textContent='상위 '+topPct+'%';
   let desc='';
   if(topPct<=1)desc='🏆 상위 1%! 대한민국 최상위 소득자입니다';
