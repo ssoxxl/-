@@ -141,12 +141,45 @@ function calc(){
   const tdee=bmr*act;
   const diet=tdee-500;
   const bulk=tdee+300;
+  // 쉬운 설명
+  const actLabel={'1.2':'거의 안 움직임','1.375':'가벼운 활동','1.55':'중간 활동','1.725':'고강도 활동','1.9':'매우 고강도'};
+  const bmrMsg = bmr < 1200 ? '⚠️ 기초대사량이 낮은 편이에요. 충분한 영양 섭취가 중요합니다.' :
+                 bmr < 1600 ? '✅ 평균 범위의 기초대사량이에요.' :
+                 '💪 기초대사량이 높은 편이에요. 근육량이 많을 가능성이 높아요.';
   document.getElementById('main').textContent=Math.round(bmr)+' kcal';
   document.getElementById('detail').innerHTML=`
-    <div class="result-row"><span>기초대사량 (BMR)</span><strong>${Math.round(bmr)} kcal</strong></div>
-    <div class="result-row"><span>활동대사량 (TDEE)</span><strong>${Math.round(tdee)} kcal</strong></div>
-    <div class="result-row"><span>다이어트 목표 칼로리</span><strong style="color:#16a34a">${Math.round(diet)} kcal</strong></div>
-    <div class="result-row"><span>근육증가 목표 칼로리</span><strong style="color:#2563eb">${Math.round(bulk)} kcal</strong></div>
+    <div style="font-size:13px;color:#555;margin-bottom:12px;line-height:1.6;padding:10px;background:rgba(255,255,255,.6);border-radius:8px;">${bmrMsg}</div>
+
+    <div class="result-row">
+      <span>🛌 기초대사량 (BMR)</span>
+      <strong>${Math.round(bmr)} kcal</strong>
+    </div>
+    <div style="font-size:11px;color:#888;margin:-2px 0 8px 0;padding-left:2px">→ 아무것도 안 해도 하루에 이만큼 소모돼요</div>
+
+    <div class="result-row">
+      <span>🚶 활동대사량 (TDEE)</span>
+      <strong>${Math.round(tdee)} kcal</strong>
+    </div>
+    <div style="font-size:11px;color:#888;margin:-2px 0 8px 0;padding-left:2px">→ 현재 생활패턴으로 하루 실제 소모 칼로리</div>
+
+    <div class="result-row">
+      <span>🥗 다이어트 목표</span>
+      <strong style="color:#16a34a">${Math.round(diet)} kcal 이하</strong>
+    </div>
+    <div style="font-size:11px;color:#888;margin:-2px 0 8px 0;padding-left:2px">→ 이보다 덜 먹으면 1주일에 약 0.5kg 감량 가능</div>
+
+    <div class="result-row">
+      <span>💪 근육증가 목표</span>
+      <strong style="color:#2563eb">${Math.round(bulk)} kcal</strong>
+    </div>
+    <div style="font-size:11px;color:#888;margin:-2px 0 12px 0;padding-left:2px">→ 이만큼 먹으면서 운동하면 근육 증가에 유리해요</div>
+
+    <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px;font-size:13px;line-height:1.7;">
+      <strong>📊 한눈에 보는 목표 칼로리</strong><br>
+      다이어트: <strong style="color:#16a34a">${Math.round(diet)}kcal</strong> &nbsp;|&nbsp;
+      유지: <strong>${Math.round(tdee)}kcal</strong> &nbsp;|&nbsp;
+      증량: <strong style="color:#2563eb">${Math.round(bulk)}kcal</strong>
+    </div>
     <div style="font-size:11px;color:#888;margin-top:8px">※ Mifflin-St Jeor 공식 기준. 개인차 있을 수 있습니다.</div>
   `;
   document.getElementById('result').classList.add('show');
