@@ -59,6 +59,9 @@ header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 2
 .faq-item{margin-bottom:14px;}
 .faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
 .faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.desc-section h3{font-size:14px;font-weight:700;margin:18px 0 8px;}
+.desc-section ul{padding-left:18px;margin:0 0 14px;}
+.desc-section li{font-size:13px;color:#555;line-height:1.8;margin-bottom:6px;}
 .related{padding:20px 28px 28px;}
 .related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
@@ -89,7 +92,15 @@ body{transition:background .3s,color .3s;}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="shortcut icon" href="/favicon.svg">
-<meta name="daumoa-verification" content="52638bd43577858cdf80a388c3bf173be6b9be4914b8bde1a3b347cf6786f5b4:Xj5dg0WfAX454QfLeg8nBA==">
+<meta daumoa-verification" content="52638bd43577858cdf80a388c3bf173be6b9be4914b8bde1a3b347cf6786f5b4:Xj5dg0WfAX454QfLeg8nBA==">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49J8CVJW33');
+</script>
 </head>
 <body>
 <header><a href="../" class="logo"><span>계산왕</span><span class="logo-badge" style="background:#0a0a0f;color:#FFD700;font-family:'Courier New',monospace;border:1px solid #D4A017;">王</span></a><a href="../" class="back-btn">← 전체 계산기</a><button onclick="toggleDark()" id="darkToggle" style="width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;margin-left:8px;">🌙</button>
@@ -118,14 +129,33 @@ body{transition:background .3s,color .3s;}
     </div>
   </div>
   <div class="desc-section">
-    <h2>📌 연봉 순위 기준</h2>
-    <p>2023년 국세청 근로소득 통계(근로소득자 1,897만 명 기준)를 바탕으로 계산됩니다. 전체 근로소득자의 평균 연봉은 약 4,213만원이며, 중위소득(중간값)은 약 3,100만원입니다.</p>
-    <p>평균보다 중간값이 낮은 이유는 고연봉자(대기업·공공기관 임원 등)가 평균을 끌어올리기 때문입니다. 실제로 전체 직장인의 절반 이상이 평균 이하 연봉을 받습니다.</p>
-    <p>내 연봉이 전체에서 어느 위치인지 알면 연봉 협상, 이직, 재테크 계획을 세울 때 현실적인 기준점이 됩니다. 성별·연령대·직종에 따라 분포가 크게 다를 수 있으니 참고 수준으로 활용하세요.</p>
-    <div class="faq-item"><div class="faq-q">Q. 연봉 1억이면 상위 몇%인가요?</div><div class="faq-a">전체 근로소득자 기준 약 상위 5~6% 수준입니다. 서울 기준으로는 약 상위 8~10% 수준입니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 연봉 5000만원은 상위 몇%인가요?</div><div class="faq-a">전체 기준 약 상위 25~28% 수준입니다. 생각보다 높은 편에 속합니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 평균 연봉이 왜 실감이 안 날까요?</div><div class="faq-a">대기업·공공기관 고연봉자가 평균을 올리기 때문입니다. 중위값(3,100만원)이 더 현실적인 기준입니다.</div></div>
+    <h2>연봉 순위를 확인하는 이유</h2>
+    <p>이직 제안을 받았을 때 내 제안 금액이 시장에서 어느 정도 수준인지 보고 싶거나, 승진 후 연봉이 상위 몇 퍼센트인지 감을 잡고 싶을 때 유용합니다. 단순히 연봉 액수만 보는 것보다 전체 직장인 분포 안에서 자신의 위치를 보는 데 의미가 있습니다.</p>
+    <h2>이 페이지는 무엇을 비교하나요?</h2>
+    <p>입력한 연봉을 전체 근로소득 분포와 비교해 대략적인 상위 비율을 보여주는 방식입니다. 성별, 연령대처럼 집단을 나눠보면 같은 연봉이라도 체감 위치가 달라질 수 있어 이직·협상 참고자료로 쓰기 좋습니다.</p>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 1</div>
+      <div class="faq-a">연봉 4,000만원은 전체 직장인 기준으로는 중간 이상일 수 있지만, 특정 연령대나 수도권 사무직 집단에서는 체감 위치가 달라질 수 있습니다. 그래서 전체 비교와 집단 비교를 함께 보는 편이 좋습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 2</div>
+      <div class="faq-a">연봉 7,000만원이면 전체 기준으로는 상위권에 들어갈 수 있지만, 업종이나 경력 수준에 따라 시장 평균과 비교한 해석은 달라질 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">왜 정확한 순위가 아니라 비율인가요?</div>
+      <div class="faq-a">공개 통계는 개인별 순번이 아니라 분포 자료 중심으로 제공되는 경우가 많습니다. 그래서 계산왕에서는 현실적으로 참고하기 좋은 상위 비율 방식으로 보여줍니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">성과급 포함 여부는?</div>
+      <div class="faq-a">비교 기준을 맞추는 것이 중요합니다. 제안 연봉에 성과급이 포함되는지, 복리후생 수당이 별도인지에 따라 체감 순위가 달라질 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">활용 팁</div>
+      <div class="faq-a">이직 협상 전에는 연봉 순위와 함께 실수령액, 건강보험료, 퇴직금 변화를 같이 보는 편이 좋습니다. 숫자 하나만 보면 오해하기 쉽기 때문입니다.</div>
+    </div>
+    <p><strong>안내:</strong> 이 페이지는 2026년 공개 통계 흐름을 바탕으로 한 참고 비교입니다. 업종, 지역, 고용형태, 성과급 포함 여부에 따라 실제 체감 수준은 달라질 수 있습니다.</p>
   </div>
+
   <div class="related"><h2>관련 계산기</h2><div class="related-grid">
     <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
     <a href="../yearend/" class="related-btn">📋 연말정산 미리보기</a>

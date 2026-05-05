@@ -62,6 +62,9 @@ header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 2
 .faq-item{margin-bottom:14px;}
 .faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
 .faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.desc-section h3{font-size:14px;font-weight:700;margin:18px 0 8px;}
+.desc-section ul{padding-left:18px;margin:0 0 14px;}
+.desc-section li{font-size:13px;color:#555;line-height:1.8;margin-bottom:6px;}
 .related{padding:20px 28px 28px;}
 .related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
@@ -85,6 +88,14 @@ footer strong{color:#fff;}
 body{transition:background .3s,color .3s;}
 
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49J8CVJW33');
+</script>
 </head>
 <body>
 <header><a href="../" class="logo"><span>계산왕</span><span class="logo-badge">王</span></a><a href="../" class="back-btn">← 전체 계산기</a><button onclick="toggleDark()" id="darkToggle" style="width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;margin-left:8px;">🌙</button>
@@ -130,23 +141,34 @@ body{transition:background .3s,color .3s;}
       </div>
     </div>
   </div>
-    <div class="desc-section">
-    <h2>📌 월급날 완벽 가이드</h2>
-    <p>월급날(임금 지급일)은 근로기준법 제43조에 따라 매월 1회 이상, 일정한 날짜를 정해 지급해야 합니다. 정해진 날짜보다 하루라도 늦으면 임금체불에 해당해 사용자가 처벌받을 수 있습니다.</p>
-    <p><strong>월급날이 주말·공휴일이면?</strong></p>
-    <p>법으로 강제된 규정은 없지만 대부분의 기업은 관행적으로 <strong>전 영업일</strong>에 지급합니다. 일부 기업은 다음 영업일에 지급하기도 하므로 취업 전 확인이 필요합니다. 근로계약서에 명시된 지급일이 우선입니다.</p>
-    <p><strong>2026년 주요 공휴일 (월급날 영향)</strong></p>
-    <p>신정 1/1(수), 설연휴 1/28~30(수~금), 삼일절 3/1(일), 어린이날 5/5(화), 현충일 6/6(토), 광복절 8/15(토), 추석연휴 10/3~7(토~수), 한글날 10/9(금), 성탄절 12/25(금). 25일 월급날이 주말인 달: 3월(일), 8월(토).</p>
-    <p><strong>임금체불 시 대처 방법</strong></p>
-    <p>① 사용자에게 서면으로 지급 요청. ② 관할 고용노동지청에 진정서 제출(무료). ③ 소액체당금 제도: 도산 사업장의 경우 국가가 최대 700만원 대지급. ④ 간이대지급금: 소송 없이 체불 임금의 일부를 먼저 지급받는 제도.</p>
-    <p><strong>월급과 임금의 차이</strong></p>
-    <p>임금은 기본급 + 각종 수당(야근·식대·교통비 등)을 모두 포함합니다. 성과급·상여금도 정기적으로 지급하기로 약정했다면 임금에 해당해 체불 시 법적 보호를 받습니다.</p>
-    <div class="faq-item"><div class="faq-q">Q. 월급날을 변경할 수 있나요?</div><div class="faq-a">근로자 동의 없이 사용자가 임의로 변경할 수 없습니다. 변경 시 근로자 과반수 또는 개별 근로자의 동의가 필요하며, 근로계약서를 재작성해야 합니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 퇴직 시 마지막 월급은 언제 받나요?</div><div class="faq-a">퇴직일로부터 14일 이내에 임금, 퇴직금, 미사용 연차수당을 모두 지급해야 합니다. 14일이 지나도 지급하지 않으면 임금체불로 신고할 수 있습니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 일용직·아르바이트 임금 지급 주기는?</div><div class="faq-a">일용직은 원칙적으로 매일 지급해야 합니다. 단, 주급·월급 형태로 지급한다고 약정했다면 그에 따릅니다. 어떤 경우에도 1개월을 초과해 체불할 수 없습니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 임금체불 신고하면 불이익이 있나요?</div><div class="faq-a">근로기준법은 임금체불 신고를 이유로 한 불이익 처우를 금지합니다. 해고·감봉·불이익 등의 보복 행위는 별도로 처벌받을 수 있습니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 월급 명세서는 꼭 받아야 하나요?</div><div class="faq-a">네. 2021년부터 상시 근로자 1인 이상 사업장은 임금 명세서 교부가 의무입니다. 기본급, 각종 수당, 공제 항목이 모두 기재돼야 하며, 이를 어기면 과태료가 부과됩니다.</div></div>
+  <div class="desc-section">
+    <h2>월급날 계산기가 필요한 순간</h2>
+    <p>매달 급여일이 다가오는 시점을 확인하고 싶을 때, 고정비 결제일과 월급일 사이 간격을 조정해야 할 때, 이직 후 급여일 변경으로 생활비 일정을 다시 짜야 할 때 유용합니다. 단순한 D-Day 계산처럼 보여도 실제 생활비 계획에는 꽤 자주 쓰입니다.</p>
+    <h2>어떻게 활용하면 좋나요?</h2>
+    <p>매월 몇 일에 급여가 들어오는지 기준일을 입력하면 다음 급여일까지 남은 일수와 이번 달 진행 상황을 한눈에 볼 수 있습니다. 월세, 카드 결제일, 적금 이체일이 월급일보다 먼저 오는 구조라면 자금 공백 기간을 미리 파악하는 데 특히 도움이 됩니다.</p>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 1</div>
+      <div class="faq-a">급여일이 매월 25일이라면 26일부터 다음 달 24일까지가 실질적인 한 달 운영 구간이 됩니다. 이 구간 안에서 고정비를 배치하면 현금흐름 관리가 쉬워집니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 2</div>
+      <div class="faq-a">급여일이 말일인 회사라면 공휴일이나 주말로 인해 실제 입금일이 당겨질 수 있습니다. 카드 대금 결제일과 겹치는지 같이 체크해두는 편이 좋습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">상여나 인센티브도 반영되나요?</div>
+      <div class="faq-a">기본 계산은 정기 급여일 기준입니다. 상여금이 분기별이나 반기별로 들어온다면 별도로 일정 관리가 필요합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">왜 진행률이 중요한가요?</div>
+      <div class="faq-a">남은 일수만 보는 것보다 현재 급여 주기의 몇 퍼센트가 지났는지 함께 보면 지출 속도를 조절하기 쉽습니다. 월말 과소비를 막는 데도 도움이 됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">생활비 팁</div>
+      <div class="faq-a">급여일 기준으로 자동이체일을 재정렬하면 카드 연체나 잔액 부족을 줄일 수 있습니다. 월급날 계산기와 함께 대출이자, 적금 계산기를 같이 써보면 월별 고정비 관리가 더 편해집니다.</div>
+    </div>
+    <p><strong>안내:</strong> 이 계산기는 2026년 달력 기준으로 다음 급여일까지 남은 기간을 계산하는 참고용 도구입니다. 실제 입금일은 회사 지급 규정과 공휴일 처리 방식에 따라 달라질 수 있습니다.</p>
   </div>
+
   <div class="related"><h2>관련 계산기</h2><div class="related-grid">
     <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
     <a href="../dday/" class="related-btn">📅 만나이·D-Day</a>

@@ -57,6 +57,9 @@ header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 2
 .faq-item{margin-bottom:14px;}
 .faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
 .faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.desc-section h3{font-size:14px;font-weight:700;margin:18px 0 8px;}
+.desc-section ul{padding-left:18px;margin:0 0 14px;}
+.desc-section li{font-size:13px;color:#555;line-height:1.8;margin-bottom:6px;}
 .related{padding:20px 28px 28px;}
 .related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
@@ -65,6 +68,14 @@ footer{background:#1a1a18;color:rgba(255,255,255,.5);text-align:center;padding:2
 footer strong{color:#fff;}
 @media(max-width:600px){.wrap{padding:16px 12px 40px;}.card-body,.card-hero,.desc-section,.related{padding-left:16px;padding-right:16px;}.field-row{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}}
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49J8CVJW33');
+</script>
 </head>
 <body>
 <header>
@@ -106,18 +117,33 @@ footer strong{color:#fff;}
     </div>
   </div>
   <div class="desc-section">
-    <h2>📌 연차 발생 기준 (근로기준법 제60조)</h2>
-    <p>연차유급휴가는 입사일을 기준으로 계산하는 것이 원칙입니다.</p>
-    <ul style="font-size:13px;color:#555;line-height:2;padding-left:20px;margin-bottom:14px">
-      <li><strong>1년 미만</strong>: 1개월 개근 시 1일 발생 (최대 11일)</li>
-      <li><strong>1년 이상</strong>: 연 15일</li>
-      <li><strong>3년 이상</strong>: 매 2년마다 1일 가산 (최대 25일)</li>
-    </ul>
-    <p>발생한 연차는 발생일로부터 1년 이내에 사용해야 하며, 미사용 시 소멸됩니다. 단, 회사가 연차 사용촉진을 하지 않은 경우 미사용 연차에 대한 수당 지급 의무가 생깁니다.</p>
-    <div class="faq-item"><div class="faq-q">Q. 연차수당은 얼마인가요?</div><div class="faq-a">1일 통상임금 × 미사용 연차일수입니다. 1일 통상임금은 월 통상임금을 해당 월 소정근로일수로 나눈 금액입니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 수습기간도 근속에 포함되나요?</div><div class="faq-a">네. 수습기간도 근속기간에 포함되어 연차가 발생합니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 최대 연차는 며칠인가요?</div><div class="faq-a">근로기준법상 최대 25일입니다. 21년차(근속 20년)부터 25일이 됩니다.</div></div>
+    <h2>연차 계산이 필요한 현실적인 상황</h2>
+    <p>입사 1년 미만이라 매달 생기는 연차를 확인해야 할 때, 1년이 지난 뒤 부여되는 연차가 몇 개인지 헷갈릴 때, 퇴사 전에 남은 연차수당을 계산하고 싶을 때 가장 많이 쓰입니다. 연차는 근속연수와 출근율에 따라 달라져서 단순히 매년 같은 개수로 보는 방식이 맞지 않습니다.</p>
+    <h2>기본 기준</h2>
+    <p>입사 1년 미만 근로자는 보통 1개월 개근 시 1일의 연차가 발생합니다. 1년 이상이 되면 전년도 출근율이 80% 이상일 경우 15일이 기본으로 부여되고, 이후 근속연수에 따라 가산되는 구조가 적용됩니다.</p>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 1</div>
+      <div class="faq-a">2026년 3월 입사자가 2026년 동안 매달 개근했다면 입사 1년 전까지는 월별 발생 연차를 기준으로 사용할 수 있습니다. 이후 1년이 넘는 시점부터는 연간 부여 구조가 적용됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 2</div>
+      <div class="faq-a">입사 3년차 근로자라면 기본 15일에 근속 가산 여부가 붙을 수 있습니다. 다만 실제 사용 가능일수는 이미 사용한 연차와 회사의 회계연도 운영 방식에 따라 달라집니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">입사일 기준과 회계연도 기준은 뭐가 다른가요?</div>
+      <div class="faq-a">법정 원칙은 입사일 기준 계산이지만 회사에 따라 관리 편의를 위해 회계연도 기준으로 운영하기도 합니다. 이 경우 중간 입사자는 첫해 연차 개수가 조정될 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">연차수당은 어떻게 보나요?</div>
+      <div class="faq-a">남은 연차일수에 1일 통상임금 또는 평균임금 기준 금액을 곱해 예상할 수 있습니다. 회사 취업규칙에 따라 산정 방식이 달라질 수 있으니 지급 기준을 꼭 함께 확인해야 합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">주의할 점</div>
+      <div class="faq-a">출근율 80% 기준, 휴직 기간 처리, 회계연도 전환 여부가 연차 결과를 크게 바꿉니다. 퇴사 직전에는 남은 연차와 소멸 예정일을 함께 체크하는 편이 좋습니다.</div>
+    </div>
+    <p><strong>안내:</strong> 이 계산기는 2026년 기준 일반적인 연차 규정을 바탕으로 한 참고용입니다. 실제 부여 방식은 출근율, 회사 운영 기준, 취업규칙에 따라 달라질 수 있습니다.</p>
   </div>
+
   <div class="related"><h2>관련 계산기</h2><div class="related-grid">
     <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
     <a href="../retire/" class="related-btn">📦 퇴직금</a>

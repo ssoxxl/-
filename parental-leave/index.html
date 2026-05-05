@@ -61,6 +61,9 @@ header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 2
 .faq-item{margin-bottom:14px;}
 .faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
 .faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.desc-section h3{font-size:14px;font-weight:700;margin:18px 0 8px;}
+.desc-section ul{padding-left:18px;margin:0 0 14px;}
+.desc-section li{font-size:13px;color:#555;line-height:1.8;margin-bottom:6px;}
 .related{padding:20px 28px 28px;}
 .related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
@@ -69,6 +72,14 @@ footer{background:#1a1a18;color:rgba(255,255,255,.5);text-align:center;padding:2
 footer strong{color:#fff;}
 @media(max-width:600px){.wrap{padding:16px 12px 40px;}.card-body,.card-hero,.desc-section,.related{padding-left:16px;padding-right:16px;}.field-row{grid-template-columns:1fr;}.month-grid{grid-template-columns:repeat(2,1fr);}.related-grid{grid-template-columns:1fr;}}
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49J8CVJW33');
+</script>
 </head>
 <body>
 <header>
@@ -111,18 +122,33 @@ footer strong{color:#fff;}
     </div>
   </div>
   <div class="desc-section">
-    <h2>📌 2026년 육아휴직 급여 기준</h2>
-    <table class="rate-table">
-      <tr><th>기간</th><th>지급률</th><th>상한액</th><th>하한액</th></tr>
-      <tr><td>1~3개월</td><td>통상임금 100%</td><td>월 250만원</td><td>월 70만원</td></tr>
-      <tr><td>4~6개월</td><td>통상임금 80%</td><td>월 200만원</td><td>월 70만원</td></tr>
-      <tr><td>7개월~</td><td>통상임금 80%</td><td>월 160만원</td><td>월 70만원</td></tr>
-    </table>
-    <p><strong>6+6 부모 육아휴직제</strong>: 생후 18개월 이내 자녀에 대해 부모가 동시 또는 순차로 육아휴직 사용 시 첫 6개월을 통상임금 100%로 지원합니다. 상한액은 1개월 250만원, 2개월 250만원, 3개월 300만원, 4개월 350만원, 5개월 400만원, 6개월 450만원으로 순차 인상됩니다.</p>
-    <div class="faq-item"><div class="faq-q">Q. 육아휴직급여 신청은 어떻게 하나요?</div><div class="faq-a">육아휴직 시작 후 1개월부터 신청 가능합니다. 고용24(work.go.kr) 또는 가까운 고용센터에서 신청하세요. 사업주가 발급한 육아휴직 확인서가 필요합니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 2026년부터 사후지급금이 폐지됐나요?</div><div class="faq-a">네. 2026년 1월 1일부터 육아휴직 기간 중 25%를 복직 후 지급하던 사후지급금 제도가 폐지되어 전액 육아휴직 중 지급됩니다.</div></div>
-    <div class="faq-item"><div class="faq-q">Q. 육아휴직 최대 기간은?</div><div class="faq-a">2026년부터 부모 각각 최대 1년 6개월로 확대됐습니다. 단, 급여 지급은 1년이 원칙이며 나머지 6개월은 무급입니다.</div></div>
+    <h2>육아휴직 급여 계산이 필요한 경우</h2>
+    <p>출산 후 육아휴직을 계획하면서 월별 수입 공백을 계산해야 할 때, 맞돌봄 6+6 제도 적용 여부를 따져봐야 할 때, 회사 급여와 고용보험 급여를 구분해서 보고 싶을 때 도움이 됩니다. 육아휴직은 제도 구간과 기간별 상한이 달라서 단순 월급 비례로 보기 어렵습니다.</p>
+    <h2>계산 기준 정리</h2>
+    <p>통상임금 또는 육아휴직 개시 전 임금 수준을 바탕으로 월 지급액을 계산하되, 기간별 상한과 하한이 적용됩니다. 맞돌봄 대상 여부, 개시 시점, 휴직 개월 수에 따라 월별 수령액이 달라질 수 있습니다.</p>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 1</div>
+      <div class="faq-a">통상임금이 높더라도 상한액이 적용되면 월 수령액이 일정 수준에서 제한됩니다. 그래서 고연봉자일수록 체감 대체율이 낮게 느껴질 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">실제 예시 2</div>
+      <div class="faq-a">부부가 순차적으로 육아휴직을 쓰는 경우 특정 기간에는 맞돌봄 제도가 적용되어 월 수령액이 달라질 수 있습니다. 단독 육아휴직과 비교해 기간별 차이를 확인해보는 것이 좋습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">회사 급여와 같은가요?</div>
+      <div class="faq-a">아닙니다. 육아휴직 급여는 고용보험에서 지급되는 제도 급여 기준으로 보는 경우가 일반적입니다. 회사가 별도로 지원금을 얹어주는 경우는 별개입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">언제부터 신청하나요?</div>
+      <div class="faq-a">휴직 개시 전후로 회사 승인 절차와 고용보험 신청 절차를 각각 챙겨야 합니다. 서류 누락이 있으면 첫 지급이 늦어질 수 있어 미리 준비하는 편이 좋습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">생활비 계획 팁</div>
+      <div class="faq-a">월별 상한이 적용되기 때문에 실제 통장 유입액은 휴직 전 월급보다 줄어드는 경우가 많습니다. 고정비와 육아비를 먼저 정리한 뒤 계산기 결과로 현금흐름을 맞춰보면 도움이 됩니다.</div>
+    </div>
+    <p><strong>안내:</strong> 2026년 제도 기준을 바탕으로 한 참고 계산이며, 실제 지급 여부와 지급액은 고용보험 적용 상태, 제도 요건 충족 여부, 신청 시점에 따라 달라질 수 있습니다.</p>
   </div>
+
   <div class="related"><h2>관련 계산기</h2><div class="related-grid">
     <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
     <a href="../unemploy/" class="related-btn">📋 실업급여</a>
