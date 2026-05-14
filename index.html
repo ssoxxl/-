@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>계산왕 — 모든 계산은 여기서 끝</title>
-<meta name="description" content="연봉 실수령액, 퇴직금, 주식 물타기, 청약가점, 양도소득세, 스마트스토어·쿠팡·배민 수수료까지. 직장인·재테크 계산기를 한곳에서.">
+<title>계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드</title>
+<meta name="description" content="연봉 실수령액, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산, 대출이자까지. 직장인 급여·세금·보험 계산기와 실무 가이드를 한곳에서 확인하세요.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="계산왕">
-<meta property="og:title" content="계산왕 — 모든 계산은 여기서 끝">
-<meta property="og:description" content="연봉 실수령액, 퇴직금, 주식 물타기, 청약가점, 양도소득세, 스마트스토어·쿠팡·배민 수수료까지. 모든 계산은 여기서 끝.">
+<meta property="og:title" content="계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드">
+<meta property="og:description" content="계산기만 나열하지 않고, 급여·세금·보험 판단에 필요한 해설 가이드까지 함께 제공합니다.">
 <meta property="og:url" content="https://xn--989av19a47d.com/">
 <meta property="og:image" content="https://xn--989av19a47d.com/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:image" content="https://xn--989av19a47d.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="계산왕 — 모든 계산은 여기서 끝">
-<meta name="twitter:description" content="연봉·퇴직금·주식·부동산·커머스 수수료까지 한번에 계산하세요.">
+<meta name="twitter:title" content="계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드">
+<meta name="twitter:description" content="연봉, 퇴직금, 실업급여, 연차, 건강보험료, 대출이자 계산기와 함께 읽는 실무 가이드를 확인하세요.">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script>
 // 다크모드 깜빡임 방지 - head에서 즉시 실행
@@ -108,6 +108,19 @@ nav{margin-left:auto;display:flex;gap:4px;align-items:center;}
 .scroll-top{position:fixed;bottom:28px;right:24px;width:44px;height:44px;border-radius:12px;background:var(--text);color:var(--bg);border:none;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,.2);}
 .scroll-top.show{opacity:1;transform:translateY(0);}
 .scroll-top:hover{transform:translateY(-2px) !important;}
+.content-shell{max-width:900px;margin:0 auto;padding:0 24px 28px;}
+.focus-note,.guide-strip{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px;}
+.focus-note h2,.guide-strip-head h2{font-size:24px;line-height:1.4;letter-spacing:-.8px;margin-bottom:10px;}
+.focus-note p{font-size:14px;line-height:1.9;color:var(--muted);}
+.focus-lead{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px;}
+.guide-strip-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;margin-bottom:18px;}
+.guide-more{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface2);color:var(--text);text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap;}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.guide-card{display:block;padding:18px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface2);text-decoration:none;color:var(--text);transition:all .2s;}
+.guide-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+.guide-tag{display:inline-block;padding:4px 8px;border-radius:999px;background:var(--accent-light);color:var(--accent);font-size:11px;font-weight:700;margin-bottom:8px;}
+.guide-card strong{display:block;font-size:15px;line-height:1.6;margin-bottom:6px;}
+.guide-card span:last-child{display:block;font-size:12px;color:var(--muted);line-height:1.7;}
 footer{background:#1a1a18;color:rgba(255,255,255,.5);text-align:center;padding:28px 24px;font-size:12px;line-height:1.8;}
 footer strong{color:#fff;}
 .footer-share{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
@@ -115,6 +128,11 @@ footer strong{color:#fff;}
 .share-btn:hover{background:rgba(255,255,255,.1);color:#fff;}
 @media(max-width:600px){
   .calc-grid{grid-template-columns:1fr;padding:0 16px 80px;}
+  .content-shell{padding:0 16px 24px;}
+  .guide-grid{grid-template-columns:1fr;}
+  .guide-strip-head{display:block;}
+  .guide-strip-head h2,.focus-note h2{font-size:20px;}
+  .guide-more{margin-top:10px;}
   nav .nav-btn{display:none;}
   .hero{padding:32px 16px 24px;}
   .logo-sub{display:none;}
@@ -152,20 +170,69 @@ footer strong{color:#fff;}
 </header>
 
 <section class="hero">
-  <h1>모든 계산은 계산왕에서 <span class="end">끝</span></h1>
-  <p class="subcopy">1초 만에 확인하는 연봉, 주식, 부동산의 모든 수치</p>
+  <h1>직장인 돈 계산은 <span class="end">계산왕</span>에서 끝</h1>
+  <p class="subcopy">연봉, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산처럼 실제 생활에 바로 닿는 계산기와 해설 가이드를 함께 제공합니다.</p>
   <div class="popular-tags">
-    <span class="popular-label">많이 찾는:</span>
+    <span class="popular-label">많이 찾는 계산:</span>
     <a class="popular-tag" href="salary/">연봉 실수령액</a>
-    <a class="popular-tag" href="salary-rank/">연봉 순위</a>
-    <a class="popular-tag" href="stock/">주식 물타기</a>
-    <a class="popular-tag" href="yearend/">연말정산</a>
     <a class="popular-tag" href="retire/">퇴직금</a>
-    <a class="popular-tag" href="lotto/">로또 <span class="tag-dot"></span></a>
+    <a class="popular-tag" href="unemploy/">실업급여</a>
+    <a class="popular-tag" href="annual-leave/">연차</a>
+    <a class="popular-tag" href="health-insurance/">건강보험료</a>
+    <a class="popular-tag" href="guides/"><span class="tag-dot"></span> 해설 가이드</a>
   </div>
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="계산기 검색... (예: 물타기, 연봉)" oninput="searchCalc()">
-    <button>🔍</button>
+    <input type="text" id="searchInput" placeholder="계산기 검색... (예: 퇴직금, 연봉, 건강보험료)" oninput="searchCalc()">
+    <button>검색</button>
+  </div>
+</section>
+
+<section class="content-shell">
+  <div class="focus-note">
+    <div class="focus-lead">직장인 · 세금 · 보험 중심</div>
+    <h2>계산 결과만 보여주지 않고, 왜 이런 숫자가 나오는지도 같이 설명해요.</h2>
+    <p>계산왕은 연봉 실수령액, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산처럼 직장인이 자주 찾는 계산을 중심으로 운영합니다. 각 계산기 아래에는 실제 사례와 계산 기준을 정리했고, 별도 가이드 문서에서는 회사별로 결과가 달라지는 이유, 실무에서 헷갈리는 포인트, 공식 기준을 함께 설명합니다.</p>
+  </div>
+  <div class="guide-strip">
+    <div class="guide-strip-head">
+      <div>
+        <div class="focus-lead">해설 가이드</div>
+        <h2>광고를 붙이기 위한 얇은 문구 대신, 실제 판단에 필요한 글을 따로 정리했습니다.</h2>
+      </div>
+      <a href="guides/" class="guide-more">가이드 전체 보기</a>
+    </div>
+    <div class="guide-grid">
+      <a href="guides/salary-negotiation/" class="guide-card">
+        <span class="guide-tag">급여</span>
+        <strong>연봉 협상할 때 세전보다 실수령액을 먼저 봐야 하는 이유</strong>
+        <span>비과세 식대, 가족 수, 공제 차이까지 함께 읽는 기본 가이드</span>
+      </a>
+      <a href="guides/severance-average-wage/" class="guide-card">
+        <span class="guide-tag">퇴직금</span>
+        <strong>퇴직금 계산에서 평균임금에 포함되는 항목은 무엇인가요?</strong>
+        <span>상여금, 연차수당, 통상임금 비교가 왜 중요한지 정리했습니다.</span>
+      </a>
+      <a href="guides/unemployment-eligibility/" class="guide-card">
+        <span class="guide-tag">실업급여</span>
+        <strong>자진퇴사인데도 실업급여를 받을 수 있는 예외가 있나요?</strong>
+        <span>수급 조건과 퇴사 전 확인할 서류를 중심으로 정리했습니다.</span>
+      </a>
+      <a href="guides/annual-leave-rules/" class="guide-card">
+        <span class="guide-tag">연차</span>
+        <strong>입사 첫해 연차와 회계연도 기준 연차는 어떻게 다른가요?</strong>
+        <span>월차, 1년 차 연차, 수당 정산까지 실제 회사에서 자주 꼬이는 부분을 다룹니다.</span>
+      </a>
+      <a href="guides/health-insurance-paycheck/" class="guide-card">
+        <span class="guide-tag">보험</span>
+        <strong>건강보험료가 오르면 실수령액은 얼마나 줄어드나요?</strong>
+        <span>급여명세서를 볼 때 같이 확인해야 할 공제 구조를 설명합니다.</span>
+      </a>
+      <a href="guides/loan-repayment-methods/" class="guide-card">
+        <span class="guide-tag">대출</span>
+        <strong>원리금균등, 원금균등, 만기일시상환은 어떻게 다를까요?</strong>
+        <span>금리보다 월 상환 구조를 먼저 봐야 하는 이유를 사례와 함께 정리했습니다.</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -246,10 +313,6 @@ footer strong{color:#fff;}
     <div class="card-inner"><div class="card-icon">🏧</div><span class="card-tag">재테크</span><div class="card-title">대출 이자 계산기</div><div class="card-desc">대출금액·금리·기간으로 월 상환액 계산</div><span class="card-arrow">→</span></div>
   </a>
 
-  <a href="coffee-savings/" class="calc-card t-orange" data-category="재테크" data-name="커피값 절약 계산기">
-    <div class="card-inner"><div class="card-icon">☕</div><span class="card-tag">재테크</span><div class="card-title">커피값 절약 계산기</div><div class="card-desc">매일 한 잔 아끼면 10년 후 얼마?</div><span class="card-arrow">→</span></div>
-  </a>
-
   <div class="section-divider"><span>🛒 커머스 · N잡러</span></div>
   <a href="freelancer/" class="calc-card t-indigo" data-category="커머스" data-name="프리랜서 세금 계산기">
     <div class="card-inner"><div class="card-icon">💻</div><span class="card-tag" style="background:#eef2ff;color:#4338ca">N잡러</span><div class="card-title">프리랜서 3.3% 세금 계산기</div><div class="card-desc">원천징수 실수령액·종합소득세 계산</div><span class="card-arrow">→</span></div>
@@ -263,28 +326,12 @@ footer strong{color:#fff;}
   <a href="baemin/" class="calc-card" data-category="커머스" data-name="배달의민족 수수료 계산기" style="border:1.5px solid var(--border);">
     <div class="card-inner"><div class="card-icon">🍔</div><span class="card-tag" style="background:#e0f7fa;color:#007c8a">커머스</span><div class="card-title">배달의민족 수수료 계산기</div><div class="card-desc">배민1플러스·가게배달·포장주문 수수료</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="youtube/" class="calc-card" data-category="커머스" data-name="유튜브 수익 계산기" style="border:1.5px solid var(--border);">
-    <div class="card-inner"><div class="card-icon">▶️</div><span class="card-tag" style="background:#fff1f2;color:#dc2626">N잡러</span><div class="card-title">유튜브 수익 계산기</div><div class="card-desc">조회수·CPM으로 예상 광고 수익 계산</div><span class="card-arrow">→</span></div>
-  </a>
-
   <div class="section-divider"><span>🌿 생활</span></div>
   <a href="halbu/" class="calc-card t-pink" data-category="생활" data-name="카드 할부이자 계산기">
     <div class="card-inner"><div class="card-icon">💳</div><span class="card-tag">생활</span><div class="card-title">카드 할부이자 계산기</div><div class="card-desc">할부 개월수별 실제 이자·월 납부액 계산</div><span class="card-arrow">→</span></div>
   </a>
   <a href="cartax/" class="calc-card t-orange" data-category="생활" data-name="자동차 취득세 계산기">
     <div class="card-inner"><div class="card-icon">🚗</div><span class="card-tag">생활</span><div class="card-title">자동차 취득세 계산기</div><div class="card-desc">차종·용도별 취득세·공채 매입금액 계산</div><span class="card-arrow">→</span></div>
-  </a>
-  <a href="bmi/" class="calc-card t-teal" data-category="생활" data-name="BMI 체질량지수 계산기">
-    <div class="card-inner"><div class="card-icon">⚖️</div><span class="card-tag">생활</span><div class="card-title">BMI 체질량지수 계산기</div><div class="card-desc">키·몸무게로 비만도 측정 및 정상 체중 확인</div><span class="card-arrow">→</span></div>
-  </a>
-  <a href="bmr/" class="calc-card t-orange" data-category="생활" data-name="기초대사량 계산기">
-    <div class="card-inner"><div class="card-icon">🔥</div><span class="card-tag">생활</span><div class="card-title">기초대사량 계산기</div><div class="card-desc">하루 필요 칼로리·다이어트 목표 칼로리 계산</div><span class="card-arrow">→</span></div>
-  </a>
-  <a href="dday/" class="calc-card t-purple" data-category="생활" data-name="만나이 D-Day 계산기">
-    <div class="card-inner"><div class="card-icon">📅</div><span class="card-tag">생활</span><div class="card-title">만나이 · D-Day 계산기</div><div class="card-desc">만나이·한국나이·D-Day 날짜 계산</div><span class="card-arrow">→</span></div>
-  </a>
-  <a href="ovulation/" class="calc-card t-pink" data-category="생활" data-name="배란일 임신주수 계산기">
-    <div class="card-inner"><div class="card-icon">🌸</div><span class="card-tag">생활</span><div class="card-title">배란일·임신주수 계산기</div><div class="card-desc">가임기·출산예정일·임신주수 계산</div><span class="card-arrow">→</span></div>
   </a>
   <a href="electricity/" class="calc-card t-orange" data-category="생활" data-name="전기세 계산기">
     <div class="card-inner"><div class="card-icon">⚡</div><span class="card-tag">생활</span><div class="card-title">전기세 계산기</div><div class="card-desc">한전 누진제 기준 전기요금 계산</div><span class="card-arrow">→</span></div>
@@ -295,11 +342,7 @@ footer strong{color:#fff;}
   <a href="vat/" class="calc-card t-blue" data-category="생활" data-name="부가세 계산기">
     <div class="card-inner"><div class="card-icon">🧾</div><span class="card-tag">세금</span><div class="card-title">부가세 계산기</div><div class="card-desc">공급가액↔부가세 포함금액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="lotto/" class="calc-card" data-category="생활" data-name="로또 번호 생성기" style="border:1.5px solid var(--border);">
-    <div class="card-inner"><div class="card-icon">🍀</div><span class="card-tag" style="background:#fffbeb;color:#d97706">생활</span><div class="card-title">로또 번호 생성기</div><div class="card-desc">이번 주 행운의 번호 랜덤 생성</div><span class="card-arrow">→</span></div>
-  </a>
-
-</div>
+  </div>
 
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
