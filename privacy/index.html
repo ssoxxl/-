@@ -136,6 +136,23 @@ body{transition:background .3s,color .3s;}
   </div>
 </div>
 
-<footer><strong>계산왕</strong> — 모든 계산은 여기서 끝</footer>
+<footer><strong>계산왕</strong> — 모든 계산은 여기서 끝<br><span style="display:block;margin-top:6px"><a href="/about/" style="color:rgba(255,255,255,.45);text-decoration:none;margin:0 8px">소개</a><a href="/contact/" style="color:rgba(255,255,255,.45);text-decoration:none;margin:0 8px">문의</a><a href="/editorial-policy/" style="color:rgba(255,255,255,.45);text-decoration:none;margin:0 8px">편집 원칙</a><a href="/sources/" style="color:rgba(255,255,255,.45);text-decoration:none;margin:0 8px">출처</a></span></footer>
+<script>
+function toggleDark(){
+  var d=document.documentElement;
+  var isDark=d.getAttribute('data-theme')==='dark';
+  d.setAttribute('data-theme',isDark?'light':'dark');
+  document.getElementById('darkToggle').textContent=isDark?'🌙':'☀️';
+  localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');
+}
+(function(){
+  var saved=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  document.documentElement.setAttribute('data-theme',saved);
+  document.addEventListener('DOMContentLoaded',function(){
+    var btn=document.getElementById('darkToggle');
+    if(btn)btn.textContent=saved==='dark'?'☀️':'🌙';
+  });
+})();
+</script>
 </body>
 </html>
