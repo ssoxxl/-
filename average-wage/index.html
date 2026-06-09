@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>평균임금 계산기 2026 - 퇴직금·휴업수당 기준 계산 | 계산왕</title>
+<meta name="description" content="2026년 평균임금 계산기. 사유 발생일 직전 3개월 임금총액과 제외일수, 통상임금 비교까지 반영해서 평균임금을 계산해요.">
+<link rel="canonical" href="https://calc.ssoxxl.com/average-wage/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="계산왕">
+<meta property="og:title" content="평균임금 계산기 2026 - 퇴직금·휴업수당 기준 계산 | 계산왕">
+<meta property="og:description" content="사유 발생일 직전 3개월 임금총액과 제외일수, 통상임금 비교까지 반영해서 평균임금을 계산해요.">
+<meta property="og:url" content="https://calc.ssoxxl.com/average-wage/">
+<meta property="og:image" content="https://calc.ssoxxl.com/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://calc.ssoxxl.com/og-image.svg">
+<meta name="daumoa-verification" content="52638bd43577858cdf80a388c3bf173be6b9be4914b8bde1a3b347cf6786f5b4:Xj5dg0WfAX454QfLeg8nBA==">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<script>
+(function(){
+  var s=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  document.documentElement.setAttribute('data-theme',s);
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f2;--surface:#fff;--surface2:#f0efe9;--border:#e2e0d8;--text:#1a1a18;--muted:#888880;--blue:#2563eb;--blue-light:#eff6ff;--green:#16a34a;--red:#dc2626;}
+[data-theme="dark"]{--bg:#0f0f14;--surface:#1a1a24;--surface2:#222230;--border:rgba(255,255,255,0.08);--text:#e8e8f0;--muted:#6b6b80;--blue-light:rgba(37,99,235,0.15);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;transition:background .3s,color .3s;}
+header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 24px;height:56px;display:flex;align-items:center;position:sticky;top:0;z-index:100;}
+.logo{font-size:18px;font-weight:900;display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text);}
+.logo-badge{background:#0a0a0f;color:#FFD700;font-family:'Courier New',monospace;border:1px solid #D4A017;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.back-btn{margin-left:auto;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:inherit;font-size:13px;text-decoration:none;}
+.dark-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;margin-left:8px;}
+.wrap{max-width:780px;margin:0 auto;padding:40px 24px 60px;}
+.calc-card{background:var(--surface);border:2px solid var(--border);border-radius:14px;overflow:hidden;}
+.card-hero{padding:28px 28px 20px;border-bottom:1px solid var(--border);}
+.card-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;margin-bottom:10px;background:var(--blue-light);color:var(--blue);}
+.card-hero h1{font-size:24px;font-weight:900;margin-bottom:6px;}
+.card-hero p{font-size:14px;color:var(--muted);line-height:1.7;}
+.card-body{padding:24px 28px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
+.field input{width:100%;padding:11px 14px;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit;outline:none;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.field-row.three{grid-template-columns:repeat(3,1fr);}
+.tip{font-size:11px;color:var(--muted);line-height:1.7;margin-top:4px;}
+.btn-calc{width:100%;padding:13px;border:none;border-radius:9px;background:var(--blue);color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;}
+.result-box{margin-top:16px;padding:20px;border-radius:10px;border:1.5px solid var(--blue);background:var(--blue-light);display:none;}
+.result-box.show{display:block;}
+.result-label{font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:8px;color:var(--blue);}
+.result-main{font-size:32px;font-weight:900;margin-bottom:8px;color:var(--blue);}
+.result-row{display:flex;justify-content:space-between;gap:16px;font-size:13px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06);}
+.result-row:last-child{border:none;}
+.result-row strong{text-align:right;}
+.desc-section{padding:24px 28px;border-top:1px solid var(--border);background:var(--surface2);}
+.desc-section h2{font-size:15px;font-weight:700;margin-bottom:12px;}
+.desc-section h3{font-size:14px;font-weight:700;margin:18px 0 8px;}
+.desc-section p{font-size:13px;color:#555;line-height:1.8;margin-bottom:14px;}
+.desc-section ul{padding-left:18px;margin:0 0 14px;}
+.desc-section li{font-size:13px;color:#555;line-height:1.8;margin-bottom:6px;}
+.faq-item{margin-bottom:14px;}
+.faq-q{font-size:13px;font-weight:700;margin-bottom:4px;}
+.faq-a{font-size:13px;color:#555;line-height:1.7;padding-left:12px;border-left:2px solid var(--border);}
+.related{padding:20px 28px 28px;}
+.related h2{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--muted);}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.related-btn{padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:13px;font-weight:600;text-decoration:none;display:block;text-align:center;}
+footer{background:#1a1a18;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:12px;line-height:1.8;}
+footer strong{color:#fff;}
+@media(max-width:600px){.wrap{padding:16px 12px 40px;}.card-body,.card-hero,.desc-section,.related{padding-left:16px;padding-right:16px;}.field-row,.field-row.three,.related-grid{grid-template-columns:1fr;}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49J8CVJW33');
+</script>
+</head>
+<body>
+<header>
+  <a href="../" class="logo"><span>계산왕</span><span class="logo-badge">王</span></a>
+  <a href="../" class="back-btn">← 전체 계산기</a>
+  <button onclick="toggleDark()" id="darkToggle" class="dark-btn">🌙</button>
+</header>
+<div class="wrap"><div class="calc-card">
+  <div class="card-hero">
+    <span class="card-tag">직장인</span>
+    <h1>평균임금 계산기 📘</h1>
+    <p>사유 발생일 직전 3개월 임금총액으로 1일 평균임금을 계산해요. 퇴직금처럼 통상임금과 비교가 필요한 경우도 같이 볼 수 있게 만들었어요. 2026년 기준이에요.</p>
+  </div>
+  <div class="card-body">
+    <div class="field">
+      <label>사유 발생일</label>
+      <input type="date" id="eventDate">
+      <div class="tip">퇴직금이면 보통 퇴직일 다음 날을 넣고 계산 범위를 확인해요.</div>
+    </div>
+    <div class="field-row three">
+      <div class="field">
+        <label>직전 1개월 임금총액</label>
+        <input type="number" id="month1" placeholder="3,200,000">
+      </div>
+      <div class="field">
+        <label>직전 2개월 임금총액</label>
+        <input type="number" id="month2" placeholder="3,200,000">
+      </div>
+      <div class="field">
+        <label>직전 3개월 임금총액</label>
+        <input type="number" id="month3" placeholder="3,200,000">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>연간 정기상여금 총액</label>
+        <input type="number" id="bonus" value="0" placeholder="0">
+      </div>
+      <div class="field">
+        <label>연차수당 합계</label>
+        <input type="number" id="leavePay" value="0" placeholder="0">
+      </div>
+    </div>
+    <div class="tip">퇴직금 참고용으로는 고용노동부 노동포털처럼 연간 정기상여금과 연차수당의 3/12를 반영해 볼 수 있어요.</div>
+    <div class="field-row">
+      <div class="field">
+        <label>평균임금 제외일수</label>
+        <input type="number" id="excludedDays" value="0" placeholder="0">
+      </div>
+      <div class="field">
+        <label>제외되는 임금총액</label>
+        <input type="number" id="excludedWages" value="0" placeholder="0">
+      </div>
+    </div>
+    <div class="field">
+      <label>비교용 1일 통상임금</label>
+      <input type="number" id="ordinaryDaily" value="0" placeholder="선택 입력">
+      <div class="tip">퇴직금처럼 평균임금이 통상임금보다 낮으면 통상임금이 적용되는 경우에 참고하려고 넣는 칸이에요.</div>
+    </div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
+    <div class="result-box" id="result">
+      <div class="result-label">1일 평균임금</div>
+      <div class="result-main" id="main"></div>
+      <div id="detail"></div>
+    </div>
+  </div>
+  <div class="desc-section">
+    <h2>📘 평균임금은 퇴직금에서 자주 만나게 돼요</h2>
+    <p>평균임금은 이름은 쉬워 보여도 막상 계산하려면 꽤 헷갈려요. 퇴직 직전 3개월 급여만 보면 될 것 같지만, 제외기간이 있거나 상여금과 연차수당을 어떻게 반영하는지에 따라 숫자가 달라질 수 있거든요.</p>
+    <p>그래서 그냥 최근 월급 세 장만 더하는 방식으로 끝내면 놓치는 게 생길 수 있어요. 퇴직, 휴업, 산재처럼 평균임금이 기준이 되는 경우에는 더 조심해서 봐야 해요.</p>
+    <h2>🧮 계산할 때 꼭 같이 봐야 하는 기준</h2>
+    <p>근로기준법은 사유 발생일 이전 3개월 동안 지급된 임금총액을 그 기간 총일수로 나누도록 정하고 있어요. 다만 시행령은 수습기간, 휴업기간, 출산전후휴가, 육아휴직처럼 제외해야 하는 기간도 따로 두고 있어요.</p>
+    <p>퇴직금 계산에서는 평균임금이 통상임금보다 낮으면 통상임금을 적용하는 비교도 자주 해요. 그래서 평균임금 계산만큼 통상임금 숫자도 같이 보는 게 실무에서는 더 안전해요.</p>
+    <h3>예외로 꼭 같이 봐야 하는 경우</h3>
+    <ul>
+      <li>직전 3개월 안에 육아휴직, 출산전후휴가, 회사 귀책 휴업이 있었다면 제외일수와 제외임금을 같이 조정해야 해요.</li>
+      <li>퇴직금 계산에서는 정기상여금과 연차수당을 고용노동부 노동포털 방식으로 안분해 반영하는지 확인해 보는 게 좋아요.</li>
+      <li>최근 3개월 임금이 우연히 많이 줄었으면 평균임금보다 통상임금이 더 높을 수 있어요.</li>
+    </ul>
+    <h3>공식 기준은 여기서 확인해요</h3>
+    <p>근로기준법 제2조는 평균임금을 사유 발생일 이전 3개월 임금총액을 총일수로 나눈 금액으로 설명해요. 근로기준법 시행령 제2조는 평균임금 계산에서 제외되는 기간과 임금을 따로 정하고 있어요. 고용노동부 노동포털 퇴직금 계산기도 연간 상여금과 연차수당 안분 입력 구조를 함께 안내하고 있어요.</p>
+    <div class="faq-item">
+      <div class="faq-q">평균임금은 최근 월급 3개월만 더하면 끝인가요?</div>
+      <div class="faq-a">기본 구조는 맞지만, 제외기간과 제외임금이 있으면 그대로 쓰면 안 돼요. 휴직이나 휴가가 끼어 있었는지 먼저 봐야 해요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">정기상여금은 왜 3/12만 넣나요?</div>
+      <div class="faq-a">퇴직금 참고 계산에서는 연 단위로 받는 금액 중 최근 3개월에 해당하는 몫만 반영해 보려는 거예요. 고용노동부 노동포털 퇴직금 계산기 방식도 이 흐름을 따르고 있어요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">연차수당도 무조건 포함되나요?</div>
+      <div class="faq-a">그냥 다 들어가는 건 아니에요. 어떤 연차수당인지, 언제 발생했고 어떤 계산에 쓰는지에 따라 달라져요. 그래서 입력 전에 성격을 확인하는 게 좋아요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">평균임금이 통상임금보다 낮으면 어떻게 되나요?</div>
+      <div class="faq-a">퇴직금처럼 법에서 통상임금 하한을 같이 보는 경우에는 통상임금을 적용할 수 있어요. 그래서 비교용 통상임금을 같이 넣어 보도록 해뒀어요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">사유 발생일은 퇴직일이랑 같은 날인가요?</div>
+      <div class="faq-a">퇴직금 계산에서는 보통 퇴직일 다음 날을 기준으로 보는 경우가 많아요. 회사 실무나 사건 종류에 따라 기준일 표현이 다를 수 있으니 입력 전에 한 번 더 확인해 주세요.</div>
+    </div>
+    <p><strong>참고해 주세요.</strong> 이 계산은 2026년 기준 일반적인 평균임금 산정 구조를 바탕으로 한 참고용 결과예요. 실제 적용은 발생 사유, 제외기간, 수당 성격에 따라 달라질 수 있어요.</p>
+  </div>
+
+  <div class="related">
+    <h2>함께 읽으면 좋은 가이드</h2>
+    <div class="related-grid">
+      <a href="../guides/retirement-pay/" class="related-btn">📘 퇴직금 평균임금 포함 항목</a>
+      <a href="../sources/" class="related-btn">🔎 기준 출처 모아보기</a>
+    </div>
+  </div>
+
+  <div class="trust-box" style="padding:0 28px 20px;">
+    <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;">
+      <h2 style="font-size:14px;font-weight:800;margin-bottom:10px;">이 계산의 기준과 참고 링크</h2>
+      <p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">기준 출처: 국가법령정보센터 근로기준법 제2조, 근로기준법 시행령 제2조, 고용노동부 노동포털 퇴직금 계산 안내</p>
+      <p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">관련 계산기: <a href="../ordinary-wage/" style="color:var(--text);font-weight:700;text-decoration:none;">통상임금 계산기</a>, <a href="../retire/" style="color:var(--text);font-weight:700;text-decoration:none;">퇴직금 계산기</a>, <a href="../inclusive-wage/" style="color:var(--text);font-weight:700;text-decoration:none;">포괄임금 계산기</a></p>
+      <p style="font-size:13px;line-height:1.8;color:var(--muted);margin:0;">운영 정보: <a href="../editorial-policy/" style="color:var(--text);font-weight:700;text-decoration:none;">편집 원칙</a> · <a href="../sources/" style="color:var(--text);font-weight:700;text-decoration:none;">주요 참고 출처</a></p>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>관련 계산기</h2>
+    <div class="related-grid">
+      <a href="../retire/" class="related-btn">📦 퇴직금 계산기</a>
+      <a href="../ordinary-wage/" class="related-btn">⏱️ 통상임금 계산기</a>
+      <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
+      <a href="../annual-leave/" class="related-btn">📅 연차 계산기</a>
+    </div>
+  </div>
+</div></div>
+<footer><strong>계산왕</strong> — 모든 계산은 여기서 끝<br><span style="margin-top:6px;display:block">본 계산기는 참고용이며 실제 평균임금 적용은 발생 사유와 제외기간에 따라 달라질 수 있습니다.</span></footer>
+<script>
+function comma(n){return Math.round(n).toLocaleString('ko-KR');}
+function won(n){return comma(n)+'원';}
+function daysBetween(a,b){return Math.round((a-b)/(1000*60*60*24));}
+function subtractMonths(date, months){
+  const day=date.getDate();
+  const target=new Date(date.getFullYear(), date.getMonth()-months, 1);
+  const lastDay=new Date(target.getFullYear(), target.getMonth()+1, 0).getDate();
+  target.setDate(Math.min(day,lastDay));
+  return target;
+}
+function calc(){
+  const eventValue=document.getElementById('eventDate').value;
+  const month1Value=document.getElementById('month1').value;
+  const month2Value=document.getElementById('month2').value;
+  const month3Value=document.getElementById('month3').value;
+  const month1=+month1Value;
+  const month2=+month2Value;
+  const month3=+month3Value;
+  const bonus=+document.getElementById('bonus').value||0;
+  const leavePay=+document.getElementById('leavePay').value||0;
+  const excludedDays=+document.getElementById('excludedDays').value||0;
+  const excludedWages=+document.getElementById('excludedWages').value||0;
+  const ordinaryDaily=+document.getElementById('ordinaryDaily').value||0;
+  if(!eventValue||month1Value===''||month2Value===''||month3Value===''){alert('사유 발생일과 3개월 임금총액을 입력해주세요.');return;}
+  if([month1,month2,month3,bonus,leavePay,excludedDays,excludedWages,ordinaryDaily].some(v=>Number.isNaN(v)||v<0)){alert('음수 없이 숫자로 입력해주세요.');return;}
+  const eventDate=new Date(eventValue);
+  const startDate=subtractMonths(eventDate,3);
+  const periodDays=daysBetween(eventDate,startDate);
+  const adjustedDays=periodDays-excludedDays;
+  if(adjustedDays<=0){alert('제외일수가 전체 계산기간보다 크면 안 돼요.');return;}
+  const baseTotal=month1+month2+month3;
+  const proratedBonus=bonus*0.25;
+  const proratedLeave=leavePay*0.25;
+  const adjustedTotal=baseTotal+proratedBonus+proratedLeave-excludedWages;
+  if(adjustedTotal<0){alert('조정 후 임금총액이 0보다 작게 계산돼요. 입력값을 다시 확인해주세요.');return;}
+  const avgDaily=adjustedTotal/adjustedDays;
+  const applied=Math.max(avgDaily,ordinaryDaily);
+  const appliedLabel=ordinaryDaily>avgDaily?'통상임금 비교 적용':'평균임금 적용';
+  document.getElementById('main').textContent=won(avgDaily);
+  document.getElementById('detail').innerHTML='' +
+    `<div class="result-row"><span>산정기간</span><strong>${startDate.toLocaleDateString('ko-KR')} ~ ${new Date(eventDate.getTime()-86400000).toLocaleDateString('ko-KR')}</strong></div>` +
+    `<div class="result-row"><span>기본 3개월 임금총액</span><strong>${won(baseTotal)}</strong></div>` +
+    `<div class="result-row"><span>정기상여금 3/12 반영</span><strong>${won(proratedBonus)}</strong></div>` +
+    `<div class="result-row"><span>연차수당 3/12 반영</span><strong>${won(proratedLeave)}</strong></div>` +
+    `<div class="result-row"><span>제외임금 차감</span><strong>${won(excludedWages)}</strong></div>` +
+    `<div class="result-row"><span>조정 후 임금총액</span><strong>${won(adjustedTotal)}</strong></div>` +
+    `<div class="result-row"><span>기본 총일수</span><strong>${periodDays}일</strong></div>` +
+    `<div class="result-row"><span>제외일수</span><strong>${excludedDays}일</strong></div>` +
+    `<div class="result-row"><span>조정 후 총일수</span><strong>${adjustedDays}일</strong></div>` +
+    `<div class="result-row"><span>1일 평균임금</span><strong>${won(avgDaily)}</strong></div>` +
+    (ordinaryDaily?`<div class="result-row"><span>비교용 1일 통상임금</span><strong>${won(ordinaryDaily)}</strong></div>`:'') +
+    `<div class="result-row"><span>실무 참고 적용값</span><strong>${won(applied)} (${appliedLabel})</strong></div>`;
+  document.getElementById('result').classList.add('show');
+}
+function toggleDark(){
+  const root=document.documentElement;
+  const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',next);
+  localStorage.setItem('gyesanwang_theme',next);
+  document.getElementById('darkToggle').textContent=next==='dark'?'☀️':'🌙';
+}
+(function(){
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  document.getElementById('darkToggle').textContent=isDark?'☀️':'🌙';
+  const tomorrow=new Date();
+  tomorrow.setDate(tomorrow.getDate()+1);
+  document.getElementById('eventDate').value=tomorrow.toISOString().split('T')[0];
+})();
+</script>
+</body>
+</html>
