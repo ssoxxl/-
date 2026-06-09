@@ -1,26 +1,26 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>怨꾩궛????吏곸옣??湲됱뿬쨌?멸툑쨌蹂댄뿕 怨꾩궛湲곗? ?댁꽕 媛?대뱶</title>
-<meta name="description" content="?곕큺 ?ㅼ닔?뱀븸, ?댁쭅湲? ?ㅼ뾽湲됱뿬, ?곗감, 嫄닿컯蹂댄뿕猷? ?곕쭚?뺤궛, ?異쒖씠?먭퉴吏. 吏곸옣??湲됱뿬쨌?멸툑쨌蹂댄뿕 怨꾩궛湲곗? ?ㅻТ 媛?대뱶瑜??쒓납?먯꽌 ?뺤씤?섏꽭??">
+<title>계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드</title>
+<meta name="description" content="연봉 실수령액, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산, 대출이자까지. 직장인 급여·세금·보험 계산기와 실무 가이드를 한곳에서 확인하세요.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="怨꾩궛??>
-<meta property="og:title" content="怨꾩궛????吏곸옣??湲됱뿬쨌?멸툑쨌蹂댄뿕 怨꾩궛湲곗? ?댁꽕 媛?대뱶">
-<meta property="og:description" content="怨꾩궛湲곕쭔 ?섏뿴?섏? ?딄퀬, 湲됱뿬쨌?멸툑쨌蹂댄뿕 ?먮떒???꾩슂???댁꽕 媛?대뱶源뚯? ?④퍡 ?쒓났?⑸땲??">
+<meta property="og:site_name" content="계산왕">
+<meta property="og:title" content="계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드">
+<meta property="og:description" content="계산기만 나열하지 않고, 급여·세금·보험 판단에 필요한 해설 가이드까지 함께 제공합니다.">
 <meta property="og:url" content="https://calc.ssoxxl.com/">
 <meta property="og:image" content="https://calc.ssoxxl.com/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:image" content="https://calc.ssoxxl.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="怨꾩궛????吏곸옣??湲됱뿬쨌?멸툑쨌蹂댄뿕 怨꾩궛湲곗? ?댁꽕 媛?대뱶">
-<meta name="twitter:description" content="?곕큺, ?댁쭅湲? ?ㅼ뾽湲됱뿬, ?곗감, 嫄닿컯蹂댄뿕猷? ?異쒖씠??怨꾩궛湲곗? ?④퍡 ?쎈뒗 ?ㅻТ 媛?대뱶瑜??뺤씤?섏꽭??">
+<meta name="twitter:title" content="계산왕 — 직장인 급여·세금·보험 계산기와 해설 가이드">
+<meta name="twitter:description" content="연봉, 퇴직금, 실업급여, 연차, 건강보험료, 대출이자 계산기와 함께 읽는 실무 가이드를 확인하세요.">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script>
-// ?ㅽ겕紐⑤뱶 源쒕묀??諛⑹? - head?먯꽌 利됱떆 ?ㅽ뻾
+// 다크모드 깜빡임 방지 - head에서 즉시 실행
 (function(){
   const saved=localStorage.getItem('gyesanwang_theme')||
     (window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
@@ -179,53 +179,53 @@ footer strong{color:#fff;}
 
 <header>
   <div class="logo">
-    <span>怨꾩궛??/span>
-    <span class="logo-badge" style="background:#0a0a0f;color:#FFD700;font-family:'Courier New',monospace;border:1px solid #D4A017;">??/span>
-    <span class="logo-sub">紐⑤뱺 怨꾩궛? ?ш린????/span>
+    <span>계산왕</span>
+    <span class="logo-badge" style="background:#0a0a0f;color:#FFD700;font-family:'Courier New',monospace;border:1px solid #D4A017;">王</span>
+    <span class="logo-sub">모든 계산은 여기서 끝</span>
   </div>
   <nav>
-    <button class="nav-btn on" onclick="filterCalc('all',this)">?꾩껜</button>
-    <button class="nav-btn" onclick="filterCalc('吏곸옣??,this)">吏곸옣??/button>
-    <button class="nav-btn" onclick="filterCalc('遺?숈궛',this)">遺?숈궛</button>
-    <button class="nav-btn" onclick="filterCalc('?ы뀒??,this)">?ы뀒??/button>
-    <button class="nav-btn" onclick="filterCalc('而ㅻ㉧??,this)">而ㅻ㉧??/button>
-    <button class="nav-btn" onclick="filterCalc('?앺솢',this)">?앺솢</button>
-    <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">?뙔</button>
+    <button class="nav-btn on" onclick="filterCalc('all',this)">전체</button>
+    <button class="nav-btn" onclick="filterCalc('직장인',this)">직장인</button>
+    <button class="nav-btn" onclick="filterCalc('부동산',this)">부동산</button>
+    <button class="nav-btn" onclick="filterCalc('재테크',this)">재테크</button>
+    <button class="nav-btn" onclick="filterCalc('커머스',this)">커머스</button>
+    <button class="nav-btn" onclick="filterCalc('생활',this)">생활</button>
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">🌙</button>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>吏곸옣??<span class="end">湲됱뿬쨌?멸툑쨌蹂댄뿕</span> 怨꾩궛? 怨꾩궛?뺤뿉????/h1>
-  <p class="subcopy">?곕큺 ?ㅼ닔?뱀븸, ?댁쭅湲? ?ㅼ뾽湲됱뿬, ?곗감, 嫄닿컯蹂댄뿕猷? ?곕쭚?뺤궛, ?≪븘?댁쭅 湲됱뿬泥섎읆 吏곸옣?몄씠 ?먯＜ ?뺤씤?섎뒗 ?듭떖 怨꾩궛??2026??湲곗??쇰줈 ?뺣━?덉뒿?덈떎. 怨꾩궛湲곗? ?댁꽕 媛?대뱶瑜??④퍡 蹂????덉뼱??</p>
+  <h1>직장인 <span class="end">급여·세금·보험</span> 계산은 계산왕에서 끝</h1>
+  <p class="subcopy">연봉 실수령액, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산, 육아휴직 급여처럼 직장인이 자주 확인하는 핵심 계산을 2026년 기준으로 정리했습니다. 계산기와 해설 가이드를 함께 볼 수 있어요.</p>
   <div class="popular-tags">
-    <span class="popular-label">留롮씠 李얜뒗 怨꾩궛:</span>
-    <a class="popular-tag" href="salary/">?곕큺 ?ㅼ닔?뱀븸</a>
-    <a class="popular-tag" href="retire/">?댁쭅湲?/a>
-    <a class="popular-tag" href="unemploy/">?ㅼ뾽湲됱뿬</a>
-    <a class="popular-tag" href="annual-leave/">?곗감</a>
-    <a class="popular-tag" href="health-insurance/">嫄닿컯蹂댄뿕猷?/a>
-    <a class="popular-tag" href="guides/"><span class="tag-dot"></span> ?댁꽕 媛?대뱶</a>
+    <span class="popular-label">많이 찾는 계산:</span>
+    <a class="popular-tag" href="salary/">연봉 실수령액</a>
+    <a class="popular-tag" href="retire/">퇴직금</a>
+    <a class="popular-tag" href="unemploy/">실업급여</a>
+    <a class="popular-tag" href="annual-leave/">연차</a>
+    <a class="popular-tag" href="health-insurance/">건강보험료</a>
+    <a class="popular-tag" href="guides/"><span class="tag-dot"></span> 해설 가이드</a>
   </div>
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="怨꾩궛湲?寃??.. (?? ?댁쭅湲? ?곕큺, 嫄닿컯蹂댄뿕猷?" oninput="searchCalc()">
-    <button>寃??/button>
+    <input type="text" id="searchInput" placeholder="계산기 검색... (예: 퇴직금, 연봉, 건강보험료)" oninput="searchCalc()">
+    <button>검색</button>
   </div>
 </section>
 
 <section class="hero-support">
   <div class="support-card">
-    <span class="featured-badge">2026??湲곗? ?듭떖 怨꾩궛湲?/span>
-    <h2>?먯＜ 李얜뒗 怨꾩궛遺??癒쇱? 紐⑥븘??댁슂</h2>
-    <p>?곕큺, ?댁쭅湲? ?ㅼ뾽湲됱뿬, ?곗감泥섎읆 ?먯＜ 蹂대뒗 怨꾩궛??泥??붾㈃?먯꽌 諛붾줈 李얠쓣 ???덉뼱??</p>
+    <span class="featured-badge">2026년 기준 핵심 계산기</span>
+    <h2>자주 찾는 계산부터 먼저 모아뒀어요</h2>
+    <p>연봉, 퇴직금, 실업급여, 연차처럼 자주 보는 계산을 첫 화면에서 바로 찾을 수 있어요.</p>
   </div>
   <div class="support-card">
-    <span class="featured-badge">媛?대뱶 쨌 ?댁쁺 湲곗?</span>
-    <h2>媛?대뱶??湲곗???諛붾줈 蹂????덉뼱??/h2>
-    <p>怨꾩궛湲곕쭔 蹂대㈃ ?룰컝由????덉뼱?? ?댁꽕 媛?대뱶? 李멸퀬 湲곗???媛숈씠 ?먯뿀?댁슂.</p>
+    <span class="featured-badge">가이드 · 운영 기준</span>
+    <h2>가이드랑 기준도 바로 볼 수 있어요</h2>
+    <p>계산기만 보면 헷갈릴 수 있어서, 해설 가이드와 참고 기준도 같이 두었어요.</p>
     <div class="support-links">
-      <a class="support-link" href="guides/">?댁꽕 媛?대뱶 蹂닿린</a>
-      <a class="support-link" href="/editorial-policy/">?몄쭛 ?먯튃</a>
-      <a class="support-link" href="/sources/">李멸퀬 異쒖쿂</a>
+      <a class="support-link" href="guides/">해설 가이드 보기</a>
+      <a class="support-link" href="/editorial-policy/">편집 원칙</a>
+      <a class="support-link" href="/sources/">참고 출처</a>
     </div>
   </div>
 </section>
@@ -233,144 +233,144 @@ footer strong{color:#fff;}
 <section class="featured-shell">
   <div class="featured-head">
     <div>
-      <h2>?듭떖 怨꾩궛湲?8媛쒕? 泥??붾㈃??紐⑥븯?댁슂</h2>
-      <p>吏곸옣?몄씠 ?먯＜ 李얜뒗 怨꾩궛湲곕???諛붾줈 蹂????덇쾶 紐⑥븘??댁슂.</p>
+      <h2>핵심 계산기 8개를 첫 화면에 모았어요</h2>
+      <p>직장인이 자주 찾는 계산기부터 바로 볼 수 있게 모아뒀어요.</p>
     </div>
   </div>
   <div class="featured-grid">
     <a href="salary/" class="calc-card t-green">
-      <div class="card-inner"><div class="card-icon">?뮳</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕큺 ?ㅼ닔?뱀븸 怨꾩궛湲?/div><div class="card-desc">4?蹂댄뿕쨌?뚮뱷??怨듭젣 ???ㅼ젣 ?붽툒</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">💼</div><span class="card-tag">직장인</span><div class="card-title">연봉 실수령액 계산기</div><div class="card-desc">4대보험·소득세 공제 후 실제 월급</div><span class="card-arrow">→</span></div>
     </a>
     <a href="retire/" class="calc-card t-purple">
-      <div class="card-inner"><div class="card-icon">?벀</div><span class="card-tag">吏곸옣??/span><div class="card-title">?댁쭅湲?怨꾩궛湲?/div><div class="card-desc">洹쇱냽湲곌컙쨌?됯퇏?꾧툑 湲곕컲 ?댁쭅湲??곗젙</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">📦</div><span class="card-tag">직장인</span><div class="card-title">퇴직금 계산기</div><div class="card-desc">근속기간·평균임금 기반 퇴직금 산정</div><span class="card-arrow">→</span></div>
     </a>
     <a href="unemploy/" class="calc-card t-blue">
-      <div class="card-inner"><div class="card-icon">?뱥</div><span class="card-tag">吏곸옣??/span><div class="card-title">?ㅼ뾽湲됱뿬 怨꾩궛湲?/div><div class="card-desc">?댁쭅?셋룰렐?띻린媛꽷룹엫湲덉쑝濡??섍툒??怨꾩궛</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">📋</div><span class="card-tag">직장인</span><div class="card-title">실업급여 계산기</div><div class="card-desc">이직일·근속기간·임금으로 수급액 계산</div><span class="card-arrow">→</span></div>
     </a>
     <a href="annual-leave/" class="calc-card t-green">
-      <div class="card-inner"><div class="card-icon">?뙱</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곗감 怨꾩궛湲?/div><div class="card-desc">?낆궗??湲곗? ?곗감 媛쒖닔쨌?섎떦 怨꾩궛</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">🌴</div><span class="card-tag">직장인</span><div class="card-title">연차 계산기</div><div class="card-desc">입사일 기준 연차 개수·수당 계산</div><span class="card-arrow">→</span></div>
     </a>
     <a href="health-insurance/" class="calc-card t-teal">
-      <div class="card-inner"><div class="card-icon">?룯</div><span class="card-tag">吏곸옣??/span><div class="card-title">嫄닿컯蹂댄뿕猷?怨꾩궛湲?/div><div class="card-desc">2026??嫄닿컯蹂댄뿕 3.595% 吏곸옣쨌吏??怨꾩궛</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">🏥</div><span class="card-tag">직장인</span><div class="card-title">건강보험료 계산기</div><div class="card-desc">2026년 건강보험 3.595% 직장·지역 계산</div><span class="card-arrow">→</span></div>
     </a>
     <a href="yearend/" class="calc-card t-purple">
-      <div class="card-inner"><div class="card-icon">?뱤</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕쭚?뺤궛 誘몃━蹂닿린</div><div class="card-desc">?섍툒諛쏆쓣源? ?좏빐?쇨퉴? 誘몃━ 怨꾩궛</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">📊</div><span class="card-tag">직장인</span><div class="card-title">연말정산 미리보기</div><div class="card-desc">환급받을까? 토해낼까? 미리 계산</div><span class="card-arrow">→</span></div>
     </a>
     <a href="parental-leave/" class="calc-card t-pink">
-      <div class="card-inner"><div class="card-icon">?뫔</div><span class="card-tag">吏곸옣??/span><div class="card-title">?≪븘?댁쭅 湲됱뿬 怨꾩궛湲?/div><div class="card-desc">2026???붾퀎 ?≪븘?댁쭅 湲됱뿬쨌6+6 怨꾩궛</div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">👶</div><span class="card-tag">직장인</span><div class="card-title">육아휴직 급여 계산기</div><div class="card-desc">2026년 월별 육아휴직 급여·6+6 계산</div><span class="card-arrow">→</span></div>
     </a>
     <a href="payday/" class="calc-card t-green">
-      <div class="card-inner"><div class="card-icon">?뮥</div><span class="card-tag">吏곸옣??/span><div class="card-title">?붽툒??怨꾩궛湲?/div><div class="card-desc">?대쾲???붽툒源뚯? D-Day 移댁슫?몃떎??/div><span class="card-arrow">??/span></div>
+      <div class="card-inner"><div class="card-icon">💰</div><span class="card-tag">직장인</span><div class="card-title">월급날 계산기</div><div class="card-desc">이번달 월급까지 D-Day 카운트다운</div><span class="card-arrow">→</span></div>
     </a>
   </div>
 </section>
 
-<div class="all-cats-note">遺?숈궛, 而ㅻ㉧?? ?앺솢 怨꾩궛湲곕뒗 ?꾨옒?먯꽌 ?뺤씤?????덉뼱??</div>
+<div class="all-cats-note">부동산, 커머스, 생활 계산기는 아래에서 확인할 수 있어요.</div>
 
 <div class="calc-grid" id="calcGrid">
 
-  <div class="section-divider"><span>?뮳 吏곸옣??/span></div>
-  <a href="salary/" class="calc-card t-green" data-category="吏곸옣?? data-name="?곕큺 ?ㅼ닔?뱀븸 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮳</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕큺 ?ㅼ닔?뱀븸 怨꾩궛湲?/div><div class="card-desc">4?蹂댄뿕쨌?뚮뱷??怨듭젣 ???ㅼ젣 ?붽툒</div><span class="card-arrow">??/span></div>
+  <div class="section-divider"><span>💼 직장인</span></div>
+  <a href="salary/" class="calc-card t-green" data-category="직장인" data-name="연봉 실수령액 계산기">
+    <div class="card-inner"><div class="card-icon">💼</div><span class="card-tag">직장인</span><div class="card-title">연봉 실수령액 계산기</div><div class="card-desc">4대보험·소득세 공제 후 실제 월급</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="salary-rank/" class="calc-card t-blue" data-category="吏곸옣?? data-name="?곕큺 ?쒖쐞 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룇</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕큺 ?쒖쐞 怨꾩궛湲?/div><div class="card-desc">???곕큺???꾩껜 吏곸옣??以??곸쐞 紐??</div><span class="card-arrow">??/span></div>
+  <a href="salary-rank/" class="calc-card t-blue" data-category="직장인" data-name="연봉 순위 계산기">
+    <div class="card-inner"><div class="card-icon">🏆</div><span class="card-tag">직장인</span><div class="card-title">연봉 순위 계산기</div><div class="card-desc">내 연봉이 전체 직장인 중 상위 몇%?</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="retire/" class="calc-card t-purple" data-category="吏곸옣?? data-name="?댁쭅湲?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?벀</div><span class="card-tag">吏곸옣??/span><div class="card-title">?댁쭅湲?怨꾩궛湲?/div><div class="card-desc">洹쇱냽湲곌컙쨌?됯퇏?꾧툑 湲곕컲 ?댁쭅湲??곗젙</div><span class="card-arrow">??/span></div>
+  <a href="retire/" class="calc-card t-purple" data-category="직장인" data-name="퇴직금 계산기">
+    <div class="card-inner"><div class="card-icon">📦</div><span class="card-tag">직장인</span><div class="card-title">퇴직금 계산기</div><div class="card-desc">근속기간·평균임금 기반 퇴직금 산정</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="unemploy/" class="calc-card t-blue" data-category="吏곸옣?? data-name="?ㅼ뾽湲됱뿬 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뱥</div><span class="card-tag">吏곸옣??/span><div class="card-title">?ㅼ뾽湲됱뿬 怨꾩궛湲?/div><div class="card-desc">?댁쭅?셋룰렐?띻린媛꽷룹엫湲덉쑝濡??섍툒??怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="unemploy/" class="calc-card t-blue" data-category="직장인" data-name="실업급여 계산기">
+    <div class="card-inner"><div class="card-icon">📋</div><span class="card-tag">직장인</span><div class="card-title">실업급여 계산기</div><div class="card-desc">이직일·근속기간·임금으로 수급액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="salary-raise/" class="calc-card t-green" data-category="吏곸옣?? data-name="?곕큺 ?몄긽瑜?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뱤</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕큺 ?몄긽瑜?怨꾩궛湲?/div><div class="card-desc">?몄긽 ???ㅼ닔?뱀븸 ?쇰쭏???ㅻⅤ??鍮꾧탳</div><span class="card-arrow">??/span></div>
+  <a href="salary-raise/" class="calc-card t-green" data-category="직장인" data-name="연봉 인상률 계산기">
+    <div class="card-inner"><div class="card-icon">📊</div><span class="card-tag">직장인</span><div class="card-title">연봉 인상률 계산기</div><div class="card-desc">인상 후 실수령액 얼마나 오르나 비교</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="health-insurance/" class="calc-card t-teal" data-category="吏곸옣?? data-name="嫄닿컯蹂댄뿕猷?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룯</div><span class="card-tag">吏곸옣??/span><div class="card-title">嫄닿컯蹂댄뿕猷?怨꾩궛湲?/div><div class="card-desc">2026??嫄닿컯蹂댄뿕 3.595% 吏곸옣쨌吏??怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="health-insurance/" class="calc-card t-teal" data-category="직장인" data-name="건강보험료 계산기">
+    <div class="card-inner"><div class="card-icon">🏥</div><span class="card-tag">직장인</span><div class="card-title">건강보험료 계산기</div><div class="card-desc">2026년 건강보험 3.595% 직장·지역 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="yearend/" class="calc-card t-purple" data-category="吏곸옣?? data-name="?곕쭚?뺤궛 誘몃━蹂닿린">
-    <div class="card-inner"><div class="card-icon">?뱤</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곕쭚?뺤궛 誘몃━蹂닿린</div><div class="card-desc">?섍툒諛쏆쓣源? ?좏빐?쇨퉴? 誘몃━ 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="yearend/" class="calc-card t-purple" data-category="직장인" data-name="연말정산 미리보기">
+    <div class="card-inner"><div class="card-icon">📊</div><span class="card-tag">직장인</span><div class="card-title">연말정산 미리보기</div><div class="card-desc">환급받을까? 토해낼까? 미리 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="youth-savings/" class="calc-card t-teal" data-category="吏곸옣?? data-name="泥?뀈?꾩빟怨꾩쥖 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뙮</div><span class="card-tag">吏곸옣??/span><div class="card-title">泥?뀈?꾩빟怨꾩쥖 怨꾩궛湲?/div><div class="card-desc">?뺣?湲곗뿬湲??ы븿 5??留뚭린 ?섎졊??怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-
-  <a href="payday/" class="calc-card t-green" data-category="吏곸옣?? data-name="?붽툒??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮥</div><span class="card-tag">吏곸옣??/span><div class="card-title">?붽툒??怨꾩궛湲?/div><div class="card-desc">?대쾲???붽툒源뚯? D-Day 移댁슫?몃떎??/div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="income-tax/" class="calc-card t-orange" data-category="吏곸옣?? data-name="醫낇빀?뚮뱷??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뱥</div><span class="card-tag">吏곸옣??/span><div class="card-title">醫낇빀?뚮뱷??怨꾩궛湲?/div><div class="card-desc">2026??8?④퀎 ?꾩쭊?몄쑉 ?먮룞 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="youth-savings/" class="calc-card t-teal" data-category="직장인" data-name="청년도약계좌 계산기">
+    <div class="card-inner"><div class="card-icon">🌱</div><span class="card-tag">직장인</span><div class="card-title">청년도약계좌 계산기</div><div class="card-desc">정부기여금 포함 5년 만기 수령액 계산</div><span class="card-arrow">→</span></div>
   </a>
 
-  <a href="annual-leave/" class="calc-card t-green" data-category="吏곸옣?? data-name="?곗감 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뙱</div><span class="card-tag">吏곸옣??/span><div class="card-title">?곗감 怨꾩궛湲?/div><div class="card-desc">?낆궗??湲곗? ?곗감 媛쒖닔쨌?섎떦 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="payday/" class="calc-card t-green" data-category="직장인" data-name="월급날 계산기">
+    <div class="card-inner"><div class="card-icon">💰</div><span class="card-tag">직장인</span><div class="card-title">월급날 계산기</div><div class="card-desc">이번달 월급까지 D-Day 카운트다운</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="parental-leave/" class="calc-card t-pink" data-category="吏곸옣?? data-name="?≪븘?댁쭅 湲됱뿬 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뫔</div><span class="card-tag">吏곸옣??/span><div class="card-title">?≪븘?댁쭅 湲됱뿬 怨꾩궛湲?/div><div class="card-desc">2026???붾퀎 ?≪븘?댁쭅 湲됱뿬쨌6+6 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-
-  <div class="section-divider"><span>?뱢 ?ы뀒??/span></div>
-  <a href="retirement-fund/" class="calc-card t-purple" data-category="?ы뀒?? data-name="?명썑?먭툑 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룚截?/div><span class="card-tag">?ы뀒??/span><div class="card-title">?명썑?먭툑 怨꾩궛湲?/div><div class="card-desc">??????꾩슂???덇낵 ???異뺤븸 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="stock/" class="calc-card t-blue" data-category="?ы뀒?? data-name="二쇱떇 臾쇳?湲?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뱢</div><span class="card-tag">?ы뀒??/span><div class="card-title">二쇱떇 臾쇳?湲?怨꾩궛湲?/div><div class="card-desc">異붽? 留ㅼ닔 ???됯퇏?④?쨌?먯씡 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="savings/" class="calc-card t-green" data-category="?ы뀒?? data-name="?곴툑 留뚭린湲덉븸 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룱</div><span class="card-tag">?ы뀒??/span><div class="card-title">?곴툑 留뚭린湲덉븸 怨꾩궛湲?/div><div class="card-desc">???⑹엯?≤룰툑由?룰린媛꾩쑝濡?留뚭린湲덉븸 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="deposit/" class="calc-card t-green" data-category="?ы뀒?? data-name="?덇툑 ?댁옄 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮥</div><span class="card-tag">?ы뀒??/span><div class="card-title">?덇툑 ?댁옄 怨꾩궛湲?/div><div class="card-desc">?먭툑쨌湲덈━쨌湲곌컙?쇰줈 ?명썑 留뚭린 ?섎졊??怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="loan/" class="calc-card t-orange" data-category="?ы뀒?? data-name="?異??댁옄 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룲</div><span class="card-tag">?ы뀒??/span><div class="card-title">?異??댁옄 怨꾩궛湲?/div><div class="card-desc">?異쒓툑?≤룰툑由?룰린媛꾩쑝濡????곹솚??怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="income-tax/" class="calc-card t-orange" data-category="직장인" data-name="종합소득세 계산기">
+    <div class="card-inner"><div class="card-icon">📋</div><span class="card-tag">직장인</span><div class="card-title">종합소득세 계산기</div><div class="card-desc">2026년 8단계 누진세율 자동 계산</div><span class="card-arrow">→</span></div>
   </a>
 
-  <div class="section-divider"><span>?룧 遺?숈궛</span></div>
-  <a href="jeonse/" class="calc-card t-orange" data-category="遺?숈궛" data-name="?꾩썡???꾪솚??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룧</div><span class="card-tag">遺?숈궛</span><div class="card-title">?꾩썡???꾪솚??怨꾩궛湲?/div><div class="card-desc">?꾩꽭?믪썡???꾪솚 諛?蹂댁쬆湲?怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="annual-leave/" class="calc-card t-green" data-category="직장인" data-name="연차 계산기">
+    <div class="card-inner"><div class="card-icon">🌴</div><span class="card-tag">직장인</span><div class="card-title">연차 계산기</div><div class="card-desc">입사일 기준 연차 개수·수당 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="jeonse-vs-wolse/" class="calc-card t-orange" data-category="遺?숈궛" data-name="?꾩꽭 vs ?붿꽭 鍮꾧탳 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뽳툘</div><span class="card-tag">遺?숈궛</span><div class="card-title">?꾩꽭 vs ?붿꽭 鍮꾧탳</div><div class="card-desc">湲고쉶鍮꾩슜 ?ы븿 ?대뼡 ?좏깮???좊━?쒖? 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="cheongak/" class="calc-card t-teal" data-category="遺?숈궛" data-name="泥?빟 媛??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룫</div><span class="card-tag">遺?숈궛</span><div class="card-title">泥?빟 媛??怨꾩궛湲?/div><div class="card-desc">臾댁＜?앷린媛꽷룸??묎?議굿룹껌?쏀넻??媛???곗젙</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="yangdo/" class="calc-card t-indigo" data-category="遺?숈궛" data-name="?묐룄?뚮뱷??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?룢截?/div><span class="card-tag">遺?숈궛</span><div class="card-title">?묐룄?뚮뱷??怨꾩궛湲?/div><div class="card-desc">1二쇳깮 湲곗? ?묐룄李⑥씡쨌?몄븸 媛꾩씠 怨꾩궛</div><span class="card-arrow">??/span></div>
-  </a>
-  <a href="gift-tax/" class="calc-card t-indigo" data-category="遺?숈궛" data-name="利앹뿬??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮑</div><span class="card-tag">遺?숈궛</span><div class="card-title">利앹뿬??怨꾩궛湲?/div><div class="card-desc">媛議깃컙 利앹뿬??怨듭젣?쒕룄쨌?몄쑉 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="parental-leave/" class="calc-card t-pink" data-category="직장인" data-name="육아휴직 급여 계산기">
+    <div class="card-inner"><div class="card-icon">👶</div><span class="card-tag">직장인</span><div class="card-title">육아휴직 급여 계산기</div><div class="card-desc">2026년 월별 육아휴직 급여·6+6 계산</div><span class="card-arrow">→</span></div>
   </a>
 
-  <div class="section-divider"><span>?썟 而ㅻ㉧??쨌 N?〓윭</span></div>
-  <a href="freelancer/" class="calc-card t-indigo" data-category="而ㅻ㉧?? data-name="?꾨━?쒖꽌 ?멸툑 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮲</div><span class="card-tag" style="background:#eef2ff;color:#4338ca">N?〓윭</span><div class="card-title">?꾨━?쒖꽌 3.3% ?멸툑 怨꾩궛湲?/div><div class="card-desc">?먯쿇吏뺤닔 ?ㅼ닔?뱀븸쨌醫낇빀?뚮뱷??怨꾩궛</div><span class="card-arrow">??/span></div>
+  <div class="section-divider"><span>📈 재테크</span></div>
+  <a href="retirement-fund/" class="calc-card t-purple" data-category="재테크" data-name="노후자금 계산기">
+    <div class="card-inner"><div class="card-icon">🏖️</div><span class="card-tag">재테크</span><div class="card-title">노후자금 계산기</div><div class="card-desc">은퇴 후 필요한 돈과 월 저축액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="smartstore/" class="calc-card t-green" data-category="而ㅻ㉧?? data-name="?ㅻ쭏?몄뒪?좎뼱 ?섏닔猷?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?썚截?/div><span class="card-tag" style="background:#edfaf3;color:#03c75a">而ㅻ㉧??/span><div class="card-title">?ㅻ쭏?몄뒪?좎뼱 ?섏닔猷?怨꾩궛湲?/div><div class="card-desc">2026??6??媛쒗렪 湲곗? ?ㅼ닔?뱀븸 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="stock/" class="calc-card t-blue" data-category="재테크" data-name="주식 물타기 계산기">
+    <div class="card-inner"><div class="card-icon">📈</div><span class="card-tag">재테크</span><div class="card-title">주식 물타기 계산기</div><div class="card-desc">추가 매수 후 평균단가·손익 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="coupang/" class="calc-card t-blue" data-category="而ㅻ㉧?? data-name="荑좏뙜 ?먮ℓ ?섏닔猷?怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?썟</div><span class="card-tag" style="background:#eff3ff;color:#1a56ff">而ㅻ㉧??/span><div class="card-title">荑좏뙜 ?먮ℓ ?섏닔猷?怨꾩궛湲?/div><div class="card-desc">移댄뀒怨좊━蹂?4~10.9% ?섏닔猷??ㅼ닔?뱀븸</div><span class="card-arrow">??/span></div>
+  <a href="savings/" class="calc-card t-green" data-category="재테크" data-name="적금 만기금액 계산기">
+    <div class="card-inner"><div class="card-icon">🏦</div><span class="card-tag">재테크</span><div class="card-title">적금 만기금액 계산기</div><div class="card-desc">월 납입액·금리·기간으로 만기금액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="baemin/" class="calc-card" data-category="而ㅻ㉧?? data-name="諛곕떖?섎?議??섏닔猷?怨꾩궛湲? style="border:1.5px solid var(--border);">
-    <div class="card-inner"><div class="card-icon">?뜑</div><span class="card-tag" style="background:#e0f7fa;color:#007c8a">而ㅻ㉧??/span><div class="card-title">諛곕떖?섎?議??섏닔猷?怨꾩궛湲?/div><div class="card-desc">諛곕?1?뚮윭?ㅒ룰?寃뚮같??룻룷?μ＜臾??섏닔猷?/div><span class="card-arrow">??/span></div>
+  <a href="deposit/" class="calc-card t-green" data-category="재테크" data-name="예금 이자 계산기">
+    <div class="card-inner"><div class="card-icon">💰</div><span class="card-tag">재테크</span><div class="card-title">예금 이자 계산기</div><div class="card-desc">원금·금리·기간으로 세후 만기 수령액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <div class="section-divider"><span>?뙼 ?앺솢</span></div>
-  <a href="halbu/" class="calc-card t-pink" data-category="?앺솢" data-name="移대뱶 ?좊??댁옄 怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?뮩</div><span class="card-tag">?앺솢</span><div class="card-title">移대뱶 ?좊??댁옄 怨꾩궛湲?/div><div class="card-desc">?좊? 媛쒖썡?섎퀎 ?ㅼ젣 ?댁옄쨌???⑸???怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="loan/" class="calc-card t-orange" data-category="재테크" data-name="대출 이자 계산기">
+    <div class="card-inner"><div class="card-icon">🏧</div><span class="card-tag">재테크</span><div class="card-title">대출 이자 계산기</div><div class="card-desc">대출금액·금리·기간으로 월 상환액 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="cartax/" class="calc-card t-orange" data-category="?앺솢" data-name="?먮룞李?痍⑤뱷??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?슅</div><span class="card-tag">?앺솢</span><div class="card-title">?먮룞李?痍⑤뱷??怨꾩궛湲?/div><div class="card-desc">李⑥쥌쨌?⑸룄蹂?痍⑤뱷?맞룰났梨?留ㅼ엯湲덉븸 怨꾩궛</div><span class="card-arrow">??/span></div>
+
+  <div class="section-divider"><span>🏠 부동산</span></div>
+  <a href="jeonse/" class="calc-card t-orange" data-category="부동산" data-name="전월세 전환율 계산기">
+    <div class="card-inner"><div class="card-icon">🏠</div><span class="card-tag">부동산</span><div class="card-title">전월세 전환율 계산기</div><div class="card-desc">전세→월세 전환 및 보증금 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="electricity/" class="calc-card t-orange" data-category="?앺솢" data-name="?꾧린??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">??/div><span class="card-tag">?앺솢</span><div class="card-title">?꾧린??怨꾩궛湲?/div><div class="card-desc">?쒖쟾 ?꾩쭊??湲곗? ?꾧린?붽툑 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="jeonse-vs-wolse/" class="calc-card t-orange" data-category="부동산" data-name="전세 vs 월세 비교 계산기">
+    <div class="card-inner"><div class="card-icon">⚖️</div><span class="card-tag">부동산</span><div class="card-title">전세 vs 월세 비교</div><div class="card-desc">기회비용 포함 어떤 선택이 유리한지 계산</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="used-car-tax/" class="calc-card t-orange" data-category="?앺솢" data-name="以묎퀬李?痍⑤뱷??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?슅</div><span class="card-tag">?앺솢</span><div class="card-title">以묎퀬李?痍⑤뱷??怨꾩궛湲?/div><div class="card-desc">痍⑤뱷?맞룰났梨꽷룸벑濡앸퉬 珥?遺?鍮꾩슜 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="cheongak/" class="calc-card t-teal" data-category="부동산" data-name="청약 가점 계산기">
+    <div class="card-inner"><div class="card-icon">🏢</div><span class="card-tag">부동산</span><div class="card-title">청약 가점 계산기</div><div class="card-desc">무주택기간·부양가족·청약통장 가점 산정</div><span class="card-arrow">→</span></div>
   </a>
-  <a href="vat/" class="calc-card t-blue" data-category="?앺솢" data-name="遺媛??怨꾩궛湲?>
-    <div class="card-inner"><div class="card-icon">?㎨</div><span class="card-tag">?멸툑</span><div class="card-title">遺媛??怨꾩궛湲?/div><div class="card-desc">怨듦툒媛?△넄遺媛???ы븿湲덉븸 怨꾩궛</div><span class="card-arrow">??/span></div>
+  <a href="yangdo/" class="calc-card t-indigo" data-category="부동산" data-name="양도소득세 계산기">
+    <div class="card-inner"><div class="card-icon">🏛️</div><span class="card-tag">부동산</span><div class="card-title">양도소득세 계산기</div><div class="card-desc">1주택 기준 양도차익·세액 간이 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="gift-tax/" class="calc-card t-indigo" data-category="부동산" data-name="증여세 계산기">
+    <div class="card-inner"><div class="card-icon">💝</div><span class="card-tag">부동산</span><div class="card-title">증여세 계산기</div><div class="card-desc">가족간 증여세 공제한도·세율 계산</div><span class="card-arrow">→</span></div>
+  </a>
+
+  <div class="section-divider"><span>🛒 커머스 · N잡러</span></div>
+  <a href="freelancer/" class="calc-card t-indigo" data-category="커머스" data-name="프리랜서 세금 계산기">
+    <div class="card-inner"><div class="card-icon">💻</div><span class="card-tag" style="background:#eef2ff;color:#4338ca">N잡러</span><div class="card-title">프리랜서 3.3% 세금 계산기</div><div class="card-desc">원천징수 실수령액·종합소득세 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="smartstore/" class="calc-card t-green" data-category="커머스" data-name="스마트스토어 수수료 계산기">
+    <div class="card-inner"><div class="card-icon">🛍️</div><span class="card-tag" style="background:#edfaf3;color:#03c75a">커머스</span><div class="card-title">스마트스토어 수수료 계산기</div><div class="card-desc">2026년 6월 개편 기준 실수령액 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="coupang/" class="calc-card t-blue" data-category="커머스" data-name="쿠팡 판매 수수료 계산기">
+    <div class="card-inner"><div class="card-icon">🛒</div><span class="card-tag" style="background:#eff3ff;color:#1a56ff">커머스</span><div class="card-title">쿠팡 판매 수수료 계산기</div><div class="card-desc">카테고리별 4~10.9% 수수료 실수령액</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="baemin/" class="calc-card" data-category="커머스" data-name="배달의민족 수수료 계산기" style="border:1.5px solid var(--border);">
+    <div class="card-inner"><div class="card-icon">🍔</div><span class="card-tag" style="background:#e0f7fa;color:#007c8a">커머스</span><div class="card-title">배달의민족 수수료 계산기</div><div class="card-desc">배민1플러스·가게배달·포장주문 수수료</div><span class="card-arrow">→</span></div>
+  </a>
+  <div class="section-divider"><span>🌿 생활</span></div>
+  <a href="halbu/" class="calc-card t-pink" data-category="생활" data-name="카드 할부이자 계산기">
+    <div class="card-inner"><div class="card-icon">💳</div><span class="card-tag">생활</span><div class="card-title">카드 할부이자 계산기</div><div class="card-desc">할부 개월수별 실제 이자·월 납부액 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="cartax/" class="calc-card t-orange" data-category="생활" data-name="자동차 취득세 계산기">
+    <div class="card-inner"><div class="card-icon">🚗</div><span class="card-tag">생활</span><div class="card-title">자동차 취득세 계산기</div><div class="card-desc">차종·용도별 취득세·공채 매입금액 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="electricity/" class="calc-card t-orange" data-category="생활" data-name="전기세 계산기">
+    <div class="card-inner"><div class="card-icon">⚡</div><span class="card-tag">생활</span><div class="card-title">전기세 계산기</div><div class="card-desc">한전 누진제 기준 전기요금 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="used-car-tax/" class="calc-card t-orange" data-category="생활" data-name="중고차 취득세 계산기">
+    <div class="card-inner"><div class="card-icon">🚗</div><span class="card-tag">생활</span><div class="card-title">중고차 취득세 계산기</div><div class="card-desc">취득세·공채·등록비 총 부대비용 계산</div><span class="card-arrow">→</span></div>
+  </a>
+  <a href="vat/" class="calc-card t-blue" data-category="생활" data-name="부가세 계산기">
+    <div class="card-inner"><div class="card-icon">🧾</div><span class="card-tag">세금</span><div class="card-title">부가세 계산기</div><div class="card-desc">공급가액↔부가세 포함금액 계산</div><span class="card-arrow">→</span></div>
   </a>
   
 
@@ -380,86 +380,86 @@ footer strong{color:#fff;}
 
 <section class="content-shell">
   <div class="focus-note">
-    <div class="focus-lead">吏곸옣??쨌 ?멸툑 쨌 蹂댄뿕 以묒떖</div>
-    <h2>怨꾩궛 ?꾩뿉 ?뚯븘?먮㈃ 醫뗭? ?ㅻТ 媛?대뱶</h2>
-    <p>怨꾩궛?뺤? ?곕큺 ?ㅼ닔?뱀븸, ?댁쭅湲? ?ㅼ뾽湲됱뿬, ?곗감, 嫄닿컯蹂댄뿕猷? ?곕쭚?뺤궛泥섎읆 吏곸옣?몄씠 ?먯＜ 李얜뒗 怨꾩궛??以묒떖?쇰줈 ?댁쁺?⑸땲?? 媛?怨꾩궛湲??꾨옒?먮뒗 ?ㅼ젣 ?щ?? 怨꾩궛 湲곗????뺣━?덇퀬, 蹂꾨룄 媛?대뱶 臾몄꽌?먯꽌???뚯궗蹂꾨줈 寃곌낵媛 ?щ씪吏???댁쑀, ?ㅻТ?먯꽌 ?룰컝由щ뒗 ?ъ씤?? 怨듭떇 湲곗????④퍡 ?ㅻ챸?⑸땲??</p>
+    <div class="focus-lead">직장인 · 세금 · 보험 중심</div>
+    <h2>계산 전에 알아두면 좋은 실무 가이드</h2>
+    <p>계산왕은 연봉 실수령액, 퇴직금, 실업급여, 연차, 건강보험료, 연말정산처럼 직장인이 자주 찾는 계산을 중심으로 운영합니다. 각 계산기 아래에는 실제 사례와 계산 기준을 정리했고, 별도 가이드 문서에서는 회사별로 결과가 달라지는 이유, 실무에서 헷갈리는 포인트, 공식 기준을 함께 설명합니다.</p>
   </div>
   <div class="focus-note">
-    <div class="focus-lead">?댁쁺 ?먯튃</div>
-    <h2>怨꾩궛 湲곗?怨?李멸퀬 異쒖쿂??媛숈씠 怨듦컻?⑸땲??</h2>
-    <p>怨꾩궛?뺤? 怨꾩궛湲??レ옄留?蹂댁뿬二쇱? ?딆븘?? ?ㅼ젣濡??먮떒?????꾩????섎룄濡??몄쭛 ?먯튃, 二쇱슂 李멸퀬 異쒖쿂, ?낅뜲?댄듃 湲곕줉源뚯? ?④퍡 怨듦컻?섍퀬 ?덉뼱??</p>
-    <p style="margin-top:12px"><a href="/editorial-policy/" style="color:var(--accent);font-weight:700;text-decoration:none;margin-right:14px">?몄쭛 ?먯튃 蹂닿린</a><a href="/sources/" style="color:var(--accent);font-weight:700;text-decoration:none;margin-right:14px">李멸퀬 異쒖쿂 蹂닿린</a><a href="/updates/" style="color:var(--accent);font-weight:700;text-decoration:none">?낅뜲?댄듃 湲곕줉 蹂닿린</a></p>
+    <div class="focus-lead">운영 원칙</div>
+    <h2>계산 기준과 참고 출처도 같이 공개합니다.</h2>
+    <p>계산왕은 계산기 숫자만 보여주지 않아요. 실제로 판단할 때 도움이 되도록 편집 원칙, 주요 참고 출처, 업데이트 기록까지 함께 공개하고 있어요.</p>
+    <p style="margin-top:12px"><a href="/editorial-policy/" style="color:var(--accent);font-weight:700;text-decoration:none;margin-right:14px">편집 원칙 보기</a><a href="/sources/" style="color:var(--accent);font-weight:700;text-decoration:none;margin-right:14px">참고 출처 보기</a><a href="/updates/" style="color:var(--accent);font-weight:700;text-decoration:none">업데이트 기록 보기</a></p>
   </div>
   <div class="guide-strip">
     <div class="guide-strip-head">
       <div>
-        <div class="focus-lead">?댁꽕 媛?대뱶</div>
-        <h2>怨꾩궛 寃곌낵瑜??쒕?濡??쎈뒗 ???꾩슂??媛?대뱶瑜?紐⑥븯?댁슂</h2>
+        <div class="focus-lead">해설 가이드</div>
+        <h2>계산 결과를 제대로 읽는 데 필요한 가이드를 모았어요</h2>
       </div>
-      <a href="guides/" class="guide-more">媛?대뱶 ?꾩껜 蹂닿린</a>
+      <a href="guides/" class="guide-more">가이드 전체 보기</a>
     </div>
     <div class="guide-grid">
       <a href="guides/salary-negotiation/" class="guide-card">
-        <span class="guide-tag">湲됱뿬</span>
-        <strong>?곕큺 ?묒긽?????몄쟾蹂대떎 ?ㅼ닔?뱀븸??癒쇱? 遊먯빞 ?섎뒗 ?댁쑀</strong>
-        <span>鍮꾧낵???앸?, 媛議??? 怨듭젣 李⑥씠源뚯? ?④퍡 ?쎈뒗 湲곕낯 媛?대뱶</span>
+        <span class="guide-tag">급여</span>
+        <strong>연봉 협상할 때 세전보다 실수령액을 먼저 봐야 하는 이유</strong>
+        <span>비과세 식대, 가족 수, 공제 차이까지 함께 읽는 기본 가이드</span>
       </a>
       <a href="guides/retirement-pay/" class="guide-card">
-        <span class="guide-tag">?댁쭅湲?/span>
-        <strong>?댁쭅湲?怨꾩궛?먯꽌 ?됯퇏?꾧툑???ы븿?섎뒗 ??ぉ? 臾댁뾿?멸???</strong>
-        <span>?곸뿬湲? ?곗감?섎떦, ?듭긽?꾧툑 鍮꾧탳媛 ??以묒슂?쒖? ?뺣━?덉뒿?덈떎.</span>
+        <span class="guide-tag">퇴직금</span>
+        <strong>퇴직금 계산에서 평균임금에 포함되는 항목은 무엇인가요?</strong>
+        <span>상여금, 연차수당, 통상임금 비교가 왜 중요한지 정리했습니다.</span>
       </a>
       <a href="guides/unemployment/" class="guide-card">
-        <span class="guide-tag">?ㅼ뾽湲됱뿬</span>
-        <strong>?먯쭊?댁궗?몃뜲???ㅼ뾽湲됱뿬瑜?諛쏆쓣 ???덈뒗 ?덉쇅媛 ?덈굹??</strong>
-        <span>?섍툒 議곌굔怨??댁궗 ???뺤씤???쒕쪟瑜?以묒떖?쇰줈 ?뺣━?덉뒿?덈떎.</span>
+        <span class="guide-tag">실업급여</span>
+        <strong>자진퇴사인데도 실업급여를 받을 수 있는 예외가 있나요?</strong>
+        <span>수급 조건과 퇴사 전 확인할 서류를 중심으로 정리했습니다.</span>
       </a>
       <a href="guides/annual-leave/" class="guide-card">
-        <span class="guide-tag">?곗감</span>
-        <strong>?낆궗 泥ロ빐 ?곗감? ?뚭퀎?곕룄 湲곗? ?곗감???대뼸寃??ㅻⅨ媛??</strong>
-        <span>?붿감, 1??李??곗감, ?섎떦 ?뺤궛源뚯? ?ㅼ젣 ?뚯궗?먯꽌 ?먯＜ 瑗ъ씠??遺遺꾩쓣 ?ㅻ９?덈떎.</span>
+        <span class="guide-tag">연차</span>
+        <strong>입사 첫해 연차와 회계연도 기준 연차는 어떻게 다른가요?</strong>
+        <span>월차, 1년 차 연차, 수당 정산까지 실제 회사에서 자주 꼬이는 부분을 다룹니다.</span>
       </a>
       <a href="guides/health-insurance/" class="guide-card">
-        <span class="guide-tag">蹂댄뿕</span>
-        <strong>嫄닿컯蹂댄뿕猷뚭? ?ㅻⅤ硫??ㅼ닔?뱀븸? ?쇰쭏??以꾩뼱?쒕굹??</strong>
-        <span>湲됱뿬紐낆꽭?쒕? 蹂???媛숈씠 ?뺤씤?댁빞 ??怨듭젣 援ъ“瑜??ㅻ챸?⑸땲??</span>
+        <span class="guide-tag">보험</span>
+        <strong>건강보험료가 오르면 실수령액은 얼마나 줄어드나요?</strong>
+        <span>급여명세서를 볼 때 같이 확인해야 할 공제 구조를 설명합니다.</span>
       </a>
       <a href="guides/loan-type/" class="guide-card">
-        <span class="guide-tag">?異?/span>
-        <strong>?먮━湲덇퇏?? ?먭툑洹좊벑, 留뚭린?쇱떆?곹솚? ?대뼸寃??ㅻ?源뚯슂?</strong>
-        <span>湲덈━蹂대떎 ???곹솚 援ъ“瑜?癒쇱? 遊먯빞 ?섎뒗 ?댁쑀瑜??щ?? ?④퍡 ?뺣━?덉뒿?덈떎.</span>
+        <span class="guide-tag">대출</span>
+        <strong>원리금균등, 원금균등, 만기일시상환은 어떻게 다를까요?</strong>
+        <span>금리보다 월 상환 구조를 먼저 봐야 하는 이유를 사례와 함께 정리했습니다.</span>
       </a>
     </div>
   </div>
 </section>
 
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">??/button>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <footer>
-  <strong>怨꾩궛??/strong> ??紐⑤뱺 怨꾩궛? ?ш린????br>
-  <span style="margin-top:6px;display:block">蹂?怨꾩궛湲곕뒗 李멸퀬?⑹씠硫??ㅼ젣 湲덉븸怨??ㅻ? ???덉뒿?덈떎.<br>?뺥솗???댁슜? ?꾨Ц媛?먭쾶 臾몄쓽?섏꽭??</span>
+  <strong>계산왕</strong> — 모든 계산은 여기서 끝<br>
+  <span style="margin-top:6px;display:block">본 계산기는 참고용이며 실제 금액과 다를 수 있습니다.<br>정확한 내용은 전문가에게 문의하세요.</span>
   <div style="margin-top:10px">
-    <a href="/privacy/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">媛쒖씤?뺣낫泥섎━諛⑹묠</a>
-    <a href="/about/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">?뚭컻</a>
-    <a href="/contact/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">臾몄쓽</a>
-    <a href="/editorial-policy/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">?몄쭛 ?먯튃</a>
-    <a href="/sources/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">異쒖쿂</a>
-    <a href="/updates/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">?낅뜲?댄듃</a>
+    <a href="/privacy/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">개인정보처리방침</a>
+    <a href="/about/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">소개</a>
+    <a href="/contact/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">문의</a>
+    <a href="/editorial-policy/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">편집 원칙</a>
+    <a href="/sources/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">출처</a>
+    <a href="/updates/" style="color:rgba(255,255,255,.4);font-size:12px;text-decoration:none;margin:0 8px">업데이트</a>
   </div>
   <div class="footer-share">
-    <button class="share-btn" onclick="shareKakao()">?뵕 移댁뭅??怨듭쑀</button>
-    <button class="share-btn" onclick="shareTwitter()">?맔 X 怨듭쑀</button>
-    <button class="share-btn" onclick="copyLink()">?뱥 留곹겕 蹂듭궗</button>
+    <button class="share-btn" onclick="shareKakao()">🔗 카카오 공유</button>
+    <button class="share-btn" onclick="shareTwitter()">🐦 X 공유</button>
+    <button class="share-btn" onclick="copyLink()">📋 링크 복사</button>
   </div>
 </footer>
 
 <script>
-// ?ㅽ겕紐⑤뱶
+// 다크모드
 function toggleDark(){
   const d=document.documentElement;
   const isDark=d.getAttribute('data-theme')==='dark';
   d.setAttribute('data-theme',isDark?'light':'dark');
-  document.getElementById('darkToggle').textContent=isDark?'?뙔':'?截?;
+  document.getElementById('darkToggle').textContent=isDark?'🌙':'☀️';
   localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');
 }
 (function(){
@@ -469,12 +469,12 @@ function toggleDark(){
   if(saved==='dark'){
     document.addEventListener('DOMContentLoaded',()=>{
       const btn=document.getElementById('darkToggle');
-      if(btn)btn.textContent='?截?;
+      if(btn)btn.textContent='☀️';
     });
   }
 })();
 
-// ?꾪꽣
+// 필터
 function filterCalc(cat,btn){
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
@@ -493,7 +493,7 @@ function filterCalc(cat,btn){
   });
 }
 
-// 寃??
+// 검색
 function searchCalc(){
   const q=document.getElementById('searchInput').value.trim().toLowerCase();
   document.querySelectorAll('.calc-card').forEach(card=>{
@@ -506,12 +506,12 @@ function searchCalc(){
   });
 }
 
-// 留??꾨줈 踰꾪듉
+// 맨 위로 버튼
 window.addEventListener('scroll',()=>{
   document.getElementById('scrollTop').classList.toggle('show',window.scrollY>300);
 });
 
-// ?ㅽ겕濡??좊땲硫붿씠??
+// 스크롤 애니메이션
 const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
     if(e.isIntersecting){
@@ -521,17 +521,17 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.05});
 document.querySelectorAll('.calc-card').forEach(c=>obs.observe(c));
 
-// SNS 怨듭쑀
+// SNS 공유
 function shareTwitter(){
   const url=encodeURIComponent(location.href);
-  const txt=encodeURIComponent('怨꾩궛??- 紐⑤뱺 怨꾩궛? ?ш린?????몣');
+  const txt=encodeURIComponent('계산왕 - 모든 계산은 여기서 끝 👑');
   window.open('https://twitter.com/intent/tweet?text='+txt+'&url='+url,'_blank');
 }
 function copyLink(){
-  navigator.clipboard.writeText(location.href).then(()=>alert('留곹겕媛 蹂듭궗?먯뼱?? ?삃'));
+  navigator.clipboard.writeText(location.href).then(()=>alert('링크가 복사됐어요! 😊'));
 }
 function shareKakao(){
-  alert('移댁뭅?ㅽ넚?먯꽌 ?꾨옒 二쇱냼瑜?遺숈뿬?ｊ린 ?댁＜?몄슂 ?삃\n'+location.href);
+  alert('카카오톡에서 아래 주소를 붙여넣기 해주세요 😊\n'+location.href);
 }
 </script>
 </body>

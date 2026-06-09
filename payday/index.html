@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>?붽툒??怨꾩궛湲?2026 ???대쾲???붽툒 硫곗튌 ?⑥븯?? | 怨꾩궛??/title>
-<meta name="description" content="?붽툒??怨꾩궛湲? ?붽툒?좉퉴吏 硫곗튌 ?⑥븯?붿?, 二쇰쭚쨌怨듯쑕???쒖쇅 ?ㅼ젣 吏湲됱씪??怨꾩궛?섏꽭?? ?붽툒??D-Day 移댁슫?몃떎??">
+<title>월급날 계산기 2026 — 이번달 월급 며칠 남았나? | 계산왕</title>
+<meta name="description" content="월급날 계산기. 월급날까지 며칠 남았는지, 주말·공휴일 제외 실제 지급일을 계산하세요. 월급날 D-Day 카운트다운.">
 <link rel="canonical" href="https://calc.ssoxxl.com/payday/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="怨꾩궛??>
-<meta property="og:title" content="?붽툒??怨꾩궛湲????대쾲???붽툒 硫곗튌 ?⑥븯?? | 怨꾩궛??>
-<meta property="og:description" content="?붽툒?좉퉴吏 硫곗튌 ?⑥븯?붿? D-Day 移댁슫?몃떎?댁쑝濡??뺤씤?섏꽭??">
+<meta property="og:type" content="website"><meta property="og:site_name" content="계산왕">
+<meta property="og:title" content="월급날 계산기 — 이번달 월급 며칠 남았나? | 계산왕">
+<meta property="og:description" content="월급날까지 며칠 남았는지 D-Day 카운트다운으로 확인하세요.">
 <meta property="og:image" content="https://calc.ssoxxl.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://calc.ssoxxl.com/og-image.svg">
@@ -98,42 +98,42 @@ body{transition:background .3s,color .3s;}
 </script>
 </head>
 <body>
-<header><a href="../" class="logo"><span>怨꾩궛??/span><span class="logo-badge">??/span></a><a href="../" class="back-btn">???꾩껜 怨꾩궛湲?/a><button onclick="toggleDark()" id="darkToggle" style="width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;margin-left:8px;">?뙔</button>
+<header><a href="../" class="logo"><span>계산왕</span><span class="logo-badge">王</span></a><a href="../" class="back-btn">← 전체 계산기</a><button onclick="toggleDark()" id="darkToggle" style="width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;margin-left:8px;">🌙</button>
 </header>
 <div class="wrap"><div class="calc-card">
   <div class="card-hero">
-    <span class="card-tag">吏곸옣??/span>
-    <h1>?붽툒??怨꾩궛湲??뮥</h1>
-    <p>?대쾲 ???붽툒源뚯? 硫곗튌 ?⑥븯?붿? D-Day濡??뺤씤?섏꽭??/p>
+    <span class="card-tag">직장인</span>
+    <h1>월급날 계산기 💰</h1>
+    <p>이번 달 월급까지 며칠 남았는지 D-Day로 확인하세요</p>
   </div>
   <div class="card-body">
     <div class="field-row">
-      <div class="field"><label>?붽툒??(留ㅼ썡 紐???</label>
+      <div class="field"><label>월급날 (매월 몇 일)</label>
         <select id="payday">
-          <option value="1">1??/option><option value="5">5??/option>
-          <option value="10">10??/option><option value="15">15??/option>
-          <option value="20">20??/option><option value="25" selected>25??/option>
-          <option value="last">留먯씪</option>
+          <option value="1">1일</option><option value="5">5일</option>
+          <option value="10">10일</option><option value="15">15일</option>
+          <option value="20">20일</option><option value="25" selected>25일</option>
+          <option value="last">말일</option>
         </select>
       </div>
-      <div class="field"><label>二쇰쭚쨌怨듯쑕??泥섎━</label>
+      <div class="field"><label>주말·공휴일 처리</label>
         <select id="adjust">
-          <option value="before">???곸뾽?쇱뿉 吏湲?/option>
-          <option value="after">?ㅼ쓬 ?곸뾽?쇱뿉 吏湲?/option>
-          <option value="none">洹몃?濡?吏湲?/option>
+          <option value="before">전 영업일에 지급</option>
+          <option value="after">다음 영업일에 지급</option>
+          <option value="none">그대로 지급</option>
         </select>
       </div>
     </div>
-    <button class="btn-calc" onclick="calc()">怨꾩궛?섍린</button>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
     <div class="dday-box" id="result">
       <div class="dday-num" id="dday-num"></div>
       <div class="dday-label" id="dday-label"></div>
       <div class="dday-today" id="dday-today"></div>
       <div class="info-grid">
-        <div class="info-box"><div class="label">?대쾲 ?붽툒??/div><div class="val" id="this-pay"></div></div>
-        <div class="info-box"><div class="label">?ㅼ쓬 ?붽툒??/div><div class="val" id="next-pay"></div></div>
-        <div class="info-box"><div class="label">?ㅻ뒛</div><div class="val" id="today-val"></div></div>
-        <div class="info-box"><div class="label">?대쾲??珥??쇱닔</div><div class="val" id="month-days"></div></div>
+        <div class="info-box"><div class="label">이번 월급날</div><div class="val" id="this-pay"></div></div>
+        <div class="info-box"><div class="label">다음 월급날</div><div class="val" id="next-pay"></div></div>
+        <div class="info-box"><div class="label">오늘</div><div class="val" id="today-val"></div></div>
+        <div class="info-box"><div class="label">이번달 총 일수</div><div class="val" id="month-days"></div></div>
       </div>
       <div class="progress-wrap">
         <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
@@ -142,54 +142,54 @@ body{transition:background .3s,color .3s;}
     </div>
   </div>
   <div class="desc-section">
-    <h2>?뱟 ?붽툒??怨꾩궛? ?앺솢鍮?由щ벉 ?≪쓣 ???뱁엳 醫뗭븘??/h2>
-        <p>?붽툒?좎? 洹몃깷 ?좎쭨 ?섎굹 媛숈?留? ?앺솢鍮?怨꾪쉷?먯꽌???앷컖蹂대떎 以묒슂?댁슂. 硫곗튌 ?⑥븯?붿?? ?대쾲 ??吏異?援ш컙???대뵒易ㅼ씤吏 媛숈씠 蹂대㈃ ???곕뒗 媛먭컖???щ씪?몄슂.</p>
-    <p>?뱁엳 移대뱶媛? ?붿꽭, ?곴툑 鍮좎????좎씠 紐곕젮 ?덉쑝硫??붽툒??媛꾧꺽??湲멸쾶 ?먭뺨吏??뚭? ?덉짛. ?대윺 ???⑥? ?쇱닔? 吏꾪뻾瑜좎쓣 媛숈씠 蹂대㈃ 怨꾪쉷 ?몄슦湲곌? ?⑥뵮 ?ъ썙?몄슂.</p>
-    <h2>?㎜ ?대윴 ?앹쑝濡??⑤낫硫??ㅼ슜?곸씠?먯슂</h2>
-        <p>?붽툒?쇱쓣 ?ｊ퀬 ?⑥? ?쇱닔瑜?蹂??ㅼ쓬, 洹??ъ씠??怨좎젙吏異쒖씠 紐?踰??섍??붿? 媛숈씠 ?곸뼱蹂댁꽭?? 洹몃윭硫?泥닿컧???쒖뼵?쒕????꾧뺨???섎뒗吏?앷? 諛붾줈 蹂댁뿬??</p>
-    <p>?異??곹솚?쇱씠??移대뱶 寃곗젣?쇱씠 ?붽툒?쇰낫??癒쇱? ?ㅻ㈃ ?ㅽ듃?덉뒪媛 而ㅼ쭏 ???덉뼱?? 洹몃옒???붽툒??怨꾩궛湲곕뒗 ?⑥닚 D-Day蹂대떎 ?꾧툑 ?먮쫫 ?꾧뎄濡?蹂대뒗 履쎌씠 ??醫뗭븘??</p>
+    <h2>📅 월급날 계산은 생활비 리듬 잡을 때 특히 좋아요</h2>
+        <p>월급날은 그냥 날짜 하나 같지만, 생활비 계획에서는 생각보다 중요해요. 며칠 남았는지와 이번 달 지출 구간이 어디쯤인지 같이 보면 돈 쓰는 감각이 달라져요.</p>
+    <p>특히 카드값, 월세, 적금 빠지는 날이 몰려 있으면 월급날 간격이 길게 느껴질 때가 있죠. 이럴 때 남은 일수와 진행률을 같이 보면 계획 세우기가 훨씬 쉬워져요.</p>
+    <h2>🧮 이런 식으로 써보면 실용적이에요</h2>
+        <p>월급일을 넣고 남은 일수를 본 다음, 그 사이에 고정지출이 몇 번 나가는지 같이 적어보세요. 그러면 체감상 “언제부터 아껴야 하는지”가 바로 보여요.</p>
+    <p>대출 상환일이나 카드 결제일이 월급일보다 먼저 오면 스트레스가 커질 수 있어요. 그래서 월급날 계산기는 단순 D-Day보다 현금 흐름 도구로 보는 쪽이 더 좋아요.</p>
     <div class="faq-item">
-      <div class="faq-q">?붽툒?좎씠 25?쇱씠硫??앺솢鍮?援ш컙? ?대뼸寃?蹂대㈃ 醫뗫굹??</div>
-      <div class="faq-a">蹂댄넻 25???ㅼ쓬 ??以묒닚, 以묒닚~留먯씪泥섎읆 ??援ш컙?쇰줈 ?섎늻硫?泥닿컧???ъ썙?? 怨좎젙吏異쒖씠 ?몄젣 鍮좎??붿???媛숈씠 ?곸뼱蹂댁꽭??</div>
+      <div class="faq-q">월급날이 25일이면 생활비 구간은 어떻게 보면 좋나요?</div>
+      <div class="faq-a">보통 25일~다음 달 중순, 중순~말일처럼 두 구간으로 나누면 체감이 쉬워요. 고정지출이 언제 빠지는지도 같이 적어보세요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">吏꾪뻾瑜?諛붾뒗 ?대뼡 ?⑸룄濡?蹂대㈃ ?섎굹??</div>
-      <div class="faq-a">?대쾲 ?붽툒 援ш컙???대뒓 ?뺣룄 吏?섍컮?붿? 媛??〓뒗 ?⑸룄?덉슂. ?앷컖蹂대떎 鍮⑤━ 以꾩뼱?쒕뒗 ?ъ쓣 ?뺤씤?섍린 醫뗭븘??</div>
+      <div class="faq-q">진행률 바는 어떤 용도로 보면 되나요?</div>
+      <div class="faq-a">이번 월급 구간이 어느 정도 지나갔는지 감 잡는 용도예요. 생각보다 빨리 줄어드는 달을 확인하기 좋아요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">?異??곹솚?쇱씠 ?붽툒?좊낫??鍮좊Ⅴ硫??대뼡 ?먯씠 臾몄젣二?</div>
-      <div class="faq-a">?붽툒???ㅼ뼱?ㅺ린 ?꾩뿉 ???덉씠 鍮좎졇?섍?硫?泥닿컧 ?뺣컯??而ㅼ졇?? 洹몃옒???붽툒?좉낵 ?곹솚?쇱쓣 媛숈씠 蹂대뒗 寃?醫뗭븘??</div>
+      <div class="faq-q">대출 상환일이 월급날보다 빠르면 어떤 점이 문제죠?</div>
+      <div class="faq-a">월급이 들어오기 전에 큰 돈이 빠져나가면 체감 압박이 커져요. 그래서 월급날과 상환일을 같이 보는 게 좋아요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">移대뱶 寃곗젣?쇰룄 媛숈씠 留욎떠遊먯빞 ?섎굹??</div>
-      <div class="faq-a">?? ?붽툒?좉낵 移대뱶 寃곗젣?쇱씠 ?덈Т ?뉕컝由щ㈃ ?꾧툑 ?먮쫫??瑗ъ씪 ???덉뼱??</div>
+      <div class="faq-q">카드 결제일도 같이 맞춰봐야 하나요?</div>
+      <div class="faq-a">네. 월급날과 카드 결제일이 너무 엇갈리면 현금 흐름이 꼬일 수 있어요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">??怨꾩궛湲곌? ?ы뀒?ъ뿉???꾩? ?섎굹??</div>
-      <div class="faq-a">?꾩? ?쇱슂. ?곴툑?대굹 ?뚮퉬 ?쒕룄瑜??붽툒 援ш컙??留욎떠 ?섎늻??湲곗??쇰줈 ?곌린 醫뗪굅?좎슂.</div>
+      <div class="faq-q">이 계산기가 재테크에도 도움 되나요?</div>
+      <div class="faq-a">도움 돼요. 적금이나 소비 한도를 월급 구간에 맞춰 나누는 기준으로 쓰기 좋거든요.</div>
     </div>
-    <p><strong>李멸퀬??二쇱꽭??</strong> ??怨꾩궛? 2026??湲곗? ?좎쭨 ?먮쫫??諛뷀깢?쇰줈 ??李멸퀬???꾧뎄?덉슂. ?ㅼ젣 ?먭툑 怨꾪쉷? 移대뱶 寃곗젣?? ?異??곹솚?? ?먮룞?댁껜 ?쇱젙源뚯? 媛숈씠 蹂닿퀬 ?뺣━?섎뒗 寃?醫뗭븘??</p>
+    <p><strong>참고해 주세요.</strong> 이 계산은 2026년 기준 날짜 흐름을 바탕으로 한 참고용 도구예요. 실제 자금 계획은 카드 결제일, 대출 상환일, 자동이체 일정까지 같이 보고 정리하는 게 좋아요.</p>
   </div>
 
   <div class="related">
-    <h2>?④퍡 ?쎌쑝硫?醫뗭? 媛?대뱶</h2>
+    <h2>함께 읽으면 좋은 가이드</h2>
     <div class="related-grid">
-      <a href="../guides/loan-type/" class="related-btn">?뱲 ???곹솚?↔낵 湲됱뿬??愿由?/a>
-      <a href="../guides/" class="related-btn">?뾺 怨꾩궛??媛?대뱶 紐⑥븘蹂닿린</a>
+      <a href="../guides/loan-type/" class="related-btn">📘 월 상환액과 급여일 관리</a>
+      <a href="../guides/" class="related-btn">🗂 계산왕 가이드 모아보기</a>
     </div>
   </div>
 
-  <div class="trust-box" style="padding:0 28px 20px;"><div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;"><h2 style="font-size:14px;font-weight:800;margin-bottom:10px;">??怨꾩궛??湲곗?怨?李멸퀬 留곹겕</h2><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">湲곗? 異쒖쿂: 怨좎슜?몃룞遺 ?꾧툑 吏湲??먯튃 ?덈궡, ?뚯궗 湲됱뿬 吏湲?洹쒖젙</p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">愿??媛?대뱶: <a href="../guides/salary-negotiation/" style="color:var(--text);font-weight:700;text-decoration:none;">?곕큺 ?묒긽 ?꾩뿉 ?몄쟾蹂대떎 ?ㅼ닔?뱀븸??癒쇱? 遊먯빞 ?섎뒗 ?댁쑀</a>, <a href="../guides/loan-type/" style="color:var(--text);font-weight:700;text-decoration:none;">?먮━湲덇퇏?? ?먭툑洹좊벑, 留뚭린?쇱떆?곹솚? ?대뼸寃??ㅻ?源뚯슂?</a></p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin:0;">?댁쁺 ?뺣낫: <a href="../editorial-policy/" style="color:var(--text);font-weight:700;text-decoration:none;">?몄쭛 ?먯튃</a> 쨌 <a href="../sources/" style="color:var(--text);font-weight:700;text-decoration:none;">二쇱슂 李멸퀬 異쒖쿂</a></p></div></div>
-  <div class="related"><h2>愿??怨꾩궛湲?/h2><div class="related-grid">
-    <a href="../salary/" class="related-btn">?뮳 ?곕큺 ?ㅼ닔?뱀븸</a>
-    <a href="../dday/" class="related-btn">?뱟 留뚮굹?는텱-Day</a>
-    <a href="../retire/" class="related-btn">?벀 ?댁쭅湲?/a>
-    <a href="../unemploy/" class="related-btn">?뱥 ?ㅼ뾽湲됱뿬</a>
+  <div class="trust-box" style="padding:0 28px 20px;"><div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;"><h2 style="font-size:14px;font-weight:800;margin-bottom:10px;">이 계산의 기준과 참고 링크</h2><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">기준 출처: 고용노동부 임금 지급 원칙 안내, 회사 급여 지급 규정</p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">관련 가이드: <a href="../guides/salary-negotiation/" style="color:var(--text);font-weight:700;text-decoration:none;">연봉 협상 전에 세전보다 실수령액을 먼저 봐야 하는 이유</a>, <a href="../guides/loan-type/" style="color:var(--text);font-weight:700;text-decoration:none;">원리금균등, 원금균등, 만기일시상환은 어떻게 다를까요?</a></p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin:0;">운영 정보: <a href="../editorial-policy/" style="color:var(--text);font-weight:700;text-decoration:none;">편집 원칙</a> · <a href="../sources/" style="color:var(--text);font-weight:700;text-decoration:none;">주요 참고 출처</a></p></div></div>
+  <div class="related"><h2>관련 계산기</h2><div class="related-grid">
+    <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
+    <a href="../dday/" class="related-btn">📅 만나이·D-Day</a>
+    <a href="../retire/" class="related-btn">📦 퇴직금</a>
+    <a href="../unemploy/" class="related-btn">📋 실업급여</a>
   </div></div>
 </div></div>
-<footer><strong>怨꾩궛??/strong> ??紐⑤뱺 怨꾩궛? ?ш린????br><span style="margin-top:6px;display:block">蹂?怨꾩궛湲곕뒗 李멸퀬?⑹엯?덈떎. ?뚯궗 洹쒖젙???곕씪 ?ㅻ? ???덉뒿?덈떎.</span></footer>
+<footer><strong>계산왕</strong> — 모든 계산은 여기서 끝<br><span style="margin-top:6px;display:block">본 계산기는 참고용입니다. 회사 규정에 따라 다를 수 있습니다.</span></footer>
 <script>
-// 2026??怨듯쑕??
+// 2026년 공휴일
 const HOLIDAYS_2026=['2026-01-01','2026-01-28','2026-01-29','2026-01-30','2026-03-01','2026-05-05','2026-06-06','2026-08-15','2026-10-03','2026-10-05','2026-10-06','2026-10-07','2026-10-09','2026-12-25'];
 function isHoliday(d){
   const str=d.toISOString().split('T')[0];
@@ -227,7 +227,7 @@ function calc(){
   let thisPay=getPayDate(y,m,payday,adjust);
   let nextPay;
   if(thisPay<=today){
-    // ?대쾲???붽툒 ?대? 吏?????ㅼ쓬??
+    // 이번달 월급 이미 지남 → 다음달
     thisPay=getPayDate(y,m+1,payday,adjust);
     nextPay=getPayDate(y,m+2,payday,adjust);
   } else {
@@ -237,26 +237,26 @@ function calc(){
   const box=document.getElementById('result');
   if(diff===0){
     document.getElementById('dday-num').textContent='D-DAY';
-    document.getElementById('dday-label').textContent='?럦 ?ㅻ뒛???붽툒??';
+    document.getElementById('dday-label').textContent='🎉 오늘이 월급날!';
     document.getElementById('dday-today').textContent='';
   } else {
     document.getElementById('dday-num').textContent='D-'+diff;
-    document.getElementById('dday-label').textContent='?붽툒?좉퉴吏';
-    document.getElementById('dday-today').textContent=diff+'???⑥븯?듬땲??;
+    document.getElementById('dday-label').textContent='월급날까지';
+    document.getElementById('dday-today').textContent=diff+'일 남았습니다';
   }
   document.getElementById('this-pay').textContent=fmtDate(thisPay);
   document.getElementById('next-pay').textContent=fmtDate(nextPay);
   document.getElementById('today-val').textContent=fmtDate(today);
-  // ?대쾲???쇱닔
+  // 이번달 일수
   const daysInMonth=new Date(y,m,0).getDate();
-  document.getElementById('month-days').textContent=daysInMonth+'??;
-  // 吏꾪뻾瑜?(?대쾲??1??~ ?붽툒??湲곗?)
+  document.getElementById('month-days').textContent=daysInMonth+'일';
+  // 진행률 (이번달 1일 ~ 월급날 기준)
   const monthStart=new Date(y,m-1,1);
   const totalDays=Math.ceil((thisPay-monthStart)/(1000*60*60*24));
   const passedDays=Math.ceil((today-monthStart)/(1000*60*60*24));
   const pct=Math.min(100,Math.max(0,Math.floor(passedDays/totalDays*100)));
   document.getElementById('progress-fill').style.width=pct+'%';
-  document.getElementById('p-start').textContent=m+'??1??;
+  document.getElementById('p-start').textContent=m+'월 1일';
   document.getElementById('p-end').textContent=fmtDate(thisPay);
   box.classList.add('show');
 }

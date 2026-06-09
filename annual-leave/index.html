@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>?곗감 怨꾩궛湲?2026 ???낆궗??湲곗? ?곗감 諛쒖깮?쇱닔 怨꾩궛 | 怨꾩궛??/title>
-<meta name="description" content="?곗감 怨꾩궛湲? ?낆궗?쇰줈 ?곗감 諛쒖깮?쇱닔? ?⑥? ?곗감瑜?怨꾩궛?섏꽭?? 2026??洹쇰줈湲곗?踰?湲곗?. 1??誘몃쭔 11?? 1???댁긽 15?? 理쒕? 25??">
+<title>연차 계산기 2026 — 입사일 기준 연차 발생일수 계산 | 계산왕</title>
+<meta name="description" content="연차 계산기. 입사일로 연차 발생일수와 남은 연차를 계산하세요. 2026년 근로기준법 기준. 1년 미만 11일, 1년 이상 15일, 최대 25일.">
 <link rel="canonical" href="https://calc.ssoxxl.com/annual-leave/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="怨꾩궛??>
-<meta property="og:title" content="?곗감 怨꾩궛湲?2026 ???낆궗??湲곗? ?곗감 諛쒖깮?쇱닔 怨꾩궛 | 怨꾩궛??>
-<meta property="og:description" content="?낆궗?쇰줈 ?곗감 諛쒖깮?쇱닔瑜?怨꾩궛?섏꽭?? 2026??洹쇰줈湲곗?踰?湲곗?.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="계산왕">
+<meta property="og:title" content="연차 계산기 2026 — 입사일 기준 연차 발생일수 계산 | 계산왕">
+<meta property="og:description" content="입사일로 연차 발생일수를 계산하세요. 2026년 근로기준법 기준.">
 <meta property="og:image" content="https://calc.ssoxxl.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://calc.ssoxxl.com/og-image.svg">
@@ -79,98 +79,98 @@ footer strong{color:#fff;}
 </head>
 <body>
 <header>
-  <a href="../" class="logo"><span>怨꾩궛??/span><span class="logo-badge">??/span></a>
-  <a href="../" class="back-btn">???꾩껜 怨꾩궛湲?/a>
-  <button onclick="toggleDark()" id="darkToggle" class="dark-btn">?뙔</button>
+  <a href="../" class="logo"><span>계산왕</span><span class="logo-badge">王</span></a>
+  <a href="../" class="back-btn">← 전체 계산기</a>
+  <button onclick="toggleDark()" id="darkToggle" class="dark-btn">🌙</button>
 </header>
 <div class="wrap"><div class="calc-card">
   <div class="card-hero">
-    <span class="card-tag">吏곸옣??/span>
-    <h1>?곗감 怨꾩궛湲??뱟</h1>
-    <p>?낆궗??湲곗? ?곗감 諛쒖깮?쇱닔? ?⑥? ?곗감瑜?怨꾩궛?⑸땲?? 2026??洹쇰줈湲곗?踰?湲곗?.</p>
+    <span class="card-tag">직장인</span>
+    <h1>연차 계산기 📅</h1>
+    <p>입사일 기준 연차 발생일수와 남은 연차를 계산합니다. 2026년 근로기준법 기준.</p>
   </div>
   <div class="card-body">
     <div class="field-row">
-      <div class="field"><label>?낆궗??/label><input type="date" id="join-date"></div>
-      <div class="field"><label>湲곗???(?ㅻ뒛 ?먮뒗 ?뱀젙??</label><input type="date" id="base-date"></div>
+      <div class="field"><label>입사일</label><input type="date" id="join-date"></div>
+      <div class="field"><label>기준일 (오늘 또는 특정일)</label><input type="date" id="base-date"></div>
     </div>
     <div class="field-row">
-      <div class="field"><label>?ъ슜???곗감 (??</label><input type="number" id="used" placeholder="0" value="0"></div>
-      <div class="field"><label>湲곗?</label>
+      <div class="field"><label>사용한 연차 (일)</label><input type="number" id="used" placeholder="0" value="0"></div>
+      <div class="field"><label>기준</label>
         <select id="basis">
-          <option value="entry">?낆궗??湲곗?</option>
-          <option value="fiscal">?뚭퀎?곕룄 湲곗? (1??1??</option>
+          <option value="entry">입사일 기준</option>
+          <option value="fiscal">회계연도 기준 (1월 1일)</option>
         </select>
       </div>
     </div>
-    <div class="tip">??洹쇰줈湲곗?踰???0議?湲곗?. 1??誘몃쭔: ??1??理쒕? 11??, 1???댁긽: 15?? 3???댁긽: 2?꾨쭏??1??媛??理쒕? 25??.</div>
-    <button class="btn-calc" onclick="calc()">怨꾩궛?섍린</button>
+    <div class="tip">※ 근로기준법 제60조 기준. 1년 미만: 월 1일(최대 11일), 1년 이상: 15일, 3년 이상: 2년마다 1일 가산(최대 25일).</div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
     <div class="result-box" id="result">
-      <div class="result-label">諛쒖깮 ?곗감</div>
+      <div class="result-label">발생 연차</div>
       <div class="result-main" id="res-main"></div>
       <div class="remain-box">
-        <div><div class="label">?ъ슜???곗감</div><div class="val" id="used-val" style="color:#dc2626"></div></div>
-        <div style="font-size:24px;color:var(--muted)">??/div>
-        <div><div class="label">?⑥? ?곗감</div><div class="val" id="remain-val" style="color:#16a34a"></div></div>
+        <div><div class="label">사용한 연차</div><div class="val" id="used-val" style="color:#dc2626"></div></div>
+        <div style="font-size:24px;color:var(--muted)">→</div>
+        <div><div class="label">남은 연차</div><div class="val" id="remain-val" style="color:#16a34a"></div></div>
       </div>
       <div id="res-detail"></div>
     </div>
   </div>
   <div class="desc-section">
-    <h2>?뱟 ?곗감???レ옄蹂대떎 湲곗?????以묒슂?댁슂</h2>
-        <p>?곗감??硫곗튌 ?⑥븯?붿?留?蹂대㈃ ?ъ썙 蹂댁뿬?? 洹몃윴???낆궗??湲곗??몄?, ?뚭퀎?곕룄 湲곗??몄????곕씪 ?붾㈃??蹂댁씠???レ옄媛 ?щ씪吏????덉뼱??</p>
-    <p>?낆궗 泥ロ빐?먮뒗 ???⑥쐞濡??볦씠???닿?? ?ㅼ쓬 ???곗감媛 ?댁뼱吏湲??뚮Ц?????룰컝?ㅼ슂. 洹몃옒???뚯궗 ?쒖뒪???レ옄? 怨꾩궛湲?寃곌낵媛 ?ㅻ? ?뚮뒗 湲곗?遺??癒쇱? ?뺤씤?섎뒗 寃?醫뗭븘??</p>
-    <h2>?㎜ ?곗감?섎떦源뚯? 媛숈씠 蹂대㈃ ???뺥솗?댁슂</h2>
-        <p>?ъ슜?섏? 紐삵븳 ?곗감??議곌굔???곕씪 ?섎떦?쇰줈 ?뺤궛?????덉뼱?? ?대븣 以묒슂??嫄??⑥? ?쇱닔留뚯씠 ?꾨땲怨? ?대뼡 ?꾧툑 湲곗??쇰줈 怨꾩궛?섎뒓?먯삁??</p>
-    <p>?뱁엳 ?댁궗 吏곸쟾?닿굅???댁쭅 ?꾪썑?쇰㈃ ?곗감?섎떦??留덉?留?湲됱뿬 泥닿컧???곹뼢??以????덉뼱?? 洹몃옒???곗감???쇱닔, 湲곗?, ?뺤궛 ?쒖젏??媛숈씠 蹂대뒗 寃?媛???ㅼ슜?곸씠?먯슂.</p>
-    <h3>?덉쇅濡?瑗?媛숈씠 遊먯빞 ?섎뒗 寃쎌슦</h3>
+    <h2>📅 연차는 숫자보다 기준이 더 중요해요</h2>
+        <p>연차는 며칠 남았는지만 보면 쉬워 보여요. 그런데 입사일 기준인지, 회계연도 기준인지에 따라 화면에 보이는 숫자가 달라질 수 있어요.</p>
+    <p>입사 첫해에는 월 단위로 쌓이는 휴가와 다음 해 연차가 이어지기 때문에 더 헷갈려요. 그래서 회사 시스템 숫자와 계산기 결과가 다를 때는 기준부터 먼저 확인하는 게 좋아요.</p>
+    <h2>🧮 연차수당까지 같이 보면 더 정확해요</h2>
+        <p>사용하지 못한 연차는 조건에 따라 수당으로 정산될 수 있어요. 이때 중요한 건 남은 일수만이 아니고, 어떤 임금 기준으로 계산하느냐예요.</p>
+    <p>특히 퇴사 직전이거나 휴직 전후라면 연차수당이 마지막 급여 체감에 영향을 줄 수 있어요. 그래서 연차는 일수, 기준, 정산 시점을 같이 보는 게 가장 실용적이에요.</p>
+    <h3>예외로 꼭 같이 봐야 하는 경우</h3>
     <ul>
-      <li>?낆궗??湲곗??몄? ?뚭퀎?곕룄 湲곗??몄????곕씪 媛숈? ?щ엺??蹂댁씠???곗감 ?レ옄媛 ?щ씪吏????덉뼱??</li>
-      <li>?낆궗 泥ロ빐?????⑥쐞 諛쒖깮怨??ㅼ쓬 ??遺??諛⑹떇???댁뼱吏湲??뚮Ц???⑥닚??15?쇰쭔 ?좎삱由щ㈃ ?룰컝由ш린 ?ъ썙??</li>
-      <li>?댁궗 ?뺤궛?대굹 ?ъ슜珥됱쭊 ?덉감媛 ?덉뿀?붿????곗감?섎떦 吏湲??щ???吏곸젒 ?곹뼢??以????덉뼱??</li>
+      <li>입사일 기준인지 회계연도 기준인지에 따라 같은 사람도 보이는 연차 숫자가 달라질 수 있어요.</li>
+      <li>입사 첫해는 월 단위 발생과 다음 해 부여 방식이 이어지기 때문에 단순히 15일만 떠올리면 헷갈리기 쉬워요.</li>
+      <li>퇴사 정산이나 사용촉진 절차가 있었는지는 연차수당 지급 여부에 직접 영향을 줄 수 있어요.</li>
     </ul>
-    <h3>怨듭떇 湲곗?? ?ш린???뺤씤?댁슂</h3>
-    <p>?곗감 諛쒖깮 ?먯튃? 怨좎슜?몃룞遺 ?곗감?좉툒?닿? ?덈궡? 洹쇰줈湲곗?踰?湲곗???媛숈씠 蹂대뒗 寃?醫뗭븘?? ?뚯궗留덈떎 愿由?諛⑹떇???щ씪 蹂댁뿬?? ?ㅼ젣 ?먮떒? ?대뼡 湲곗??쇰줈 遺?ы븯怨??뺤궛?섎뒗吏 臾몄꽌濡??뺤씤?섎뒗 寃?媛???뺥솗?댁슂.</p>
+    <h3>공식 기준은 여기서 확인해요</h3>
+    <p>연차 발생 원칙은 고용노동부 연차유급휴가 안내와 근로기준법 기준을 같이 보는 게 좋아요. 회사마다 관리 방식이 달라 보여도, 실제 판단은 어떤 기준으로 부여하고 정산하는지 문서로 확인하는 게 가장 정확해요.</p>
     <div class="faq-item">
-      <div class="faq-q">?낆궗??湲곗??대옉 ?뚭퀎?곕룄 湲곗?? 萸먭? ?ㅻⅨ媛??</div>
-      <div class="faq-a">?낆궗??湲곗?? ???낆궗??以묒떖?닿퀬, ?뚭퀎?곕룄 湲곗?? ?뚯궗媛 愿由ы븯湲??쎄쾶 留욎텛??諛⑹떇?댁뿉?? 洹몃옒???쒖떆 ?レ옄媛 ?ㅻⅤ寃?蹂댁씪 ???덉뼱??</div>
+      <div class="faq-q">입사일 기준이랑 회계연도 기준은 뭐가 다른가요?</div>
+      <div class="faq-a">입사일 기준은 내 입사일 중심이고, 회계연도 기준은 회사가 관리하기 쉽게 맞추는 방식이에요. 그래서 표시 숫자가 다르게 보일 수 있어요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">?낆궗 泥ロ빐 ?곗감??留ㅻ떖 ?대뼸寃??볦씠?섏슂?</div>
-      <div class="faq-a">蹂댄넻 媛쒓렐???ъ뿉 ?곕씪 ?앷린??援ъ“瑜?癒쇱? 蹂닿쾶 ?쇱슂. 洹몃옒??泥ロ빐?먮뒗 ???⑥쐞 ?먮쫫怨??ㅼ쓬 ???곗감媛 ?대뼸寃??댁뼱吏?붿? 媛숈씠 遊먯빞 ?댁슂.</div>
+      <div class="faq-q">입사 첫해 연차는 매달 어떻게 쌓이나요?</div>
+      <div class="faq-a">보통 개근한 달에 따라 생기는 구조를 먼저 보게 돼요. 그래서 첫해에는 월 단위 흐름과 다음 해 연차가 어떻게 이어지는지 같이 봐야 해요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">?뚯궗 ?쒖뒪???レ옄??怨꾩궛湲?寃곌낵媛 ???ㅻⅤ二?</div>
-      <div class="faq-a">湲곗? ?먯껜媛 ?ㅻⅨ 寃쎌슦媛 媛??留롮븘?? ?꾧? ??몃떎湲곕낫?? ?대뒓 湲곗??쇰줈 愿由щ릺?붿?瑜?癒쇱? ?뺤씤?섎뒗 寃?留욎븘??</div>
+      <div class="faq-q">회사 시스템 숫자랑 계산기 결과가 왜 다르죠?</div>
+      <div class="faq-a">기준 자체가 다른 경우가 가장 많아요. 누가 틀렸다기보다, 어느 기준으로 관리되는지를 먼저 확인하는 게 맞아요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">?⑥? ?곗감??臾댁“嫄??섎떦?쇰줈 ?섏삤?섏슂?</div>
-      <div class="faq-a">議곌굔???곕씪 ?щ씪?몄슂. ?ъ슜 珥됱쭊 ?덉감媛 ?덉뿀?붿?, ?뺤궛 湲곗? ?꾧툑??萸붿?源뚯? 媛숈씠 遊먯빞 ?댁슂.</div>
+      <div class="faq-q">남은 연차는 무조건 수당으로 나오나요?</div>
+      <div class="faq-a">조건에 따라 달라져요. 사용 촉진 절차가 있었는지, 정산 기준 임금이 뭔지까지 같이 봐야 해요.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">?댁궗 吏곸쟾?먮뒗 萸?媛??癒쇱? 遊먯빞 ?섎굹??</div>
-      <div class="faq-a">?⑥? ?쇱닔留?蹂댁? 留먭퀬, ?뚯궗媛 ?대뼡 湲곗??쇰줈 ?곗감?섎떦??怨꾩궛?섎뒗吏遺??蹂댁떆硫??쇱슂. 洹멸쾶 泥닿컧 李⑥씠瑜?媛???ш쾶 留뚮뱾?댁슂.</div>
+      <div class="faq-q">퇴사 직전에는 뭘 가장 먼저 봐야 하나요?</div>
+      <div class="faq-a">남은 일수만 보지 말고, 회사가 어떤 기준으로 연차수당을 계산하는지부터 보시면 돼요. 그게 체감 차이를 가장 크게 만들어요.</div>
     </div>
-    <p><strong>李멸퀬??二쇱꽭??</strong> ??怨꾩궛? 2026??湲곗? ?쇰컲?곸씤 ?곗감 諛쒖깮 援ъ“瑜?諛뷀깢?쇰줈 ??李멸퀬??寃곌낵?덉슂. ?ㅼ젣 遺??諛⑹떇怨??섎떦 ?뺤궛 湲곗?? ?뚯궗 ?댁쁺 洹쒖젙???곕씪 ?щ씪吏????덉뼱??</p>
+    <p><strong>참고해 주세요.</strong> 이 계산은 2026년 기준 일반적인 연차 발생 구조를 바탕으로 한 참고용 결과예요. 실제 부여 방식과 수당 정산 기준은 회사 운영 규정에 따라 달라질 수 있어요.</p>
   </div>
 
   <div class="related">
-    <h2>?④퍡 ?쎌쑝硫?醫뗭? 媛?대뱶</h2>
+    <h2>함께 읽으면 좋은 가이드</h2>
     <div class="related-grid">
-      <a href="../guides/annual-leave/" class="related-btn">?뱲 ?낆궗 泥ロ빐 ?곗감 湲곗?</a>
-      <a href="../guides/" class="related-btn">?뾺 怨꾩궛??媛?대뱶 紐⑥븘蹂닿린</a>
+      <a href="../guides/annual-leave/" class="related-btn">📘 입사 첫해 연차 기준</a>
+      <a href="../guides/" class="related-btn">🗂 계산왕 가이드 모아보기</a>
     </div>
   </div>
 
-  <div class="trust-box" style="padding:0 28px 20px;"><div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;"><h2 style="font-size:14px;font-weight:800;margin-bottom:10px;">??怨꾩궛??湲곗?怨?李멸퀬 留곹겕</h2><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">湲곗? 異쒖쿂: 怨좎슜?몃룞遺, 洹쇰줈湲곗?踰??곗감?좉툒?닿? ?덈궡</p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">愿??媛?대뱶: <a href="../guides/annual-leave/" style="color:var(--text);font-weight:700;text-decoration:none;">?낆궗 泥ロ빐 ?곗감? ?뚭퀎?곕룄 湲곗? ?곗감???대뼸寃??ㅻⅨ媛??</a>, <a href="../guides/retirement-pay/" style="color:var(--text);font-weight:700;text-decoration:none;">?댁쭅湲?怨꾩궛?먯꽌 ?됯퇏?꾧툑???ы븿?섎뒗 ??ぉ? 臾댁뾿?멸???</a></p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin:0;">?댁쁺 ?뺣낫: <a href="../editorial-policy/" style="color:var(--text);font-weight:700;text-decoration:none;">?몄쭛 ?먯튃</a> 쨌 <a href="../sources/" style="color:var(--text);font-weight:700;text-decoration:none;">二쇱슂 李멸퀬 異쒖쿂</a></p></div></div>
-  <div class="related"><h2>愿??怨꾩궛湲?/h2><div class="related-grid">
-    <a href="../salary/" class="related-btn">?뮳 ?곕큺 ?ㅼ닔?뱀븸</a>
-    <a href="../retire/" class="related-btn">?벀 ?댁쭅湲?/a>
-    <a href="../parental-leave/" class="related-btn">?뫔 ?≪븘?댁쭅 湲됱뿬</a>
-    <a href="../dday/" class="related-btn">?뱟 留뚮굹?는텱-Day</a>
+  <div class="trust-box" style="padding:0 28px 20px;"><div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;"><h2 style="font-size:14px;font-weight:800;margin-bottom:10px;">이 계산의 기준과 참고 링크</h2><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">기준 출처: 고용노동부, 근로기준법 연차유급휴가 안내</p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:8px;">관련 가이드: <a href="../guides/annual-leave/" style="color:var(--text);font-weight:700;text-decoration:none;">입사 첫해 연차와 회계연도 기준 연차는 어떻게 다른가요?</a>, <a href="../guides/retirement-pay/" style="color:var(--text);font-weight:700;text-decoration:none;">퇴직금 계산에서 평균임금에 포함되는 항목은 무엇인가요?</a></p><p style="font-size:13px;line-height:1.8;color:var(--muted);margin:0;">운영 정보: <a href="../editorial-policy/" style="color:var(--text);font-weight:700;text-decoration:none;">편집 원칙</a> · <a href="../sources/" style="color:var(--text);font-weight:700;text-decoration:none;">주요 참고 출처</a></p></div></div>
+  <div class="related"><h2>관련 계산기</h2><div class="related-grid">
+    <a href="../salary/" class="related-btn">💼 연봉 실수령액</a>
+    <a href="../retire/" class="related-btn">📦 퇴직금</a>
+    <a href="../parental-leave/" class="related-btn">👶 육아휴직 급여</a>
+    <a href="../dday/" class="related-btn">📅 만나이·D-Day</a>
   </div></div>
 </div></div>
-<footer><strong>怨꾩궛??/strong> ??紐⑤뱺 怨꾩궛? ?ш린????br><span style="margin-top:6px;display:block">蹂?怨꾩궛湲곕뒗 李멸퀬?⑹씠硫??뺥솗???곗감???뚯궗 痍⑥뾽洹쒖튃 ?먮뒗 怨좎슜?몃룞遺??臾몄쓽?섏꽭??</span></footer>
+<footer><strong>계산왕</strong> — 모든 계산은 여기서 끝<br><span style="margin-top:6px;display:block">본 계산기는 참고용이며 정확한 연차는 회사 취업규칙 또는 고용노동부에 문의하세요.</span></footer>
 <script>
 function calc(){
   const joinDate=new Date(document.getElementById('join-date').value);
@@ -179,9 +179,9 @@ function calc(){
   const basis=document.getElementById('basis').value;
 
   if(!document.getElementById('join-date').value||!document.getElementById('base-date').value){
-    alert('?낆궗?쇨낵 湲곗??쇱쓣 ?낅젰?댁＜?몄슂.');return;
+    alert('입사일과 기준일을 입력해주세요.');return;
   }
-  if(baseDate<joinDate){alert('湲곗??쇱? ?낆궗?쇰낫???댄썑?ъ빞 ?⑸땲??');return;}
+  if(baseDate<joinDate){alert('기준일은 입사일보다 이후여야 합니다.');return;}
 
   const diffDays=Math.floor((baseDate-joinDate)/(1000*60*60*24));
   const diffMonths=Math.floor(diffDays/30.44);
@@ -191,41 +191,41 @@ function calc(){
   let detail='';
 
   if(years<1){
-    // 1??誘몃쭔: ??1??(理쒕? 11??
+    // 1년 미만: 월 1일 (최대 11일)
     const monthLeave=Math.min(Math.floor(diffMonths),11);
     totalLeave=monthLeave;
-    detail=`<div class="result-row"><span>洹쇱냽 湲곌컙</span><strong>${Math.floor(diffMonths)}媛쒖썡 ${diffDays%30}??/strong></div>
-    <div class="result-row"><span>1??誘몃쭔 諛쒖깮 ?곗감</span><strong>??1??횞 ${Math.floor(diffMonths)}媛쒖썡 = ${monthLeave}??/strong></div>`;
+    detail=`<div class="result-row"><span>근속 기간</span><strong>${Math.floor(diffMonths)}개월 ${diffDays%30}일</strong></div>
+    <div class="result-row"><span>1년 미만 발생 연차</span><strong>월 1일 × ${Math.floor(diffMonths)}개월 = ${monthLeave}일</strong></div>`;
   } else {
-    // 1???댁긽
+    // 1년 이상
     const fullYears=Math.floor(years);
     let baseLeave=15;
-    // 3???댁긽: 2?꾨쭏??1??媛??
+    // 3년 이상: 2년마다 1일 가산
     if(fullYears>=3){
       const extra=Math.floor((fullYears-1)/2);
       baseLeave=Math.min(15+extra,25);
     }
     totalLeave=baseLeave;
-    detail=`<div class="result-row"><span>洹쇱냽 湲곌컙</span><strong>${fullYears}??${Math.floor((years-fullYears)*12)}媛쒖썡</strong></div>
-    <div class="result-row"><span>湲곕낯 ?곗감 (15??</span><strong>15??/strong></div>
-    ${fullYears>=3?`<div class="result-row"><span>媛???곗감 (3?꾩씠??</span><strong>+${baseLeave-15}??/strong></div>`:''}
-    <div class="result-row"><span>珥?諛쒖깮 ?곗감</span><strong>${baseLeave}??/strong></div>`;
+    detail=`<div class="result-row"><span>근속 기간</span><strong>${fullYears}년 ${Math.floor((years-fullYears)*12)}개월</strong></div>
+    <div class="result-row"><span>기본 연차 (15일)</span><strong>15일</strong></div>
+    ${fullYears>=3?`<div class="result-row"><span>가산 연차 (3년이상)</span><strong>+${baseLeave-15}일</strong></div>`:''}
+    <div class="result-row"><span>총 발생 연차</span><strong>${baseLeave}일</strong></div>`;
   }
 
   const remain=Math.max(0,totalLeave-used);
-  document.getElementById('res-main').textContent=totalLeave+'??;
-  document.getElementById('used-val').textContent=used+'??;
-  document.getElementById('remain-val').textContent=remain+'??;
+  document.getElementById('res-main').textContent=totalLeave+'일';
+  document.getElementById('used-val').textContent=used+'일';
+  document.getElementById('remain-val').textContent=remain+'일';
   document.getElementById('res-detail').innerHTML=detail+
-    `<div class="result-row"><span>?ъ슜 ?곗감</span><strong style="color:#dc2626">-${used}??/strong></div>
-    <div class="result-row"><span>?⑥? ?곗감</span><strong style="color:#16a34a">${remain}??/strong></div>
-    <div style="font-size:11px;color:#888;margin-top:8px">???낆궗??湲곗? 怨꾩궛. ?뚯궗 痍⑥뾽洹쒖튃???곕씪 ?ㅻ? ???덉뒿?덈떎.</div>`;
+    `<div class="result-row"><span>사용 연차</span><strong style="color:#dc2626">-${used}일</strong></div>
+    <div class="result-row"><span>남은 연차</span><strong style="color:#16a34a">${remain}일</strong></div>
+    <div style="font-size:11px;color:#888;margin-top:8px">※ 입사일 기준 계산. 회사 취업규칙에 따라 다를 수 있습니다.</div>`;
   document.getElementById('result').classList.add('show');
 }
-// 湲곕낯媛??ㅻ뒛
+// 기본값 오늘
 const today=new Date().toISOString().split('T')[0];
 document.getElementById('base-date').value=today;
-function toggleDark(){var d=document.documentElement;var isDark=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',isDark?'light':'dark');var btn=document.getElementById('darkToggle');if(btn)btn.textContent=isDark?'?뙔':'?截?;localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');}
-(function(){var s=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',s);document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('darkToggle');if(b)b.textContent=s==='dark'?'?截?:'?뙔';});})();
+function toggleDark(){var d=document.documentElement;var isDark=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',isDark?'light':'dark');var btn=document.getElementById('darkToggle');if(btn)btn.textContent=isDark?'🌙':'☀️';localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');}
+(function(){var s=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',s);document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('darkToggle');if(b)b.textContent=s==='dark'?'☀️':'🌙';});})();
 </script>
 </body></html>
