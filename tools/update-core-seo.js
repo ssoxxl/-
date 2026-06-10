@@ -3,12 +3,12 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const googleTagSnippet = `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5E3YW37RYV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-49J8CVJW33');
+  gtag('config', 'G-5E3YW37RYV');
 </script>`;
 
 const targetSections = {
@@ -311,7 +311,7 @@ const styleAddition = `
 `.trim();
 
 function ensureGoogleTag(text) {
-  if (text.includes('G-49J8CVJW33')) return text;
+  if (text.includes('G-5E3YW37RYV')) return text;
   return text.replace('</head>', `${googleTagSnippet}\n</head>`);
 }
 

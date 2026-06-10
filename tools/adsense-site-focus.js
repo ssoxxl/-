@@ -139,12 +139,12 @@ footer strong{color:#fff;}
 }
 </style>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5E3YW37RYV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-49J8CVJW33');
+  gtag('config', 'G-5E3YW37RYV');
 </script>
 </head>
 <body>
@@ -895,12 +895,12 @@ footer strong{color:#fff;}
 @media(max-width:640px){.wrap{padding:18px 14px 48px;}.guide-grid{grid-template-columns:1fr;}.hero h1{font-size:26px;}}
 </style>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49J8CVJW33"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5E3YW37RYV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-49J8CVJW33');
+  gtag('config', 'G-5E3YW37RYV');
 </script>
 </head>
 <body>
