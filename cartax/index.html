@@ -43,7 +43,15 @@ body{transition:background .3s,color .3s;}
 <div class="wrap"><div class="calc-card">
   <div class="card-hero"><span class="card-tag">생활</span><h1>자동차 취득세 계산기</h1><p>차량 구매 시 납부해야 할 취득세와 공채 매입 비용을 계산합니다</p></div>
   <div class="card-body">
-  <div style="margin-top:18px;">
+<div class="field"><label>차량 가격 (원)</label><input type="number" id="price" placeholder="30,000,000"></div>
+    <div class="field-row">
+      <div class="field"><label>차종</label><select id="type"><option value="0.07">비영업용 승용 (7%)</option><option value="0.05">승합·화물·특수 (5%)</option><option value="0.02">경차 (2%)</option><option value="0.04">영업용 (4%)</option></select></div>
+      <div class="field"><label>신차/중고차</label><select id="new"><option value="new">신차</option><option value="used">중고차</option></select></div>
+    </div>
+    <div class="tip">※ 전기차·하이브리드 감면 혜택은 지자체별 상이</div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
+    <div class="result-box" id="result"><div class="result-label">취득세</div><div class="result-main" id="main"></div><div id="detail"></div></div>
+<div style="margin-top:18px;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-8390635644947402"
@@ -54,14 +62,6 @@ body{transition:background .3s,color .3s;}
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-    <div class="field"><label>차량 가격 (원)</label><input type="number" id="price" placeholder="30,000,000"></div>
-    <div class="field-row">
-      <div class="field"><label>차종</label><select id="type"><option value="0.07">비영업용 승용 (7%)</option><option value="0.05">승합·화물·특수 (5%)</option><option value="0.02">경차 (2%)</option><option value="0.04">영업용 (4%)</option></select></div>
-      <div class="field"><label>신차/중고차</label><select id="new"><option value="new">신차</option><option value="used">중고차</option></select></div>
-    </div>
-    <div class="tip">※ 전기차·하이브리드 감면 혜택은 지자체별 상이</div>
-    <button class="btn-calc" onclick="calc()">계산하기</button>
-    <div class="result-box" id="result"><div class="result-label">취득세</div><div class="result-main" id="main"></div><div id="detail"></div></div>
   </div>
   <div class="desc-section">
     <h2>📌 자동차 취득세란?</h2>

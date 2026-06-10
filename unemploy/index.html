@@ -46,7 +46,15 @@ body{transition:background .3s,color .3s;}
 <div class="wrap"><div class="calc-card">
   <div class="card-hero"><span class="card-tag">직장인</span><h1>실업급여 계산기</h1><p>2026년 기준 1일 구직급여 및 총 수급액을 계산합니다</p></div>
   <div class="card-body">
-  <div style="margin-top:18px;">
+<div class="field"><label>퇴직 전 평균 월급 (원)</label><input type="number" id="wage" placeholder="3,000,000"></div>
+    <div class="field-row">
+      <div class="field"><label>고용보험 가입 기간</label><select id="period"><option value="120">1년 미만 (120일)</option><option value="150">1년~3년 (150일)</option><option value="180">3년~5년 (180일)</option><option value="210">5년~10년 (210일)</option><option value="240">10년 이상 (240일)</option></select></div>
+      <div class="field"><label>나이</label><select id="age"><option value="young">50세 미만</option><option value="old">50세 이상/장애인</option></select></div>
+    </div>
+    <div class="tip">※ 비자발적 퇴직(권고사직·계약만료 등)만 해당</div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
+    <div class="result-box" id="result"><div class="result-label">1일 구직급여</div><div class="result-main" id="main"></div><div id="detail"></div></div>
+<div style="margin-top:18px;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-8390635644947402"
@@ -57,14 +65,6 @@ body{transition:background .3s,color .3s;}
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-    <div class="field"><label>퇴직 전 평균 월급 (원)</label><input type="number" id="wage" placeholder="3,000,000"></div>
-    <div class="field-row">
-      <div class="field"><label>고용보험 가입 기간</label><select id="period"><option value="120">1년 미만 (120일)</option><option value="150">1년~3년 (150일)</option><option value="180">3년~5년 (180일)</option><option value="210">5년~10년 (210일)</option><option value="240">10년 이상 (240일)</option></select></div>
-      <div class="field"><label>나이</label><select id="age"><option value="young">50세 미만</option><option value="old">50세 이상/장애인</option></select></div>
-    </div>
-    <div class="tip">※ 비자발적 퇴직(권고사직·계약만료 등)만 해당</div>
-    <button class="btn-calc" onclick="calc()">계산하기</button>
-    <div class="result-box" id="result"><div class="result-label">1일 구직급여</div><div class="result-main" id="main"></div><div id="detail"></div></div>
   </div>
   <div class="desc-section">
     <h2>📋 실업급여는 금액보다 자격부터 봐야 해요</h2>

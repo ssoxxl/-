@@ -43,7 +43,16 @@ body{transition:background .3s,color .3s;}
 <div class="wrap"><div class="calc-card">
   <div class="card-hero"><span class="card-tag">부동산</span><h1>전월세 전환율 계산기</h1><p>전세↔월세 전환 시 적정 금액을 계산합니다. 법정 전환율 5% 기준.</p></div>
   <div class="card-body">
-  <div style="margin-top:18px;">
+<div class="field"><label>현재 전세 보증금 (만원)</label><input type="number" id="jeonse" placeholder="30,000"></div>
+    <div class="field-row">
+      <div class="field"><label>월세 보증금 (만원)</label><input type="number" id="deposit" placeholder="5,000"></div>
+      <div class="field"><label>전환율 (%)</label><input type="number" id="rate" placeholder="5.0" value="5.0" step="0.1"></div>
+    </div>
+    <div class="field"><label>계산 방향</label><select id="mode"><option value="to_monthly">전세 → 월세 전환</option><option value="to_jeonse">월세 → 전세 전환</option></select></div>
+    <div class="tip">※ 법정 전월세 전환율 상한은 계약 시점 기준 최신 기준을 확인해 주세요.</div>
+    <button class="btn-calc" onclick="calc()">계산하기</button>
+    <div class="result-box" id="result"><div class="result-label">계산 결과</div><div class="result-main" id="main"></div><div id="detail"></div></div>
+<div style="margin-top:18px;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-8390635644947402"
@@ -54,15 +63,6 @@ body{transition:background .3s,color .3s;}
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-    <div class="field"><label>현재 전세 보증금 (만원)</label><input type="number" id="jeonse" placeholder="30,000"></div>
-    <div class="field-row">
-      <div class="field"><label>월세 보증금 (만원)</label><input type="number" id="deposit" placeholder="5,000"></div>
-      <div class="field"><label>전환율 (%)</label><input type="number" id="rate" placeholder="5.0" value="5.0" step="0.1"></div>
-    </div>
-    <div class="field"><label>계산 방향</label><select id="mode"><option value="to_monthly">전세 → 월세 전환</option><option value="to_jeonse">월세 → 전세 전환</option></select></div>
-    <div class="tip">※ 법정 전월세 전환율 상한은 계약 시점 기준 최신 기준을 확인해 주세요.</div>
-    <button class="btn-calc" onclick="calc()">계산하기</button>
-    <div class="result-box" id="result"><div class="result-label">계산 결과</div><div class="result-main" id="main"></div><div id="detail"></div></div>
   </div>
   <div class="desc-section">
     <h2>📌 전월세 전환율이란?</h2>
