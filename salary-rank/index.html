@@ -5,7 +5,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8390635644947402" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>연봉 순위 계산기 2026 — 내 연봉 상위 몇%? | 계산왕</title>
-<meta name="description" content="내 연봉이 전체 직장인 중 상위 몇%인지 계산하세요. 2023년 국세청 근로소득 통계 기준.">
+<meta name="description" content="내 연봉이 전체 직장인 중 상위 몇%인지 계산하세요. 국세청 근로소득 공개 통계 기준으로 빠르게 비교해볼 수 있어요.">
 <link rel="canonical" href="https://calc.ssoxxl.com/salary-rank/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="계산왕">
@@ -39,6 +39,7 @@ header{background:var(--surface);border-bottom:2px solid var(--text);padding:0 2
 .field label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
 .field input,.field select{width:100%;padding:11px 14px;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit;outline:none;}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.field-help{margin:-4px 0 14px;font-size:12px;line-height:1.6;color:var(--muted);}
 .btn-calc{width:100%;padding:13px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;}
 .result-box{margin-top:16px;padding:20px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent-light);display:none;}
 .result-box.show{display:block;}
@@ -117,6 +118,7 @@ body{transition:background .3s,color .3s;}
       <div class="field"><label>성별</label><select id="gender"><option value="all">전체</option><option value="m">남성</option><option value="f">여성</option></select></div>
       <div class="field"><label>연령대</label><select id="age"><option value="all">전체</option><option value="20">20대</option><option value="30">30대</option><option value="40">40대</option><option value="50">50대 이상</option></select></div>
     </div>
+    <p class="field-help">연령대를 고르면 성별 비교보다 연령대 비교를 먼저 적용해요. 성별 차이만 보고 싶으면 연령대는 전체로 두면 돼요.</p>
     <button class="btn-calc" onclick="calc()">순위 확인하기</button>
     <div class="result-box" id="result">
       <div class="result-label">전체 직장인 중 내 위치</div>
@@ -166,7 +168,7 @@ body{transition:background .3s,color .3s;}
       <div class="faq-q">순위가 낮게 나오면 바로 연봉 협상해야 할까요?</div>
       <div class="faq-a">바로 그렇게 보기보다는 현재 업종과 근무 조건, 실수령액까지 같이 본 뒤 판단하는 게 좋아요.</div>
     </div>
-    <p><strong>참고해 주세요.</strong> 이 계산은 2026년 기준 공개 통계와 일반적인 비교 로직을 바탕으로 한 참고용 결과예요. 실제 체감 가치는 업종, 지역, 복지, 실수령 구조에 따라 달라질 수 있어요.</p>
+    <p><strong>참고해 주세요.</strong> 이 계산은 국세청 공개 통계와 일반적인 비교 로직을 바탕으로 한 참고용 결과예요. 실제 체감 가치는 업종, 지역, 복지, 실수령 구조에 따라 달라질 수 있어요.</p>
   </div>
 
 
