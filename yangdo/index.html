@@ -42,7 +42,7 @@ body{transition:background .3s,color .3s;}
 <header><a href="../" class="logo"><span>계산왕</span><span class="logo-badge" style="background:#0a0a0f;color:#FFD700;font-family:'Courier New',monospace;border:1px solid #D4A017;">王</span></a><a href="../" class="back-btn">← 전체 계산기</a><button onclick="toggleDark()" id="darkToggle" style="width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;margin-left:8px;">🌙</button>
 </header>
 <div class="wrap"><div class="calc-card">
-  <div class="card-hero"><span class="card-tag">부동산</span><h1>양도소득세 간이 계산기</h1><p>1주택 비과세, 장기보유특별공제, 다주택 중과를 반영한 간이 계산기입니다</p></div>
+  <div class="card-hero"><span class="card-tag">부동산</span><h1>양도소득세 간이 계산기</h1><p>확인한 비과세·공제·중과 조건을 직접 선택해 계산합니다</p></div>
   <div class="card-body">
 <div class="field-row">
       <div class="field"><label>취득가액 (만원)</label><input type="number" id="buy" placeholder="30,000"></div>
@@ -50,9 +50,9 @@ body{transition:background .3s,color .3s;}
     </div>
     <div class="field-row">
       <div class="field"><label>필요경비 (만원)</label><input type="number" id="cost" placeholder="500" value="0"></div>
-      <div class="field"><label>보유 기간</label><select id="hold"><option value="0">1년 미만</option><option value="6">1~2년</option><option value="12">2~3년</option><option value="24">3~4년</option><option value="32">4~5년</option><option value="40">5~6년</option><option value="48">6~7년</option><option value="56">7~8년</option><option value="64">8~9년</option><option value="72">9~10년</option><option value="80">10년 이상</option></select></div>
+      <div class="field"><label>적용 장기보유특별공제율</label><select id="hold"><option value="0">0% / 미적용</option><option value="6">6%</option><option value="12">12%</option><option value="24">24%</option><option value="32">32%</option><option value="40">40%</option><option value="48">48%</option><option value="56">56%</option><option value="64">64%</option><option value="72">72%</option><option value="80">80%</option></select></div>
     </div>
-    <div class="field"><label>주택 수 / 조건</label><select id="house"><option value="1">1주택 (2년 이상 거주)</option><option value="2">1주택 (거주요건 미충족)</option><option value="3">2주택 (조정대상지역)</option><option value="4">3주택 이상</option></select></div>
+    <div class="field"><label>확인한 과세 조건</label><select id="house"><option value="1">1세대 1주택 비과세 요건 충족</option><option value="2">일반세율 적용</option><option value="3">일반세율 +20%p 중과 적용</option><option value="4">일반세율 +30%p 중과 적용</option></select></div>
     <div class="tip">※ 간이 계산입니다. 정확한 세액은 세무사 확인 필요</div>
     <button class="btn-calc" onclick="calc()">계산하기</button>
     <div class="result-box" id="result"><div class="result-label">예상 양도소득세</div><div class="result-main" id="main"></div><div id="detail"></div></div>
@@ -103,7 +103,7 @@ body{transition:background .3s,color .3s;}
 <script>
 function comma(n){return Math.round(n).toLocaleString('ko-KR');}
 function won(n){return comma(n)+'원';}
-function calcTax(b){if(b<=14000000)return b*0.06;if(b<=50000000)return 840000+(b-14000000)*0.15;if(b<=88000000)return 6240000+(b-50000000)*0.24;if(b<=150000000)return 15360000+(b-88000000)*0.35;if(b<=300000000)return 37060000+(b-150000000)*0.38;if(b<=500000000)return 94060000+(b-300000000)*0.40;return 174060000+(b-500000000)*0.42;}
+function calcTax(b){if(b<=14000000)return b*.06;if(b<=50000000)return b*.15-1260000;if(b<=88000000)return b*.24-5760000;if(b<=150000000)return b*.35-15440000;if(b<=300000000)return b*.38-19940000;if(b<=500000000)return b*.40-25940000;if(b<=1000000000)return b*.42-35940000;return b*.45-65940000;}
 function calc(){
   const buy=+document.getElementById('buy').value*10000;
   const sell=+document.getElementById('sell').value*10000;
@@ -122,10 +122,10 @@ function calc(){
     document.getElementById('detail').innerHTML=`<div class="result-row"><span>1주택 비과세</span><strong style="color:#16a34a">12억 이하 비과세 적용</strong></div>`;
     document.getElementById('result').classList.add('show');return;
   }
-  let longDeduct=0;
-  if(houseType==='1')longDeduct=profit*Math.min(holdRate*2,0.80);
-  else if(houseType==='2')longDeduct=profit*Math.min(holdRate,0.30);
-  const netProfit=profit-longDeduct;
+  // 1세대 1주택 고가주택은 12억원 초과 비율에 해당하는 양도차익만 과세
+  const taxableProfit=houseType==='1'?profit*(sell-1200000000)/sell:profit;
+  const longDeduct=taxableProfit*Math.min(holdRate,0.80);
+  const netProfit=taxableProfit-longDeduct;
   const taxBase=Math.max(0,netProfit-2500000);
   let addRate=0,addDesc='';
   if(houseType==='3'){addRate=0.20;addDesc='2주택 중과 (+20%p)';}
@@ -138,6 +138,7 @@ function calc(){
     <div class="result-row"><span>양도가액</span><strong>${won(sell)}</strong></div>
     <div class="result-row"><span>취득가액+필요경비</span><strong>${won(buy+cost)}</strong></div>
     <div class="result-row"><span>양도차익</span><strong>${won(profit)}</strong></div>
+    ${houseType==='1'?`<div class="result-row"><span>12억원 초과분 과세대상 차익</span><strong>${won(taxableProfit)}</strong></div>`:''}
     <div class="result-row"><span>장기보유특별공제</span><strong style="color:#16a34a">-${won(longDeduct)}</strong></div>
     <div class="result-row"><span>기본공제</span><strong style="color:#16a34a">-${won(2500000)}</strong></div>
     <div class="result-row"><span>과세표준</span><strong>${won(taxBase)}</strong></div>
@@ -145,7 +146,7 @@ function calc(){
     <div class="result-row"><span>양도소득세</span><strong>${won(incomeTax)}</strong></div>
     <div class="result-row"><span>지방소득세 (10%)</span><strong>${won(localTax)}</strong></div>
     <div class="result-row"><span>총 세금</span><strong style="color:#dc2626">${won(total)}</strong></div>
-    <div style="font-size:11px;color:#888;margin-top:8px">※ 간이 계산. 정확한 세액은 세무사 확인 필요</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">※ 선택한 비과세·장특공제·중과 조건을 전제로 한 간이 계산입니다. 실제 적용 요건은 홈택스 또는 세무전문가에게 확인하세요.</div>
   `;
   document.getElementById('result').classList.add('show');
 }
