@@ -260,4 +260,5 @@ document.getElementById('base-date').value=today;
 function toggleDark(){var d=document.documentElement;var isDark=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',isDark?'light':'dark');var btn=document.getElementById('darkToggle');if(btn)btn.textContent=isDark?'🌙':'☀️';localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');}
 (function(){var s=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',s);document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('darkToggle');if(b)b.textContent=s==='dark'?'☀️':'🌙';});})();
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>

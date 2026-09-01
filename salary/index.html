@@ -290,8 +290,8 @@ function calc(){
   const taxAmount=calcTax(taxBase);
   function creditLimit(y){
     if(y<=33000000)return 740000;
-    if(y<=70000000)return Math.max(660000-(y-33000000)*0.8/100*1000,500000);
-    return 500000;
+    if(y<=70000000)return Math.max(660000,740000-(y-33000000)*0.008);
+    return Math.max(500000,660000-(y-70000000)*0.5);
   }
   const taxCredit=Math.min(taxAmount<=1300000?taxAmount*0.55:715000+(taxAmount-1300000)*0.30,creditLimit(annual));
   const incomeTax=Math.floor(Math.max(0,taxAmount-taxCredit)/12);
@@ -314,6 +314,7 @@ function calc(){
   document.getElementById('result').classList.add('show');
 }
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body>
 </html>
 

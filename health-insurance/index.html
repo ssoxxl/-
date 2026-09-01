@@ -136,8 +136,7 @@ body{transition:background .3s,color .3s;}
     <div class="tab-content" id="tab-local">
       <div class="field"><label>연간 소득 (원)</label><input type="number" id="l-income" placeholder="30,000,000"></div>
       <div class="field-row">
-        <div class="field"><label>재산 (만원, 과세표준)</label><input type="number" id="l-property" placeholder="10000" value="0"></div>
-        <div class="field"><label>자동차 (만원, 차량가액)</label><input type="number" id="l-car" placeholder="0" value="0"></div>
+<div class="field"><label>재산보험료 부과점수 (공단 고지서)</label><input type="number" id="l-property" placeholder="0" value="0"></div>
       </div>
       <div class="tip">※ 지역가입자는 소득·재산·자동차를 점수로 환산해 보험료를 계산합니다. 간이 계산이며 실제와 다를 수 있습니다.</div>
       <button class="btn-calc" onclick="calcLocal()">계산하기</button>
@@ -273,26 +272,22 @@ function calcWorker(){
 }
 function calcLocal(){
   const income=+document.getElementById('l-income').value;
-  const property=+document.getElementById('l-property').value*10000||0;
-  const car=+document.getElementById('l-car').value*10000||0;
+  const propertyPoints=+document.getElementById('l-property').value||0;
   if(!income){alert('연간 소득을 입력해주세요.');return;}
-  // 지역가입자 간이 계산 (점수제 근사)
-  // 소득: 연소득 / 12 × 6.99% (근사)
-  const incomeScore=Math.floor(income/100)*0.28;
-  const propertyScore=property>0?Math.floor(property/10000)*0.22:0;
-  const carScore=car>0?Math.floor(car/1000)*0.02:0;
-  const totalScore=incomeScore+propertyScore+carScore;
-  const pointValue=208.4; // 2026년 점수당 금액 (근사)
-  const health=Math.max(19780,Math.floor(totalScore*pointValue)); // 최저 보험료
-  const ltc=Math.floor(health*0.1314);
+  // 2026년: 소득월액 × 7.19% + 재산점수 × 211.5원. 자동차 부과는 2024.2 폐지.
+  const incomePremium=Math.floor(income/12*0.0719);
+  const propertyPremium=Math.floor(propertyPoints*211.5);
+  const health=Math.max(20160,incomePremium+propertyPremium);
+  const ltc=Math.floor(health*(0.009448/0.0719));
   document.getElementById('l-main').textContent=won(health+ltc)+' / 월';
   document.getElementById('l-detail').innerHTML=`
     <div class="result-row"><span>연간 소득</span><strong>${won(income)}</strong></div>
-    <div class="result-row"><span>재산 (과세표준)</span><strong>${won(property)}</strong></div>
-    <div class="result-row"><span>건강보험료 (근사)</span><strong style="color:#dc2626">-${won(health)}</strong></div>
+    <div class="result-row"><span>소득분 보험료</span><strong>${won(incomePremium)}</strong></div>
+    <div class="result-row"><span>재산분 보험료 (${propertyPoints.toLocaleString()}점)</span><strong>${won(propertyPremium)}</strong></div>
+    <div class="result-row"><span>건강보험료</span><strong style="color:#dc2626">-${won(health)}</strong></div>
     <div class="result-row"><span>장기요양보험료</span><strong style="color:#dc2626">-${won(ltc)}</strong></div>
     <div class="result-row"><span>합계</span><strong style="color:#0d9488">${won(health+ltc)}</strong></div>
-    <div style="font-size:11px;color:#888;margin-top:8px">※ 지역가입자 보험료는 소득·재산·자동차 점수를 합산해 계산합니다. 정확한 금액은 건강보험공단(1577-1000)에 문의하세요.</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">※ 2026년 요율·점수당 금액·최저보험료 기준. 재산점수는 공단 고지서의 점수를 입력해야 하며 조정·경감은 반영하지 않습니다.</div>
   `;
   document.getElementById('result-local').classList.add('show');
 }

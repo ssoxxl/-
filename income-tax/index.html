@@ -233,11 +233,13 @@ function calc(){
   // 근로소득세액공제
   let earnCredit=0;
   if(wage>0){
-    earnCredit=incomeTax<=1300000?incomeTax*0.55:Math.max(0,715000-(incomeTax-1300000)*0.3);
+    const creditLimit=wage<=33000000?740000:wage<=70000000?Math.max(660000,740000-(wage-33000000)*0.008):Math.max(500000,660000-(wage-70000000)*0.5);
+    earnCredit=Math.min(incomeTax<=1300000?incomeTax*0.55:715000+(incomeTax-1300000)*0.3,creditLimit);
   }
   const finalTax=Math.max(0,incomeTax-earnCredit);
   const localTax=Math.floor(finalTax*0.1);
   const totalTax=finalTax+localTax;
+  // 기납부세액은 국세 원천징수액으로 입력받으므로 국세 결정세액과 비교
   const diff=finalTax-prepaid;
   const isRefund=diff<0;
   const box=document.getElementById('result');
@@ -258,9 +260,10 @@ function calc(){
     <div class="result-row"><span>지방소득세 (10%)</span><strong>${won(localTax)}</strong></div>
     <div class="result-row"><span>기납부세액</span><strong style="color:#16a34a">-${won(prepaid)}</strong></div>
     <div class="result-row"><span>${isRefund?'환급액':'추가납부액'}</span><strong style="color:${isRefund?'#16a34a':'#ea580c'}">${won(Math.abs(Math.floor(diff)))}</strong></div>
-    <div style="font-size:11px;color:#888;margin-top:8px">※ 사업소득 단순경비율 64.1% 적용. 신고기간: 매년 5월 1일~31일</div>
+    <div style="font-size:11px;color:#888;margin-top:8px">※ 간이 추정치입니다. 사업소득 단순경비율은 업종마다 다르므로 현재 64.1% 가정값은 실제 신고에 사용할 수 없습니다. 지방소득세는 기납부세액 비교에서 제외했습니다.</div>
   `;
   box.classList.add('show');
 }
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>

@@ -82,21 +82,19 @@ footer strong{color:#fff;}
     <p>중고차 구매 시 취득세·공채·등록비를 계산합니다 (2026년 기준)</p>
   </div>
   <div class="card-body">
-<div class="field"><label>차량 구매 가격 (원)</label><input type="number" id="price" placeholder="15,000,000"></div>
+<div class="field"><label>취득세 과세표준 (원)</label><input type="number" id="price" placeholder="15,000,000"></div>
     <div class="field-row">
       <div class="field"><label>차종</label>
         <select id="car-type">
           <option value="passenger">승용차 (7%)</option>
-          <option value="economy">경차 (4%, 50% 감면)</option>
+          <option value="economy">경차 (4%, 최대 75만원 감면)</option>
           <option value="van">승합·화물 (5%)</option>
           <option value="electric">전기차 (취득세 감면)</option>
         </select>
       </div>
       <div class="field"><label>거주 지역 (공채)</label>
         <select id="region">
-          <option value="seoul">서울</option>
-          <option value="gyeonggi">경기</option>
-          <option value="other">기타 지역</option>
+          <option value="none">공채 비용 제외</option>
         </select>
       </div>
     </div>
@@ -161,7 +159,7 @@ function calc(){
   let taxRate,taxNote;
   let acquisitionTax;
   if(type==='passenger'){taxRate=0.07;taxNote='승용차 7%';acquisitionTax=Math.floor(price*0.07);}
-  else if(type==='economy'){taxRate=0.02;taxNote='경차 2%(50% 감면)';acquisitionTax=Math.floor(price*0.02);}
+  else if(type==='economy'){taxRate=0.04;taxNote='경차 4%에서 최대 75만원 감면';acquisitionTax=Math.max(0,Math.floor(price*0.04)-750000);}
   else if(type==='van'){taxRate=0.05;taxNote='승합·화물 5%';acquisitionTax=Math.floor(price*0.05);}
   else{// 전기차
     taxRate=0.07;
@@ -169,13 +167,7 @@ function calc(){
     taxNote='전기차 (최대 140만원 감면)';
   }
   // 공채 (차량가액 기준 비율, 지역별)
-  let bondRate;
-  if(region==='seoul') bondRate=type==='passenger'?0.09:0.05;
-  else if(region==='gyeonggi') bondRate=type==='passenger'?0.05:0.03;
-  else bondRate=type==='passenger'?0.04:0.02;
-  const bondTotal=Math.floor(price*bondRate);
-  const bondDiscount=0.1; // 즉시매도 할인율 10% 가정
-  const bondCost=Math.floor(bondTotal*bondDiscount);
+  const bondCost=0;
   // 등록 수수료
   const regFee=15000;
   // 번호판 비용
@@ -183,14 +175,12 @@ function calc(){
   const total=acquisitionTax+bondCost+regFee+plateFee;
   document.getElementById('res-main').textContent=won(total);
   document.getElementById('res-detail').innerHTML=`
-    <div class="result-row"><span>차량 구매가격</span><strong>${won(price)}</strong></div>
+    <div class="result-row"><span>입력 과세표준</span><strong>${won(price)}</strong></div>
     <div class="result-row"><span>취득세 (${taxNote})</span><strong style="color:#dc2626">+${won(acquisitionTax)}</strong></div>
-    <div class="result-row"><span>공채 실비용 (즉시매도 기준)</span><strong style="color:#dc2626">+${won(bondCost)}</strong></div>
     <div class="result-row"><span>등록 수수료</span><strong style="color:#dc2626">+${won(regFee)}</strong></div>
     <div class="result-row"><span>번호판</span><strong style="color:#dc2626">+${won(plateFee)}</strong></div>
     <div class="result-row"><span>총 부대비용</span><strong style="color:var(--orange)">${won(total)}</strong></div>
-    <div class="result-row"><span>차량 포함 실구매가</span><strong>${won(price+total)}</strong></div>
-    <div style="font-size:11px;color:var(--muted);margin-top:8px">※ 공채 할인율·공채율은 지역·차종·시기에 따라 다를 수 있습니다.</div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px">※ 신고가액과 시가표준액 중 적용되는 과세표준을 입력하세요. 공채와 실제 등록비는 등록지에 따라 달라 별도입니다.</div>
   `;
   document.getElementById('result').classList.add('show');
 }
@@ -210,4 +200,5 @@ function toggleDark(){
   });
 })();
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>

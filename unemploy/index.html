@@ -154,7 +154,8 @@ function calc(){
   if(!wage){alert('월급을 입력해주세요.');return;}
   const dailyWage=wage/30;
   const upperLimit=68100;
-  const lowerLimit=9860*8*0.8;
+  // 2026년 최저임금 10,320원 × 8시간 × 80%
+  const lowerLimit=10320*8*0.8;
   let daily=Math.min(Math.max(dailyWage*0.6,lowerLimit),upperLimit);
   const total=daily*days;
   document.getElementById('main').textContent=comma(daily)+'원 / 일';
@@ -171,5 +172,6 @@ function calc(){
   document.getElementById('result').classList.add('show');
 }
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>
 

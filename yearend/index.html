@@ -263,28 +263,30 @@ function calc(){
   const totalCard=credit+debit;
   let cardDeduct=0;
   if(totalCard>cardBase){
-    const over=totalCard-cardBase;
     const creditOver=Math.max(0,credit-cardBase);
-    const debitOver=Math.min(over,debit+(credit>cardBase?0:0));
+    // 최저사용액은 공제율이 낮은 신용카드 사용분부터 차감
+    const remainingBase=Math.max(0,cardBase-credit);
+    const debitOver=Math.max(0,debit-remainingBase);
     cardDeduct=Math.min(creditOver*0.15+debitOver*0.30, salary<=70000000?3300000:2600000);
   }
-  const pensionDeduct=Math.min(pension,6000000)*0.4;
   const housingDeduct=Math.min(housing,2400000);
-  const totalDeduct=earnDeduct+basicDeduct+cardDeduct+pensionDeduct+housingDeduct;
+  const totalDeduct=earnDeduct+basicDeduct+cardDeduct+housingDeduct;
   const taxBase=Math.max(0,salary-totalDeduct);
   let incomeTax=calcTax(taxBase);
 
   // 세액공제: 근로소득 세액공제
-  const earnCredit=incomeTax<=1300000?incomeTax*0.55:Math.max(715000-(incomeTax-1300000)*0.3,0);
+  const creditLimit=salary<=33000000?740000:salary<=70000000?Math.max(660000,740000-(salary-33000000)*0.008):Math.max(500000,660000-(salary-70000000)*0.5);
+  const earnCredit=Math.min(incomeTax<=1300000?incomeTax*0.55:715000+(incomeTax-1300000)*0.30,creditLimit);
   incomeTax=Math.max(0,incomeTax-earnCredit);
 
   // 세액공제: 의료비(15%), 교육비(15%), 기부금(15%), 월세(15%)
   const medicalCredit=Math.max(0,medical-salary*0.03)*0.15;
   const eduCredit=Math.min(edu,3000000)*0.15;
   const donateCredit=Math.min(donate,salary*0.3)*0.15;
-  const rentCredit=salary<=55000000?Math.min(rent,10000000)*0.17:Math.min(rent,10000000)*0.15;
+  const rentCredit=salary<=55000000?Math.min(rent,10000000)*0.17:salary<=80000000?Math.min(rent,10000000)*0.15:0;
   // 연금저축 세액공제
-  const pensionCredit=Math.min(pension,6000000)*(salary<=55000000?0.165:0.132);
+  // 국세 기준 15%/12%. 지방소득세는 아래에서 별도 계산.
+  const pensionCredit=Math.min(pension,6000000)*(salary<=55000000?0.15:0.12);
 
   const totalCredit=earnCredit+medicalCredit+eduCredit+donateCredit+rentCredit+pensionCredit;
   const finalTax=Math.max(0,calcTax(taxBase)-totalCredit);
@@ -313,5 +315,6 @@ function calc(){
   box.classList.add('show');
 }
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>
 

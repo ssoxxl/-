@@ -229,8 +229,8 @@ function calc(){
       pay=Math.min(wage,2500000);
       pay=Math.max(pay,700000);
     } else if(m<=6){
-      // 4~6개월: 80%, 상한200만, 하한70만
-      pay=Math.min(Math.round(wage*0.8),2000000);
+      // 4~6개월: 통상임금 100%, 상한200만, 하한70만
+      pay=Math.min(wage,2000000);
       pay=Math.max(pay,700000);
     } else {
       // 7개월~: 80%, 상한160만, 하한70만
@@ -264,4 +264,5 @@ function calc(){
 function toggleDark(){var d=document.documentElement;var isDark=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',isDark?'light':'dark');var btn=document.getElementById('darkToggle');if(btn)btn.textContent=isDark?'🌙':'☀️';localStorage.setItem('gyesanwang_theme',isDark?'light':'dark');}
 (function(){var s=localStorage.getItem('gyesanwang_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',s);document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('darkToggle');if(b)b.textContent=s==='dark'?'☀️':'🌙';});})();
 </script>
+<script src="../assets/money-inputs.js"></script>
 </body></html>
