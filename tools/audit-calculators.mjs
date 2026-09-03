@@ -10,6 +10,12 @@ let audited = 0;
 
 for (const name of pages) {
   const page = await browser.newPage();
+  page.setDefaultTimeout(5000);
+  await page.route('**/*', route => {
+    const url = new URL(route.request().url());
+    if (url.hostname === '127.0.0.1') route.continue();
+    else route.abort();
+  });
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
   const response = await page.goto(`${base}/${name}/`, { waitUntil: 'domcontentloaded' });

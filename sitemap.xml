@@ -50,6 +50,23 @@
   <url><loc>https://calc.ssoxxl.com/health-refund/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calc.ssoxxl.com/rent-tax-credit/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calc.ssoxxl.com/mortgage-dsr/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calc.ssoxxl.com/hourly-wage/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/weekly-holiday-pay/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/overtime-pay/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/annual-leave-pay/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/compound-interest/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/simple-interest/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.ssoxxl.com/roi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/cagr/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.ssoxxl.com/savings-goal/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/loan-prepayment-fee/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/stock-profit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/discount/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.ssoxxl.com/percentage/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/unit-price/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.ssoxxl.com/fuel-cost/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.ssoxxl.com/margin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.ssoxxl.com/break-even/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calc.ssoxxl.com/about/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://calc.ssoxxl.com/contact/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://calc.ssoxxl.com/editorial-policy/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
